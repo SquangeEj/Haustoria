@@ -12,4 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53a7616fa08163848bc109aae50ccf92, type: 3}
   m_Name: SCROBJ_EnemyDataHolder
   m_EditorClassIdentifier: 
-  sprt: {fileID: 21300000, guid: ffa30db5407295146b72459f0e90e59b, type: 3}
+  EnemyID: 0
+  BackgroundID: 0
+  EnemyNames:
+  - Bear (formerly halsin)
+  - Bird
+  - Disgruntled Owl

@@ -7,5 +7,9 @@ public class SCROBJ_CombatStartManager : ScriptableObject
 {
   //  public int Health;
     public int EnemyID;
+    public int BackgroundID;
+
+    public string[] EnemyNames;
+
   //  [SerializeField] private EnemyAttackType enemyAttackType;
 }

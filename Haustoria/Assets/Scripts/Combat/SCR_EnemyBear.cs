@@ -15,7 +15,16 @@ public class SCR_EnemyBear : MonoBehaviour
     [Header("Attack or Attacks")]
     [SerializeField] private GameObject Attack;
 
-   [SerializeField] private GameObject player;
+    [SerializeField] private GameObject player;
+
+    private Animator anim;
+
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
+
     public void EnemyAttack()
     {
         StartCoroutine(Bearattack());
@@ -24,7 +33,8 @@ public class SCR_EnemyBear : MonoBehaviour
 
     public IEnumerator Bearattack()
     {
-        for (int i = -10; i < 10; i += 2)
+        anim.Play("BearAttackTwo");
+     /*   for (int i = -10; i < 10; i += 2)
         {
             GameObject Claw = Instantiate(Attack, new Vector3(i, 0, 0), Quaternion.identity);
             for (float t = 0; t < 1; t += 20f * Time.deltaTime)
@@ -40,14 +50,16 @@ public class SCR_EnemyBear : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
             Destroy(Claw, 4f);
         }
+*/
 
-        
 
-        
 
-        yield return new WaitForSeconds(3f);
+       
+        yield return new WaitForSeconds(5f);
 
         CombatManager.GetComponent<SCR_EnemySelect>().BriarTurn();
+
+        anim.Play("BearIdle");
 
         yield return null;
     }
@@ -55,6 +67,10 @@ public class SCR_EnemyBear : MonoBehaviour
     public void takeDamage()
     {
         health -= AttackValues.damagetaken;
+        if (health <= 0)
+        {
+            gameObject.SetActive(false);
+        }
         Debug.Log(health);
     }
 }

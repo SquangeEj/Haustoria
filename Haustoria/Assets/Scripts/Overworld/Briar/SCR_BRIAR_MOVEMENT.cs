@@ -27,6 +27,10 @@ public class SCR_BRIAR_MOVEMENT : MonoBehaviour
         animator.SetFloat("Xmove", Input.GetAxis("Horizontal"));
         animator.SetFloat("Ymove", Input.GetAxis("Vertical"));
 
+
+        
+
+
         /* if (move != Vector3.zero)
          {
              gameObject.transform.forward = move;

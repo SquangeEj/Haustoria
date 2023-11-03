@@ -19,9 +19,12 @@ public class SCR_EnemyBear : MonoBehaviour
 
     private Animator anim;
 
+    private SpriteRenderer spriterend;
+
 
     private void Start()
     {
+        spriterend = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
     }
 
@@ -34,24 +37,7 @@ public class SCR_EnemyBear : MonoBehaviour
     public IEnumerator Bearattack()
     {
         anim.Play("BearAttackTwo");
-     /*   for (int i = -10; i < 10; i += 2)
-        {
-            GameObject Claw = Instantiate(Attack, new Vector3(i, 0, 0), Quaternion.identity);
-            for (float t = 0; t < 1; t += 20f * Time.deltaTime)
-            {
-                Claw.transform.localScale = Vector3.Lerp(Vector3.zero, new Vector3(0.5f, 0.5f, 0.5f), t);
-          
-                yield return null;
-            }
-
-           
-
-            Claw.GetComponent<Rigidbody2D>().AddForce((Vector2.down * 1), ForceMode2D.Impulse);
-            yield return new WaitForSeconds(0.2f);
-            Destroy(Claw, 4f);
-        }
-*/
-
+   
 
 
        
@@ -66,11 +52,25 @@ public class SCR_EnemyBear : MonoBehaviour
 
     public void takeDamage()
     {
+
+        StartCoroutine(BearDamage());
+       
+    }
+
+    private IEnumerator BearDamage()
+    {
+        for (float t = 0; t < 1; t += 1f * Time.deltaTime)
+        {
+            spriterend.color = Color.Lerp(Color.red, Color.white, t);
+          
+            yield return null;
+        }
+
         health -= AttackValues.damagetaken;
         if (health <= 0)
         {
             gameObject.SetActive(false);
         }
-        Debug.Log(health);
+        yield return null;
     }
 }

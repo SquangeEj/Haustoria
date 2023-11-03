@@ -10,6 +10,8 @@ public class SCR_ATKBR_Square : MonoBehaviour
     [Header("Combat Manager (as usual)")]
     [SerializeField] private GameObject combatManager;
 
+    [SerializeField] private GameObject AttackAnimation; // Check if each are unique or not
+
    private bool InArea;
 
     [Header("This is the amount of base damage it deals and the multiplier for when you hit")]
@@ -46,7 +48,7 @@ public class SCR_ATKBR_Square : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
         {
-            Debug.Log("Yeah it called");
+
             if (InArea == true)
             {
                 InArea = false;
@@ -84,6 +86,9 @@ public class SCR_ATKBR_Square : MonoBehaviour
 
         combatManager.GetComponent<SCR_EnemySelect>().DamageEnemy();
         combatManager.GetComponent<SCR_EnemySelect>().EnemyTurn();
+
+        AttackAnimation.SetActive(true);
+
 
          this.gameObject.SetActive(false);
     }

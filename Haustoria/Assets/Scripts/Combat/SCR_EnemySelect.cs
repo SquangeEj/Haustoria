@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using System;
 using TMPro;
+using Cinemachine;
 
 public class SCR_EnemySelect : MonoBehaviour
 {     
@@ -25,6 +26,8 @@ public class SCR_EnemySelect : MonoBehaviour
 
     [SerializeField] private GameObject BriarTurnUI;
     [SerializeField] private GameObject BriarCombatGameplay;
+
+    [SerializeField] private CinemachineVirtualCamera BriarCamera;
 
    
     void Start()
@@ -105,6 +108,19 @@ public class SCR_EnemySelect : MonoBehaviour
 
         CurrentEnemy.GetComponent<SCR_EnemyAttackManager>().OnDamageEnemy();
 
+        StartCoroutine(ScreenShake());
+    }
+
+    private IEnumerator ScreenShake()
+    {
+        Debug.Log("wawa");
+        for (float i = 1; i > 0; i-=4 * Time.deltaTime)
+        {
+            BriarCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = i;
+            yield return null;
+        }
+        BriarCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 0;
+        yield return null;
     }
 
    

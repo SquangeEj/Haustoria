@@ -12,6 +12,8 @@ public class SCR_EnemySelect : MonoBehaviour
     [Header("Data storage (VERY IMPORTANT)")]
     [SerializeField] private SCROBJ_CombatStartManager CombatData;
 
+    [SerializeField] private SCROBJ_BRIAR_STATS BriarStats;
+
     [Header("List of enemies, make sure IDs are correct")]
     [SerializeField] private GameObject[] Enemies;
 
@@ -29,10 +31,17 @@ public class SCR_EnemySelect : MonoBehaviour
 
     [SerializeField] private CinemachineVirtualCamera BriarCamera;
 
+    [SerializeField] private GameObject BriarHeart;
+
+
+
+
+
    
     void Start()
     {
        
+
         foreach (GameObject enemy in Enemies)
         {
 
@@ -97,7 +106,9 @@ public class SCR_EnemySelect : MonoBehaviour
 
      IEnumerator EnemyTurnStart()
     {
+        yield return new WaitForSeconds(0.5f);
         BriarCombatGameplay.SetActive(true);
+        BriarHeart.transform.position = new Vector3(0, -3.59f, 0);
         CurrentEnemy.GetComponent<SCR_EnemyAttackManager>().InvokeEvent();
         yield return null;
     }

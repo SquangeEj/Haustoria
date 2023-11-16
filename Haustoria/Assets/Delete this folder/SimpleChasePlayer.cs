@@ -23,11 +23,12 @@ public class SimpleChasePlayer : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
 
-           GameObject combatman =  GameObject.Find("CombatManager");
+           GameObject combatman =  GameObject.Find("SceneTransitionManager");
 
 
             EnemyData.EnemyID = 1;
-            combatman.GetComponent<SCR_Manager_Combat>().GoCombat();
+            combatman.GetComponent<SCR_SceneTransitionManager>().SceneLoad = 1;
+            combatman.GetComponent<SCR_SceneTransitionManager>().swapscene();
 
 
 

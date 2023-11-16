@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 
 public class SCR_EnemyBear : MonoBehaviour
@@ -21,27 +22,87 @@ public class SCR_EnemyBear : MonoBehaviour
 
     private SpriteRenderer spriterend;
 
+    private GameObject HealthSlider;
+
+    
+
 
     private void Start()
     {
         spriterend = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        HealthSlider = GameObject.Find("EnemyHealthSlider");
+
+        HealthSlider.GetComponent<Slider>().maxValue = health;
+        HealthSlider.GetComponent<Slider>().value = health;
     }
 
     public void EnemyAttack()
     {
-        StartCoroutine(Bearattack());
+        int AttackRNG = Random.Range(0, 1 + 1);
+
+
+        switch (AttackRNG)
+        {
+            case 0:
+                StartCoroutine(BearattackOne());
+                break;
+
+            case 1:
+                StartCoroutine(BearattackTwo());
+                break;
+        }
+    
+
+
     }
 
 
-    public IEnumerator Bearattack()
+    public IEnumerator BearattackOne()
     {
-        anim.Play("BearAttackTwo");
+        yield return new WaitForSeconds(1f);
+        anim.Play("BearAttackOne");
    
 
 
        
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(6f);
+
+        CombatManager.GetComponent<SCR_EnemySelect>().BriarTurn();
+
+        anim.Play("BearIdle");
+
+        yield return null;
+    }
+
+    public IEnumerator BearattackTwo()
+    {
+        yield return new WaitForSeconds(1f);
+
+        GameObject ClawFollow = Instantiate(Attack, transform.position + new Vector3(-7.5f, 0, 0), Quaternion.identity);
+        GameObject ClawFollow2 = Instantiate(Attack, transform.position + new Vector3(+7.5f, 0, 0), Quaternion.identity);
+
+
+        for (float i = 0; i < 1; i += 1 * Time.deltaTime)
+        {
+            ClawFollow.transform.localScale = new Vector3(i, i, i);
+            ClawFollow2.transform.localScale = new Vector3(i, i, i);
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(10f);
+        for(float i =1; i>0; i -= 1 * Time.deltaTime)
+        {
+            ClawFollow.transform.localScale = new Vector3(i, i, i);
+            ClawFollow2.transform.localScale = new Vector3(i, i, i);
+            yield return null;
+        }
+        Destroy(ClawFollow);
+
+
+
+
+        yield return new WaitForSeconds(1f);
 
         CombatManager.GetComponent<SCR_EnemySelect>().BriarTurn();
 
@@ -59,14 +120,20 @@ public class SCR_EnemyBear : MonoBehaviour
 
     private IEnumerator BearDamage()
     {
+        var prevhealth = health;
+        health -= AttackValues.damagetaken;
+
         for (float t = 0; t < 1; t += 1f * Time.deltaTime)
         {
+
+            HealthSlider.GetComponent<Slider>().value = Mathf.Lerp(prevhealth, health, t*5);
+            
             spriterend.color = Color.Lerp(Color.red, Color.white, t);
           
             yield return null;
         }
 
-        health -= AttackValues.damagetaken;
+        
         if (health <= 0)
         {
             gameObject.SetActive(false);

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class SCR_BriarCombatMovement : MonoBehaviour
 {
@@ -19,10 +21,14 @@ public class SCR_BriarCombatMovement : MonoBehaviour
 
     private GameObject combatmanager;
 
+    [SerializeField]
+    private TMP_Text BriarHealthText;
+
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         combatmanager = GameObject.Find("CombatManager");
+      
     }
  
     void Update()
@@ -45,10 +51,15 @@ public class SCR_BriarCombatMovement : MonoBehaviour
         combatmanager.GetComponent<SCR_EnemySelect>().StartCoroutine("ScreenShake");
 
         BriarHealth.Health -= Damage;
+        BriarHealthText.text = BriarHealth.Health.ToString();
         switch (BriarHealth.Health)
         {
             case 10:
                 BriarFace.sprite = BriarNeutral;
+                break;
+
+            case < 0:
+                SceneManager.LoadScene(3);
                 break;
 
             case < 5:

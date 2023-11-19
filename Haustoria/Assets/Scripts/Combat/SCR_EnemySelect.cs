@@ -5,6 +5,7 @@ using UnityEngine.Events;
 using System;
 using TMPro;
 using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class SCR_EnemySelect : MonoBehaviour
 {     
@@ -13,6 +14,8 @@ public class SCR_EnemySelect : MonoBehaviour
     [SerializeField] private SCROBJ_CombatStartManager CombatData;
 
     [SerializeField] private SCROBJ_BRIAR_STATS BriarStats;
+
+
 
     [Header("List of enemies, make sure IDs are correct")]
     [SerializeField] private GameObject[] Enemies;
@@ -35,12 +38,13 @@ public class SCR_EnemySelect : MonoBehaviour
 
 
 
-
+    [SerializeField]
+    private TMP_Text BriarHealthText;
 
    
     void Start()
     {
-       
+        BriarHealthText.text = BriarStats.Health.ToString();
 
         foreach (GameObject enemy in Enemies)
         {
@@ -80,8 +84,14 @@ public class SCR_EnemySelect : MonoBehaviour
         
     }
 
+    public void EnemyDied()
+    {
+        StartCoroutine(EndCombat());
+    }
+
     IEnumerator EndCombat()
     {
+        SceneManager.LoadScene(1);
         yield return null;
     }
 

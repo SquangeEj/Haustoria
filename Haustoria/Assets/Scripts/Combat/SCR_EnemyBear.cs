@@ -136,6 +136,7 @@ public class SCR_EnemyBear : MonoBehaviour
         
         if (health <= 0)
         {
+            CombatManager.GetComponent<SCR_EnemySelect>().EnemyDied();
             gameObject.SetActive(false);
         }
         yield return null;

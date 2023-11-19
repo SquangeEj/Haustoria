@@ -17,9 +17,12 @@ public class SCR_BriarCombatMovement : MonoBehaviour
     [SerializeField]
     private Sprite BriarNeutral, BriarHurt, BriarDying;
 
+    private GameObject combatmanager;
+
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        combatmanager = GameObject.Find("CombatManager");
     }
  
     void Update()
@@ -39,6 +42,8 @@ public class SCR_BriarCombatMovement : MonoBehaviour
 
     public void TakeDamage(int Damage)
     {
+        combatmanager.GetComponent<SCR_EnemySelect>().StartCoroutine("ScreenShake");
+
         BriarHealth.Health -= Damage;
         switch (BriarHealth.Health)
         {

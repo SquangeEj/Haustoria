@@ -122,9 +122,9 @@ public class SCR_EnemySelect : MonoBehaviour
         StartCoroutine(ScreenShake());
     }
 
-    private IEnumerator ScreenShake()
+    public IEnumerator ScreenShake()
     {
-        Debug.Log("wawa");
+        
         for (float i = 1; i > 0; i-=4 * Time.deltaTime)
         {
             BriarCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = i;

@@ -15,6 +15,6 @@ MonoBehaviour:
   EnemyID: 0
   BackgroundID: 0
   EnemyNames:
-  - Bear (formerly halsin)
+  - Bear
   - Bird
   - Disgruntled Owl

@@ -54,6 +54,10 @@ public class SCR_Inspection : MonoBehaviour
             TalkSprite.sprite = null;
             CharPortrait.SetActive(false);
         }
+        else
+        {
+            CharPortrait.SetActive(true);
+        }
     }
 
     public void SetSprite(Sprite image)

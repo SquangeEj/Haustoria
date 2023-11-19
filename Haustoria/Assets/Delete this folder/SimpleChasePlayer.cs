@@ -7,6 +7,7 @@ public class SimpleChasePlayer : MonoBehaviour
     public NavMeshAgent agent;
     public GameObject player;
     [SerializeField] private SCROBJ_CombatStartManager EnemyData;
+    [SerializeField] bool ischasing =false;
     void Start()
     {
         
@@ -15,7 +16,16 @@ public class SimpleChasePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        agent.SetDestination(player.transform.position);
+        if(Vector3.Distance(transform.position,player.transform.position)< 50)
+        {
+            ischasing = true;
+        }
+
+        
+        if (ischasing == true)
+        {
+            agent.SetDestination(player.transform.position);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -26,8 +36,8 @@ public class SimpleChasePlayer : MonoBehaviour
            GameObject combatman =  GameObject.Find("SceneTransitionManager");
 
 
-            EnemyData.EnemyID = 1;
-            combatman.GetComponent<SCR_SceneTransitionManager>().SceneLoad = 1;
+            EnemyData.EnemyID = 0;
+            combatman.GetComponent<SCR_SceneTransitionManager>().SceneLoad = 2;
             combatman.GetComponent<SCR_SceneTransitionManager>().swapscene();
 
 

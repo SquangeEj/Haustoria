@@ -98,6 +98,7 @@ public class SCR_EnemyBear : MonoBehaviour
             yield return null;
         }
         Destroy(ClawFollow);
+        Destroy(ClawFollow2);
 
 
 

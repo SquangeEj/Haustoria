@@ -46,7 +46,7 @@ public class SCR_ATKBR_Square : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") || Input.GetButton("Fire1"))
         {
 
             if (InArea == true)

@@ -38,10 +38,7 @@ public class SCR_BRIAR_MOVEMENT : MonoBehaviour
 
         // Footsteps Codez (need to add in a ray cast to check ground layer type for grass, road etc)
         
-        if (controller.velocity.magnitude> 2f && audioSource.isPlaying == false) 
-        {
-            SCR_SoundFXManager.instance.PlayRandomFootstep(walkPathSoundClips, audioSource);
-        }
+      
 
 
         /* if (move != Vector3.zero)
@@ -50,5 +47,13 @@ public class SCR_BRIAR_MOVEMENT : MonoBehaviour
          }
 
          controller.SimpleMove(playerVelocity * Time.deltaTime);*/
+    }
+
+
+    public void playStepSound()
+    {
+       
+      SCR_SoundFXManager.instance.PlayRandomFootstep(walkPathSoundClips, audioSource);
+        
     }
 }

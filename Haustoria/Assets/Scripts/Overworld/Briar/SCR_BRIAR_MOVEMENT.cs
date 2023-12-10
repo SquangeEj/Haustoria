@@ -28,13 +28,31 @@ public class SCR_BRIAR_MOVEMENT : MonoBehaviour
 
     private void Update()
     {
+
+    
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         controller.Move(move * Time.deltaTime * moveSpeed);
 
-        animator.SetFloat("Xmove", Input.GetAxis("Horizontal"));
-        animator.SetFloat("Ymove", Input.GetAxis("Vertical"));
+
+        if (move != Vector3.zero)
+        {
+            animator.Play("Blend Tree Running");
+        }
+        else
+        {
+            animator.Play("Blend Tree Idle");
+        }
 
 
+        if (move != Vector3.zero)
+        {
+            animator.SetFloat("Xmove", Input.GetAxis("Horizontal"));
+            animator.SetFloat("Ymove", Input.GetAxis("Vertical"));
+        }
+
+
+
+        
 
         // Footsteps Codez (need to add in a ray cast to check ground layer type for grass, road etc)
         
@@ -48,6 +66,8 @@ public class SCR_BRIAR_MOVEMENT : MonoBehaviour
 
          controller.SimpleMove(playerVelocity * Time.deltaTime);*/
     }
+
+
 
 
     public void playStepSound()

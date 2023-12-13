@@ -41,6 +41,11 @@ public class SCR_ATKBR_Square : MonoBehaviour
         InArea = true;
    }
 
+    private void resetSpeed()
+    {
+        anim.speed = 1;
+    }
+
 
 
 
@@ -53,6 +58,9 @@ public class SCR_ATKBR_Square : MonoBehaviour
             {
                 InArea = false;
                 damage *= multiplier;
+
+                anim.speed = anim.speed * 1.25f;
+
                 StartCoroutine(GameFeel());
             }
 

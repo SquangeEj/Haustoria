@@ -24,6 +24,8 @@ public class SCR_EnemyBear : MonoBehaviour
 
     private GameObject HealthSlider;
 
+    [SerializeField] private SpriteRenderer[] SpritesToDamage;
+
     
 
 
@@ -128,9 +130,11 @@ public class SCR_EnemyBear : MonoBehaviour
         {
 
             HealthSlider.GetComponent<Slider>().value = Mathf.Lerp(prevhealth, health, t*5);
-            
-            spriterend.color = Color.Lerp(Color.red, Color.white, t);
-          
+           
+            foreach(SpriteRenderer sprite in SpritesToDamage)
+            {
+                sprite.color = Color.Lerp(Color.red, Color.white, t);   
+            }
             yield return null;
         }
 

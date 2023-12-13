@@ -15,7 +15,7 @@ public class SCR_EnemySelect : MonoBehaviour
 
     [SerializeField] private SCROBJ_BRIAR_STATS BriarStats;
 
-
+    [SerializeField] private SCROBJ_BRIAR_ATTACKS AttackValues;
 
     [Header("List of enemies, make sure IDs are correct")]
     [SerializeField] private GameObject[] Enemies;
@@ -35,6 +35,9 @@ public class SCR_EnemySelect : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera BriarCamera;
 
     [SerializeField] private GameObject BriarHeart;
+
+
+    [SerializeField] private GameObject DamageNumber;
 
 
 
@@ -73,14 +76,16 @@ public class SCR_EnemySelect : MonoBehaviour
     IEnumerator StartCombat()
     {
      
-        for (float t = 0; t < 1; t+= 0.005f)
+        //this is the transparency intro, however, just gonna animate that instead, its easier :D 
+
+     /*   for (float t = 0; t < 1; t+= 0.005f)
         {
             CurrentEnemy.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.clear, Color.white, t);
             yield return null;
-        }
+        }*/
         yield return null;
 
-
+      
         
     }
 
@@ -129,6 +134,12 @@ public class SCR_EnemySelect : MonoBehaviour
 
         CurrentEnemy.GetComponent<SCR_EnemyAttackManager>().OnDamageEnemy();
 
+
+        GameObject DamageNum = Instantiate(DamageNumber, transform.position, Quaternion.identity);
+        DamageNum.GetComponent<TMP_Text>().text = AttackValues.damagetaken.ToString();
+        DamageNum.GetComponent<Rigidbody2D>().AddForce(new Vector2(UnityEngine.Random.Range(-5,6), 8), ForceMode2D.Impulse);
+        DamageNum.GetComponent<TMP_Text>().fontSizeMax = (AttackValues.damagetaken/10 )+1;
+        Destroy(DamageNum, 10f);
         StartCoroutine(ScreenShake());
     }
 
@@ -137,7 +148,7 @@ public class SCR_EnemySelect : MonoBehaviour
         
         for (float i = 1; i > 0; i-=4 * Time.deltaTime)
         {
-            BriarCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = i;
+            BriarCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = i * AttackValues.damagetaken/10;
             yield return null;
         }
         BriarCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>().m_AmplitudeGain = 0;

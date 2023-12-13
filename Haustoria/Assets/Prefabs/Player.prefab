@@ -266,7 +266,7 @@ RectTransform:
   m_Children:
   - {fileID: 6095709211587897146}
   - {fileID: 8246467306637870681}
-  m_Father: {fileID: 1072604721757885008}
+  m_Father: {fileID: 6698024718025436534}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -366,7 +366,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1072604721757885008}
+  - {fileID: 6764219280837999042}
   - {fileID: 4696448014973340420}
+  - {fileID: 1232433507756595997}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -401,8 +403,7 @@ Transform:
   m_LocalPosition: {x: -9.86, y: 0.94, z: 5.840225}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 1232433507756595997}
+  m_Children: []
   m_Father: {fileID: 6698024718025436534}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -419,6 +420,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
+  walkPathSoundClips: []
+  walkGrassSoundClips: []
 --- !u!212 &1913003974177040845
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -640,12 +643,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6992728347423634671}
-  m_LocalRotation: {x: 0.3280121, y: -0.000000028153467, z: 0.0000000097755235, w: 0.94467354}
-  m_LocalPosition: {x: -9.86, y: 6.94, z: -4.159775}
+  m_LocalRotation: {x: 0.32801214, y: -0, z: -0, w: 0.94467354}
+  m_LocalPosition: {x: -9.86, y: 6.9400005, z: -4.159774}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6764219280837999042}
+  m_Children: []
   m_Father: {fileID: 6698024718025436534}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
@@ -810,13 +812,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8072205245407614301}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.32801214, y: -0, z: -0, w: 0.94467354}
+  m_LocalPosition: {x: -9.86, y: 6.9400005, z: -4.159774}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1638076046680580129}
-  m_Father: {fileID: 4696448014973340420}
+  m_Father: {fileID: 6698024718025436534}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7130532311743986410

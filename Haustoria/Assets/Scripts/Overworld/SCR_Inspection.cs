@@ -98,21 +98,29 @@ public class SCR_Inspection : MonoBehaviour
 
         while(currentVisibleCharacterIndex < textInfo.characterCount +1)
         {
-            char character = textInfo.characterInfo[currentVisibleCharacterIndex].character;
 
-            TextToAlter.maxVisibleCharacters++;
-
-            if ( character == '?' || character == '.' || character == ',' || character == ':' || 
-                character == ';' || character == '!' || character == '-' )
+            if (currentVisibleCharacterIndex < textInfo.characterInfo.Length)
             {
-                yield return _IPDelay;
+                char character = textInfo.characterInfo[currentVisibleCharacterIndex].character;
+
+                TextToAlter.maxVisibleCharacters++;
+
+                if (character == '?' || character == '.' || character == ',' || character == ':' ||
+                    character == ';' || character == '!' || character == '-')
+                {
+                    yield return _IPDelay;
+                }
+                else
+                {
+                    yield return _simpleDelay;
+                }
+
+                currentVisibleCharacterIndex++;
             }
             else
             {
-                yield return _simpleDelay;
+                break;
             }
-
-            currentVisibleCharacterIndex++;
         }
 
        yield return new WaitForSeconds(TimeOnScreen);

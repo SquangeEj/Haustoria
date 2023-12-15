@@ -12,13 +12,6 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
        // transform.position = BriarPosition;
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Health -= 1;
-        }
-    }
 
     public void LoadData(GameData data)
     {

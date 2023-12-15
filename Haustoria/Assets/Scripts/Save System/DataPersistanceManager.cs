@@ -8,6 +8,8 @@ public class DataPersistanceManager : MonoBehaviour
     
     private GameData gameData;
 
+    
+
     [Header("File storage config")]
     [SerializeField] private string fileName;
 
@@ -16,7 +18,6 @@ public class DataPersistanceManager : MonoBehaviour
 
     private FileDataHandler dataHandler;
 
-    public int Health;
    public static DataPersistanceManager instance { get; private set; }
 
     private void Awake()
@@ -36,6 +37,7 @@ public class DataPersistanceManager : MonoBehaviour
         this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();
         LoadGame();
+
     }
 
 

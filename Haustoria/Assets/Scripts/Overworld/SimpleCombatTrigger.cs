@@ -1,0 +1,43 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SimpleCombatTrigger : MonoBehaviour, IDataPersistance
+{
+    [SerializeField] private SCROBJ_CombatStartManager EnemyData;
+    [SerializeField] private int EnemyId;
+
+    [SerializeField] private GameData Gamedata;
+  
+
+    [SerializeField] private SCROBJ_BRIAR_STATS BriarStats;
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+     
+            SaveData(Gamedata);
+
+          
+            GameObject combatman = GameObject.Find("SceneTransitionManager");
+
+
+            EnemyData.EnemyID = EnemyId;
+            combatman.GetComponent<SCR_SceneTransitionManager>().SceneLoad = 2;
+            combatman.GetComponent<SCR_SceneTransitionManager>().swapscene();
+
+        }
+    }
+
+    public void LoadData(GameData data)
+    {
+      
+
+      
+    }
+
+    public void SaveData(GameData data)
+    {
+        data.BriarPosition = transform.position;
+    }
+}

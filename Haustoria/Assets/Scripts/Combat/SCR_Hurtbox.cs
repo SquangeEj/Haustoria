@@ -14,4 +14,9 @@ public class SCR_Hurtbox : MonoBehaviour
             collision.GetComponent<SCR_BriarCombatMovement>().TakeDamage(damage);
         }
     }
+
+    private void simpledestroy()
+    {
+        Destroy(this.gameObject);
+    }
 }

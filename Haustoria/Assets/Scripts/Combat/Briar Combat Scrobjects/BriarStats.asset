@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 410aa1d918100ca47b817706758b4098, type: 3}
   m_Name: BriarStats
   m_EditorClassIdentifier: 
-  Health: 25
+  Health: 20

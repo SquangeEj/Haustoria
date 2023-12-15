@@ -48,13 +48,26 @@ public class SCR_BriarCombatMovement : MonoBehaviour
 
     public void TakeDamage(int Damage)
     {
+
+        StartCoroutine(TakeDamageInum(Damage));
+    }
+
+    private IEnumerator TakeDamageInum(int Dam)
+    {
         combatmanager.GetComponent<SCR_EnemySelect>().StartCoroutine("ScreenShake");
 
-        BriarHealth.Health -= Damage;
+        BriarHealth.Health -= Dam;
         BriarHealthText.text = BriarHealth.Health.ToString();
+
+        for (float i = 0; i < 1; i += 5 * Time.deltaTime)
+        {
+            BriarFace.sprite = BriarFace.sprite = BriarHurt;
+            yield return null;
+        }
+
         switch (BriarHealth.Health)
         {
-            case 10:
+            case > 10:
                 BriarFace.sprite = BriarNeutral;
                 break;
 
@@ -62,15 +75,14 @@ public class SCR_BriarCombatMovement : MonoBehaviour
                 SceneManager.LoadScene(3);
                 break;
 
-            case < 5:
+
+
+            case < 10:
                 BriarFace.sprite = BriarDying;
                 break;
 
-            case <10:
-                BriarFace.sprite = BriarHurt;
-                break;
 
-           
         }
+        yield return null;
     }
 }

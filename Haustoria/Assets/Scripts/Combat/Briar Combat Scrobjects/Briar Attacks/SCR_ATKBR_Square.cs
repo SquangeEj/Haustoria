@@ -18,11 +18,13 @@ public class SCR_ATKBR_Square : MonoBehaviour
     [SerializeField] private float basedamage;
    [SerializeField]  private float damage;
    [SerializeField]  private float multiplier;
-
+    [SerializeField] private float AnimSpeed;
 
     [SerializeField] private GameObject SquareSprite;
 
     [SerializeField] private Animator anim;
+
+    
 
 
     private void Start()
@@ -51,7 +53,7 @@ public class SCR_ATKBR_Square : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Jump") || Input.GetButton("Fire1"))
+        if (Input.GetButtonDown("Jump") || Input.GetButtonDown("Fire1"))
         {
 
             if (InArea == true)
@@ -59,7 +61,7 @@ public class SCR_ATKBR_Square : MonoBehaviour
                 InArea = false;
                 damage *= multiplier;
 
-                anim.speed = anim.speed * 1.25f;
+                anim.speed = anim.speed * AnimSpeed;
 
                 StartCoroutine(GameFeel());
             }

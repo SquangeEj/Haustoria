@@ -69,7 +69,7 @@ public class SCR_CutoutObject : MonoBehaviour
                 materials[m].SetVector("_Cutout_Position", cutoutPos);
             for (float t = 0.4f; t < 1; t += Time.deltaTime*4)
             {
-                materials[m].SetFloat("_CutoutSize", 0.2f *t);
+                materials[m].SetFloat("_CutoutSize", 0.4f *t);
                 materials[m].SetFloat("_FalloffSize", 0.1f*t);
                 yield return null;
             }

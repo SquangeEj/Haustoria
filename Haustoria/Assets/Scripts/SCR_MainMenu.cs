@@ -12,11 +12,14 @@ public class SCR_MainMenu : MonoBehaviour
     }
     public void StartGame()
     {
+        DataPersistanceManager.instance.NewGame();
+     
         anim.Play("FadeIn");
     }
 
     private void StartEvent()
     {
+    
         SceneManager.LoadScene(1);
     }
     public void Quit()
@@ -24,3 +27,4 @@ public class SCR_MainMenu : MonoBehaviour
         Application.Quit();
     }
 }
+

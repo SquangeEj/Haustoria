@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3778,7 +3778,7 @@ GameObject:
   - component: {fileID: 149466393}
   - component: {fileID: 149466392}
   - component: {fileID: 149466391}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall_Bed (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13633,7 +13633,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6992728347423634671, guid: cee08d1bb525a01448ad4a545ef9f77d, type: 3}
   m_PrefabInstance: {fileID: 644655052}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &483177686
+--- !u!114 &483177682
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13642,10 +13642,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 483177680}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfb1f0c9773dc7043b6afef492ded209, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e024e8426539ec439e849cdb1e696cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 434560922}
+  targetObject: {fileID: 434560922}
+  wallMask:
+    serializedVersion: 2
+    m_Bits: 8
+  Walls: []
 --- !u!1001 &487240866
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15569,7 +15573,7 @@ GameObject:
   - component: {fileID: 599140804}
   - component: {fileID: 599140803}
   - component: {fileID: 599140802}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall_Bed (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16538,7 +16542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8246467306637870681, guid: cee08d1bb525a01448ad4a545ef9f77d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 2.1829224
+      value: 2.1828613
       objectReference: {fileID: 0}
     - target: {fileID: 8246467306637870681, guid: cee08d1bb525a01448ad4a545ef9f77d, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -16561,7 +16565,7 @@ PrefabInstance:
       addedObject: {fileID: 434560921}
     - targetCorrespondingSourceObject: {fileID: 6992728347423634671, guid: cee08d1bb525a01448ad4a545ef9f77d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 483177686}
+      addedObject: {fileID: 483177682}
   m_SourcePrefab: {fileID: 100100000, guid: cee08d1bb525a01448ad4a545ef9f77d, type: 3}
 --- !u!1001 &645819396
 PrefabInstance:
@@ -21261,7 +21265,7 @@ GameObject:
   - component: {fileID: 945001502}
   - component: {fileID: 945001501}
   - component: {fileID: 945001500}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: interior
   m_TagString: Untagged
   m_Icon: {fileID: 0}

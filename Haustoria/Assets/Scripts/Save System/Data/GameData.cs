@@ -10,10 +10,17 @@ public class GameData
 
     public Vector3 BriarPosition;
 
-    public Dictionary<string, bool> AbiltiesUnlocked;
+    //   public Dictionary<int, bool> AbiltiesUnlocked = new Dictionary<int, bool>();
+    // dictionary didnt work
 
-    public GameData()
-    {
-        AbiltiesUnlocked = new Dictionary<string, bool>();
-    }
+
+
+
+    public bool[] AbilityID= new bool[3];
+
+    public Dictionary<GameObject, bool> EnemiesDead;
+
+    
+
+    
 }

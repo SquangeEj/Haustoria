@@ -8,6 +8,9 @@ public class GameData
 {
     public int health;
 
+    public int Xp;
+
+
     public Vector3 BriarPosition;
 
     //   public Dictionary<int, bool> AbiltiesUnlocked = new Dictionary<int, bool>();

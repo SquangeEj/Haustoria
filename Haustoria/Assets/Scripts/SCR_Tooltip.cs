@@ -1,91 +1,61 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using TMPro;
+using UnityEngine.UI;
 
-public class SCR_Tooltip : MonoBehaviour
+[ExecuteInEditMode()]
+public class SCR_ToolTip : MonoBehaviour
 {
-    [SerializeField] private RectTransform canvasRect;
-    private RectTransform backgroundRect;
-    private TextMeshProUGUI textmeshPro;
-    private RectTransform rectTransform;
-    [SerializeField] private EventSystem eventsy;
 
-  
-  
+    [SerializeField] private TextMeshProUGUI headerField;
+
+    [SerializeField] private TextMeshProUGUI contentField;
+
+    [SerializeField] private LayoutElement layoutElement;
+
+    [SerializeField] private int characterWrapLimit;
+
+    [SerializeField] private RectTransform rectTransform;
+
     private void Awake()
     {
-        backgroundRect = transform.Find("Background").GetComponent<RectTransform>();
-        textmeshPro = transform.Find("Text").GetComponent<TextMeshProUGUI>();
-        rectTransform = transform.GetComponent<RectTransform>();
-
-        HideTooltip();
+        rectTransform = GetComponent<RectTransform>();
     }
 
-    private void SetText(string tooltipText)
+    public void SetText(string content, string header = "")
     {
-        textmeshPro.SetText(tooltipText);
-        textmeshPro.ForceMeshUpdate();
+        Debug.Log("here");
+        if (string.IsNullOrEmpty(header))
+        {
+            headerField.gameObject.SetActive(false);
+        }
+        else
+        {
+            headerField.gameObject.SetActive(true);
+            headerField.text = header;
+        }
 
-        Vector2 textSize = textmeshPro.GetRenderedValues(false);
-        Vector2 paddingSize = new Vector2(50,25);
+        contentField.text = content;
 
+        int headerLength = headerField.text.Length;
+        int contentLength = contentField.text.Length;
 
-        backgroundRect.sizeDelta = textSize + paddingSize;
+        layoutElement.enabled = (headerLength > characterWrapLimit || contentLength > characterWrapLimit) ? true : false;
+
     }
+
 
     private void Update()
     {
-        if (eventsy.currentSelectedGameObject != null)
-        {
-            Vector2 anchoredPosition = eventsy.currentSelectedGameObject.GetComponent<RectTransform>().position / canvasRect.localScale.x;
+        Vector2 position = Input.mousePosition;
+
+        float pivotX = position.x / Screen.width;
+        float pivotY = position.y / (Screen.height/2);
 
 
-            if (anchoredPosition.x + backgroundRect.rect.width > canvasRect.rect.width)
-            {
-                anchoredPosition.x = canvasRect.rect.width - backgroundRect.rect.width;
-            }
-
-            if (anchoredPosition.y + backgroundRect.rect.height +75 > canvasRect.rect.height)
-            {
-                anchoredPosition.y = (canvasRect.rect.height - backgroundRect.rect.height) - 75;
-            }
-
-
-            rectTransform.anchoredPosition = anchoredPosition + new Vector2(0, 75);
-
-            if (eventsy.currentSelectedGameObject.GetComponent<SCR_ToolTipTextHolder>())
-            {
-                ShowTooltip(eventsy.currentSelectedGameObject.GetComponent<SCR_ToolTipTextHolder>().ToolTipText);
-            }
-            else if (!eventsy.currentSelectedGameObject.GetComponent<SCR_ToolTipTextHolder>())
-            {
-                HideTooltip();
-            }
-        }
-        else {
-                HideTooltip();
-            
-        }
-        
-        
-      
+        rectTransform.pivot = new Vector2(pivotX, pivotY);
+        transform.position = position;
     }
-
-    public void ShowTooltip(string tooltiptext)
-    {
-        backgroundRect.transform.gameObject.SetActive(true);
-        textmeshPro.transform.gameObject.SetActive(true);
-        SetText(tooltiptext);
-    }
-
-    public void HideTooltip()
-    {
-        backgroundRect.transform.gameObject.SetActive(false);
-        textmeshPro.transform.gameObject.SetActive(false);
-        
-    }
-
 
 }

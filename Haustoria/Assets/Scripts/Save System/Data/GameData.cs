@@ -8,8 +8,9 @@ public class GameData
 {
     public int health;
 
-    public int Xp;
+    public int Xp, Atk, Def;
 
+    
 
     public Vector3 BriarPosition;
 
@@ -17,6 +18,8 @@ public class GameData
     // dictionary didnt work
 
 
+
+    public bool[] SkillID = new bool[3];
 
 
     public bool[] AbilityID= new bool[3];

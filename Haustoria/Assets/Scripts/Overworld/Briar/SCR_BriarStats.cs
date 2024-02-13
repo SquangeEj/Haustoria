@@ -5,8 +5,10 @@ using UnityEngine;
 public class SCR_BriarStats : MonoBehaviour, IDataPersistance
 {
     [SerializeField] private int Health;
-    [SerializeField] private int XP;
+    [SerializeField] private int XP, Attack, Defence;
     [SerializeField] private int AbilityPoints;
+
+    [SerializeField] private GameObject SkillTree;
 
 
 
@@ -41,21 +43,25 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
 
     private void GetSkillTree()
     {
-
+        SkillTree.SetActive(true);
     }
 
 
     public void LoadData(GameData data)
     {
-        transform.position = data.BriarPosition;
+        transform.localPosition = data.BriarPosition;
         this.XP = data.Xp;
         this.Health = data.health;
+
     }
 
     public void SaveData(GameData data)
     {
-        data.BriarPosition = transform.position;
+
+    
         data.health = this.Health;
         data.Xp = this.XP;
+        data.Atk = this.Attack;
+        data.Def = this.Defence;
     }
 }

@@ -4,7 +4,6 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-[ExecuteInEditMode()]
 public class SCR_ToolTip : MonoBehaviour
 {
 

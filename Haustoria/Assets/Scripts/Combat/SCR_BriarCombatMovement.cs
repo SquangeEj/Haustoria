@@ -85,4 +85,21 @@ public class SCR_BriarCombatMovement : MonoBehaviour
         }
         yield return null;
     }
+
+    public void RecoverHealth(int amount)
+    {
+        StartCoroutine(RecoverHealthCoroutine(amount));
+    }
+
+    private IEnumerator RecoverHealthCoroutine(int amount)
+    {
+        BriarHealth.Health += amount;
+        BriarHealth.Health = Mathf.Min(BriarHealth.Health, BriarHealth.MaxHealth);
+
+        // Update the health text
+        BriarHealthText.text = BriarHealth.Health.ToString();
+
+
+        yield return null; // Yield null to end the coroutine
+    }
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class GameData 
 {
-    public int health;
+    public int health, stamina;
 
     public int Xp, Atk, Def;
 

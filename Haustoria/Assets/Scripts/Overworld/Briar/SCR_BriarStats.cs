@@ -7,6 +7,7 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
     [SerializeField] private int Health;
     [SerializeField] private int XP, Attack, Defence;
     [SerializeField] private int AbilityPoints;
+    [SerializeField] public int Stamina;
 
     [SerializeField] private GameObject SkillTree;
 
@@ -52,6 +53,7 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
         transform.localPosition = data.BriarPosition;
         this.XP = data.Xp;
         this.Health = data.health;
+        this.Stamina = data.stamina;
 
     }
 
@@ -60,6 +62,7 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
 
     
         data.health = this.Health;
+        data.stamina = this.Stamina;
         data.Xp = this.XP;
         data.Atk = this.Attack;
         data.Def = this.Defence;

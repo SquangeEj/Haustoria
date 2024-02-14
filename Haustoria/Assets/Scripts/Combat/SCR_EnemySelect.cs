@@ -44,7 +44,8 @@ public class SCR_EnemySelect : MonoBehaviour
     [SerializeField]
     private TMP_Text BriarHealthText;
 
-   
+    private int previousSceneIndex;
+
     void Start()
     {
         BriarHealthText.text = BriarStats.Health.ToString();
@@ -68,6 +69,8 @@ public class SCR_EnemySelect : MonoBehaviour
         Backgrounds[CombatData.BackgroundID].SetActive(true);
         EnemyName_TXT.text = CombatData.EnemyNames[CombatData.EnemyID];
         CurrentEnemy = Enemies[CombatData.EnemyID];
+
+        previousSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
         StartCoroutine(StartCombat());
     }
@@ -96,11 +99,11 @@ public class SCR_EnemySelect : MonoBehaviour
 
     IEnumerator EndCombat()
     {
-        if(CombatData.EnemyID == 0)
+        if(CombatData.EnemyID == 1)
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
         }
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
         yield return null;
     }
 

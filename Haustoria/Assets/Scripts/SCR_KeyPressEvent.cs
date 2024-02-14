@@ -5,16 +5,22 @@ using UnityEngine.Events;
 
 public class SCR_KeyPressEvent : MonoBehaviour
 {
-    public UnityEvent onIKeyPress;
+    public GameObject inventoryUI;
+    private bool isInventoryVisible = false;
+
     private bool isPaused = false;
+
+    void Start()
+    {
+        inventoryUI.SetActive(false);
+    }
 
     void Update()
     {
         
         if (Input.GetKeyDown(KeyCode.I)) // 'I' key to Open Inventory
         {
-            // Trigger the Unity event
-            onIKeyPress.Invoke();
+            ToggleInventoryUI(); 
 
         }
 
@@ -24,6 +30,25 @@ public class SCR_KeyPressEvent : MonoBehaviour
         }
     }
 
+    public void ToggleInventoryUI()
+    {
+        isInventoryVisible = !isInventoryVisible;
+
+        if (isInventoryVisible)
+        {
+            TogglePause();
+            // Show the inventory UI
+            inventoryUI.SetActive(true);
+            Debug.Log("Inventory UI shown.");
+        }
+        else
+        {
+            TogglePause();
+            // Hide the inventory UI
+            inventoryUI.SetActive(false);
+            Debug.Log("Inventory UI hidden.");
+        }
+    }
     public void TogglePause()
     {
         isPaused = !isPaused;

@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using TMPro;
 
 public class SCR_ClickOnEvent : MonoBehaviour
 {
     public ItemClass item;
     [SerializeField] private UnityEvent onClickEvent;
+    public TextMeshProUGUI itemNameText;
 
     private void OnMouseDown()
     {
@@ -29,6 +31,11 @@ public class SCR_ClickOnEvent : MonoBehaviour
             {
                 Debug.Log("Item added to inventory: " + item.itemName);
                 Destroy(gameObject); // Remove the item from the game world
+
+                if (itemNameText != null)
+                {
+                    itemNameText.text = item.itemName +" added to inventory: Press 'I' to open Inventory " ;
+                }
             }
             else
             {

@@ -84,9 +84,10 @@ public class SCR_CutoutObject : MonoBehaviour
 
     IEnumerator MaterialUnset()
     {
-        foreach (GameObject wall in Walls)
+        List<GameObject> wallsCopy = new List<GameObject>(Walls); // Make a copy of the list
+
+        foreach (GameObject wall in wallsCopy)
         {
-          
             Material[] materials = wall.transform.GetComponent<Renderer>().materials;
 
             for (int m = 0; m < materials.Length; m++)
@@ -100,11 +101,11 @@ public class SCR_CutoutObject : MonoBehaviour
                 }
             }
 
-
-
+            Walls.Remove(wall); // Remove the wall from the original list
             yield return null;
         }
-        Walls.Clear();
+
+        wallsCopy.Clear();
 
 
 

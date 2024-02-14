@@ -1,73 +1,75 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SCR_BRIAR_MOVEMENT : MonoBehaviour
 {
     [Header("Movement")]
     [SerializeField] private float moveSpeed;
 
+    [Header("Stamina")]
+
     [Header("Sound Effects")]
     [SerializeField] private AudioClip[] walkPathSoundClips;
     [SerializeField] private AudioClip[] walkGrassSoundClips;
 
     private CharacterController controller;
-
     private Animator animator;
-
     private AudioSource audioSource;
-
-    private Vector3 playerVelocity;
+    private SCR_BriarStats briarStats; // Reference to SCR_BriarStats script
 
     private void Start()
     {
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+
+        briarStats = GetComponent<SCR_BriarStats>();
     }
 
     private void Update()
     {
 
+        if (Input.GetKey(KeyCode.LeftShift) && IsMoving())
+        {
+            MovePlayer(moveSpeed + 5);
+        }
+        else
+        {
+            MovePlayer(moveSpeed);
+        }
+
+
+        MovePlayer(moveSpeed);
+    }
+
+    private bool IsMoving()
+    {
+        return Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0;
+    }
+
     
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        controller.Move(move * Time.deltaTime * moveSpeed);
+    private void MovePlayer(float speed)
+    {
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
 
+        Vector3 move = new Vector3(horizontalInput, 0, verticalInput);
+        controller.Move(move * Time.deltaTime * speed);
 
+        
         if (move != Vector3.zero)
         {
             animator.Play("Blend Tree Running");
+            animator.SetFloat("Xmove", horizontalInput);
+            animator.SetFloat("Ymove", verticalInput);
         }
         else
         {
             animator.Play("Blend Tree Idle");
         }
-
-
-        if (move != Vector3.zero)
-        {
-            animator.SetFloat("Xmove", Input.GetAxis("Horizontal"));
-            animator.SetFloat("Ymove", Input.GetAxis("Vertical"));
-        }
-
-
-
-        
-
-        // Footsteps Codez (need to add in a ray cast to check ground layer type for grass, road etc)
-        
-      
-
-
-        /* if (move != Vector3.zero)
-         {
-             gameObject.transform.forward = move;
-         }
-
-         controller.SimpleMove(playerVelocity * Time.deltaTime);*/
     }
-
-
 
 
     public void playStepSound()

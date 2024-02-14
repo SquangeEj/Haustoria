@@ -7,6 +7,7 @@ public class SCROBJ_BRIAR_STATS : ScriptableObject
 {
     [Header("Stats")]
     public int Health;
+    public int MaxHealth;
 
     public Vector3 Position;
 

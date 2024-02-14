@@ -133,8 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8246467306637870681}
   - component: {fileID: 8768868497575091222}
-  - component: {fileID: 841015295627939840}
   - component: {fileID: 8793163445534521756}
+  - component: {fileID: 3138954936333240478}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -171,7 +171,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527989327527282252}
   m_CullTransparentMesh: 1
---- !u!114 &841015295627939840
+--- !u!114 &8793163445534521756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527989327527282252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0809bcccfeb0e84ca2443e140c74571, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InspectText: 
+  TimeOnScreen: 3
+  TextBox: {fileID: 2303665912337336931}
+  TalkSprite: {fileID: 6448767628934470928}
+  CharPortrait: {fileID: 8732498573050633949}
+  TextToAlter: {fileID: 0}
+  charactersPerSecond: 15
+  IPDelay: 0.5
+--- !u!114 &3138954936333240478
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -200,7 +220,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 4294967295
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -260,26 +280,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &8793163445534521756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 527989327527282252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0809bcccfeb0e84ca2443e140c74571, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InspectText: 
-  TimeOnScreen: 3
-  TextBox: {fileID: 2303665912337336931}
-  TalkSprite: {fileID: 6448767628934470928}
-  CharPortrait: {fileID: 8732498573050633949}
-  TextToAlter: {fileID: 841015295627939840}
-  charactersPerSecond: 15
-  IPDelay: 0.5
 --- !u!1 &912095227292158692
 GameObject:
   m_ObjectHideFlags: 0
@@ -3183,8 +3183,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6992728347423634671}
-  m_LocalRotation: {x: 0.32305393, y: -3e-45, z: 1e-45, w: 0.9463806}
-  m_LocalPosition: {x: -127.29, y: 7, z: -128.77}
+  m_LocalRotation: {x: 0.32305393, y: 3e-45, z: -1e-45, w: 0.9463806}
+  m_LocalPosition: {x: -127.29001, y: 7, z: -128.76999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3535,8 +3535,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8072205245407614301}
-  m_LocalRotation: {x: 0.32305393, y: -1e-45, z: 1e-45, w: 0.9463806}
-  m_LocalPosition: {x: -127.29, y: 7, z: -128.77}
+  m_LocalRotation: {x: 0.32305393, y: -0, z: -0, w: 0.9463806}
+  m_LocalPosition: {x: -127.29001, y: 7, z: -128.76999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

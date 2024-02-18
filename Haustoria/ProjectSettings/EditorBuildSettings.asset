@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/FarmHouseScene.unity
     guid: 2d9503b8270bbb546bb77540e0e100ac
+  - enabled: 1
+    path: Assets/Scenes/AlphaScenes/PrologueHouse.unity
+    guid: 760ca3133911a1849b5d493f80ef5797
+  - enabled: 1
+    path: Assets/Scenes/AlphaScenes/PrologueFarm.unity
+    guid: f0d0c990aeaf90e409cbbb064702cf18
   m_configObjects: {}

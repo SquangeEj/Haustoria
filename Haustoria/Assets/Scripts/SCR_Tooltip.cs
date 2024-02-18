@@ -24,7 +24,7 @@ public class SCR_ToolTip : MonoBehaviour
 
     public void SetText(string content, string header = "")
     {
-        Debug.Log("here");
+       
         if (string.IsNullOrEmpty(header))
         {
             headerField.gameObject.SetActive(false);

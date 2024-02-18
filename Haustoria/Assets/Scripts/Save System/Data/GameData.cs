@@ -21,6 +21,8 @@ public class GameData
 
     public bool[] SkillID = new bool[3];
 
+    public int RootAbilityPointsUsed;
+
 
     public bool[] AbilityID= new bool[3];
 

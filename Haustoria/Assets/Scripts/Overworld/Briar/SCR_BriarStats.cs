@@ -10,6 +10,7 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
     [SerializeField] public int Stamina;
 
     [SerializeField] private GameObject SkillTree;
+    [SerializeField] public int RootAbilityPointsSpent;
 
 
 
@@ -54,13 +55,14 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
         this.XP = data.Xp;
         this.Health = data.health;
         this.Stamina = data.stamina;
+        RootAbilityPointsSpent = data.RootAbilityPointsUsed;
 
     }
 
     public void SaveData(GameData data)
     {
 
-    
+        data.RootAbilityPointsUsed = RootAbilityPointsSpent;
         data.health = this.Health;
         data.stamina = this.Stamina;
         data.Xp = this.XP;

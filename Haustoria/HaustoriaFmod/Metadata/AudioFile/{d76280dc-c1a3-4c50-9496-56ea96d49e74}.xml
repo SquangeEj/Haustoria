@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{d76280dc-c1a3-4c50-9496-56ea96d49e74}">
+		<property name="assetPath">
+			<value>Audio/Combat/Sounds/Monster_Efforts_2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.83733333333333337</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{51d9d26e-5973-4851-8f66-d0c0696003f8}</destination>
+		</relationship>
+	</object>
+</objects>

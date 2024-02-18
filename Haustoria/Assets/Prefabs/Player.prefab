@@ -1988,6 +1988,7 @@ MonoBehaviour:
   AbilityPoints: 0
   Stamina: 10
   SkillTree: {fileID: 205547609331744565}
+  RootAbilityPointsSpent: 0
 --- !u!212 &1913003974177040845
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3188,10 +3189,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4696448014973340420}
   - component: {fileID: 1454573606117275199}
-  - component: {fileID: 2654831039205169704}
   - component: {fileID: 6846685225006362711}
   - component: {fileID: 5736737941669522893}
   - component: {fileID: 4326330783397559394}
+  - component: {fileID: 3253758914317368035}
+  - component: {fileID: 8918402340150001422}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3265,14 +3267,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &2654831039205169704
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6992728347423634671}
-  m_Enabled: 1
 --- !u!114 &6846685225006362711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3368,6 +3362,32 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   Walls: []
+--- !u!114 &3253758914317368035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6992728347423634671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
+--- !u!114 &8918402340150001422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6992728347423634671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1 &7603229499097488248
 GameObject:
   m_ObjectHideFlags: 0

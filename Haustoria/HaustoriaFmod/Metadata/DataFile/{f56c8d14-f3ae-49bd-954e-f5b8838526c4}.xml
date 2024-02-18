@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="DataFile" id="{f56c8d14-f3ae-49bd-954e-f5b8838526c4}">
+		<property name="assetPath">
+			<value>Audio/Overworld/Sounds/Footsteps/Gravel/Footsteps_Gravel_Walk_09.wav.meta</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{51d9d26e-5973-4851-8f66-d0c0696003f8}</destination>
+		</relationship>
+	</object>
+</objects>

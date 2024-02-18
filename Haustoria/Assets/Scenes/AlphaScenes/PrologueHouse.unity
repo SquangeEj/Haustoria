@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &71217553 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7970370388294800105, guid: a115e55baf8724b4e84e9d48ff5ab685, type: 3}
+  m_PrefabInstance: {fileID: 1466974271}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bda4db0a9577ac4190e4bf1a01434d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &122783765
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,6 +206,193 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 33.258, y: 0, z: 0}
+--- !u!1 &324800827 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5034792060860210263, guid: ac6cadf45eb179249895d8ceec0cc363, type: 3}
+  m_PrefabInstance: {fileID: 1226898859}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &324800832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324800827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4753bfc591a6e984a9cb35e7863d44dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
+  onClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1317441399}
+        m_TargetAssemblyTypeName: SCR_Inspection, Assembly-CSharp
+        m_MethodName: SetSprite
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 21300000, guid: e00c25b816810ad41a7f37a7a3d70037, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1317441399}
+        m_TargetAssemblyTypeName: SCR_Inspection, Assembly-CSharp
+        m_MethodName: SetText
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 'I should throw this out. It just wastes space, being
+            broken. '
+          m_BoolArgument: 0
+        m_CallState: 2
+  itemNameText: {fileID: 0}
+--- !u!1 &376546176 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9039765191008596198, guid: ac6cadf45eb179249895d8ceec0cc363, type: 3}
+  m_PrefabInstance: {fileID: 1226898859}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &376546181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376546176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4753bfc591a6e984a9cb35e7863d44dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
+  onClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1317441399}
+        m_TargetAssemblyTypeName: SCR_Inspection, Assembly-CSharp
+        m_MethodName: SetSprite
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 21300000, guid: e00c25b816810ad41a7f37a7a3d70037, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1317441399}
+        m_TargetAssemblyTypeName: SCR_Inspection, Assembly-CSharp
+        m_MethodName: SetText
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 21300000, guid: e00c25b816810ad41a7f37a7a3d70037, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 'There''s work to be done. Sleep can wait. '
+          m_BoolArgument: 0
+        m_CallState: 2
+  itemNameText: {fileID: 0}
+--- !u!1 &514755396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 514755399}
+  - component: {fileID: 514755398}
+  - component: {fileID: 514755397}
+  m_Layer: 0
+  m_Name: StartDayDialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &514755397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514755396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe4821382e0864e45aae8d831ab20a19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTriggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1317441399}
+        m_TargetAssemblyTypeName: SCR_Inspection, Assembly-CSharp
+        m_MethodName: SetSprite
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 21300000, guid: e00c25b816810ad41a7f37a7a3d70037, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1317441399}
+        m_TargetAssemblyTypeName: SCR_Inspection, Assembly-CSharp
+        m_MethodName: SetText
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 'I need to go feed the sheep. '
+          m_BoolArgument: 0
+        m_CallState: 2
+  DeleteAfter: 1
+--- !u!65 &514755398
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514755396}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.3609796, y: 9.248849, z: 7.5212994}
+  m_Center: {x: 0.21531129, y: -0.5468378, z: 0.5661688}
+--- !u!4 &514755399
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514755396}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.51, y: -1.18, z: 6.74}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &560763732
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -348,6 +546,101 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &687288225
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 687288228}
+  - component: {fileID: 687288227}
+  - component: {fileID: 687288226}
+  m_Layer: 0
+  m_Name: BathroomDialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &687288226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687288225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe4821382e0864e45aae8d831ab20a19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTriggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1317441399}
+        m_TargetAssemblyTypeName: SCR_Inspection, Assembly-CSharp
+        m_MethodName: SetSprite
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 21300000, guid: e00c25b816810ad41a7f37a7a3d70037, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1317441399}
+        m_TargetAssemblyTypeName: SCR_Inspection, Assembly-CSharp
+        m_MethodName: SetText
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 'I''ll take a shower after doing some work. Might as
+            well get dirty first. '
+          m_BoolArgument: 0
+        m_CallState: 2
+  DeleteAfter: 1
+--- !u!65 &687288227
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687288225}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.3609796, y: 9.248849, z: 7.5212994}
+  m_Center: {x: 0.21531129, y: -0.5468378, z: 0.5661688}
+--- !u!4 &687288228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687288225}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -22.11, y: -1.18, z: 1.87}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &778010482
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,6 +751,73 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7105968905411346199, guid: ac6cadf45eb179249895d8ceec0cc363, type: 3}
   m_PrefabInstance: {fileID: 1226898859}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &862305639 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6484003905824833308, guid: ac6cadf45eb179249895d8ceec0cc363, type: 3}
+  m_PrefabInstance: {fileID: 1226898859}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &862305641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862305639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4753bfc591a6e984a9cb35e7863d44dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
+  onClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1317441399}
+        m_TargetAssemblyTypeName: SCR_Inspection, Assembly-CSharp
+        m_MethodName: SetSprite
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 21300000, guid: e00c25b816810ad41a7f37a7a3d70037, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1317441399}
+        m_TargetAssemblyTypeName: SCR_Inspection, Assembly-CSharp
+        m_MethodName: SetText
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 'I still can''t handle going into my sister''s room. '
+          m_BoolArgument: 0
+        m_CallState: 2
+  itemNameText: {fileID: 0}
+--- !u!65 &862305645
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862305639}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1127660519
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,6 +982,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 678245138672863031, guid: ac6cadf45eb179249895d8ceec0cc363, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1519726998674167863, guid: ac6cadf45eb179249895d8ceec0cc363, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.0780334
@@ -649,6 +1013,30 @@ PrefabInstance:
     - target: {fileID: 5856007270161218608, guid: ac6cadf45eb179249895d8ceec0cc363, type: 3}
       propertyPath: m_LocalPosition.z
       value: 4.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 5922867746088886382, guid: ac6cadf45eb179249895d8ceec0cc363, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6466345801535578173, guid: ac6cadf45eb179249895d8ceec0cc363, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6737972616115044806, guid: ac6cadf45eb179249895d8ceec0cc363, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6737972616115044806, guid: ac6cadf45eb179249895d8ceec0cc363, type: 3}
+      propertyPath: m_Size.z
+      value: 4.256389
+      objectReference: {fileID: 0}
+    - target: {fileID: 6737972616115044806, guid: ac6cadf45eb179249895d8ceec0cc363, type: 3}
+      propertyPath: m_Center.y
+      value: -1.1514608e-15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6737972616115044806, guid: ac6cadf45eb179249895d8ceec0cc363, type: 3}
+      propertyPath: m_Center.z
+      value: -1.6281941
       objectReference: {fileID: 0}
     - target: {fileID: 7210243822008212121, guid: ac6cadf45eb179249895d8ceec0cc363, type: 3}
       propertyPath: m_RootOrder
@@ -705,13 +1093,96 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 778010483}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2563216986797420462, guid: ac6cadf45eb179249895d8ceec0cc363, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 9039765191008596198, guid: ac6cadf45eb179249895d8ceec0cc363, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1569705004}
+      addedObject: {fileID: 376546181}
     - targetCorrespondingSourceObject: {fileID: 5081764693508747093, guid: ac6cadf45eb179249895d8ceec0cc363, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1864639644}
+    - targetCorrespondingSourceObject: {fileID: 6484003905824833308, guid: ac6cadf45eb179249895d8ceec0cc363, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 862305641}
+    - targetCorrespondingSourceObject: {fileID: 6484003905824833308, guid: ac6cadf45eb179249895d8ceec0cc363, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 862305645}
+    - targetCorrespondingSourceObject: {fileID: 5034792060860210263, guid: ac6cadf45eb179249895d8ceec0cc363, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 324800832}
+    - targetCorrespondingSourceObject: {fileID: 4702606477674447957, guid: ac6cadf45eb179249895d8ceec0cc363, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1298654519}
+    - targetCorrespondingSourceObject: {fileID: 4702606477674447957, guid: ac6cadf45eb179249895d8ceec0cc363, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1298654524}
   m_SourcePrefab: {fileID: 100100000, guid: ac6cadf45eb179249895d8ceec0cc363, type: 3}
+--- !u!1 &1298654514 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4702606477674447957, guid: ac6cadf45eb179249895d8ceec0cc363, type: 3}
+  m_PrefabInstance: {fileID: 1226898859}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1298654519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298654514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4753bfc591a6e984a9cb35e7863d44dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
+  onClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1317441399}
+        m_TargetAssemblyTypeName: SCR_Inspection, Assembly-CSharp
+        m_MethodName: SetSprite
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 21300000, guid: e00c25b816810ad41a7f37a7a3d70037, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1317441399}
+        m_TargetAssemblyTypeName: SCR_Inspection, Assembly-CSharp
+        m_MethodName: SetText
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 'I don''t want to go into my parents'' room. Nothing
+            there that I need, anyways. '
+          m_BoolArgument: 0
+        m_CallState: 2
+  itemNameText: {fileID: 0}
+--- !u!65 &1298654524
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298654514}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1317441399 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8793163445534521756, guid: cee08d1bb525a01448ad4a545ef9f77d, type: 3}
@@ -828,52 +1299,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a115e55baf8724b4e84e9d48ff5ab685, type: 3}
---- !u!1 &1569705001 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2563216986797420462, guid: ac6cadf45eb179249895d8ceec0cc363, type: 3}
-  m_PrefabInstance: {fileID: 1226898859}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1569705004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1569705001}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4753bfc591a6e984a9cb35e7863d44dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  item: {fileID: 0}
-  onClickEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1317441399}
-        m_TargetAssemblyTypeName: SCR_Inspection, Assembly-CSharp
-        m_MethodName: SetText
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 'There''s work to be done. Sleep can wait. '
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1317441399}
-        m_TargetAssemblyTypeName: SCR_Inspection, Assembly-CSharp
-        m_MethodName: SetSprite
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: e00c25b816810ad41a7f37a7a3d70037, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  itemNameText: {fileID: 0}
 --- !u!1 &1679697314
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,6 +1417,101 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1 &1819434167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1819434170}
+  - component: {fileID: 1819434169}
+  - component: {fileID: 1819434168}
+  m_Layer: 0
+  m_Name: NotHungryDialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1819434168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819434167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe4821382e0864e45aae8d831ab20a19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTriggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1317441399}
+        m_TargetAssemblyTypeName: SCR_Inspection, Assembly-CSharp
+        m_MethodName: SetSprite
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 21300000, guid: e00c25b816810ad41a7f37a7a3d70037, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1317441399}
+        m_TargetAssemblyTypeName: SCR_Inspection, Assembly-CSharp
+        m_MethodName: SetText
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 'I don''t feel like eating breakfast. That dream threw
+            me off. '
+          m_BoolArgument: 0
+        m_CallState: 2
+  DeleteAfter: 1
+--- !u!65 &1819434169
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819434167}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.3609796, y: 9.248849, z: 7.5212994}
+  m_Center: {x: 0.21531129, y: -0.5468378, z: 0.5661688}
+--- !u!4 &1819434170
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819434167}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -16.29, y: -1.18, z: 12.82}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1864639639 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5081764693508747093, guid: ac6cadf45eb179249895d8ceec0cc363, type: 3}
@@ -1015,18 +1535,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1317441399}
         m_TargetAssemblyTypeName: SCR_Inspection, Assembly-CSharp
-        m_MethodName: SetText
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: March 5th. Nothing special.
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1317441399}
-        m_TargetAssemblyTypeName: SCR_Inspection, Assembly-CSharp
         m_MethodName: SetSprite
         m_Mode: 2
         m_Arguments:
@@ -1037,7 +1545,153 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1317441399}
+        m_TargetAssemblyTypeName: SCR_Inspection, Assembly-CSharp
+        m_MethodName: SetText
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 21300000, guid: e00c25b816810ad41a7f37a7a3d70037, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: March 5th. Nothing special.
+          m_BoolArgument: 0
+        m_CallState: 2
   itemNameText: {fileID: 0}
+--- !u!1 &1981215331
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1981215333}
+  - component: {fileID: 1981215332}
+  - component: {fileID: 1981215334}
+  m_Layer: 0
+  m_Name: BriarLeaves
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1981215332
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981215331}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 17.00132, y: 11.225731, z: 10.040693}
+  m_Center: {x: 0.4962902, y: 2.871702, z: -1.0542116}
+--- !u!4 &1981215333
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981215331}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.7638652, y: -3.77, z: -15.49}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1981215334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981215331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe4821382e0864e45aae8d831ab20a19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnTriggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 71217553}
+        m_TargetAssemblyTypeName: SCR_SceneTransitionManager, Assembly-CSharp
+        m_MethodName: SetScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 71217553}
+        m_TargetAssemblyTypeName: SCR_SceneTransitionManager, Assembly-CSharp
+        m_MethodName: SetDestinationX
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 246
+          m_FloatArgument: 0
+          m_StringArgument: My dreams get stranger every day... Maybe some day I'll
+            ring the clinic about it.
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 71217553}
+        m_TargetAssemblyTypeName: SCR_SceneTransitionManager, Assembly-CSharp
+        m_MethodName: SetDestinationY
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: My dreams get stranger every day... Maybe some day I'll
+            ring the clinic about it.
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 71217553}
+        m_TargetAssemblyTypeName: SCR_SceneTransitionManager, Assembly-CSharp
+        m_MethodName: SetDestinationZ
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 122
+          m_FloatArgument: 0
+          m_StringArgument: My dreams get stranger every day... Maybe some day I'll
+            ring the clinic about it.
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 71217553}
+        m_TargetAssemblyTypeName: SCR_SceneTransitionManager, Assembly-CSharp
+        m_MethodName: swapscene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: My dreams get stranger every day... Maybe some day I'll
+            ring the clinic about it.
+          m_BoolArgument: 0
+        m_CallState: 2
+  DeleteAfter: 0
 --- !u!1001 &2141142763
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1049,6 +1703,30 @@ PrefabInstance:
     - target: {fileID: 1454573606117275199, guid: cee08d1bb525a01448ad4a545ef9f77d, type: 3}
       propertyPath: field of view
       value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913003974177040845, guid: cee08d1bb525a01448ad4a545ef9f77d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b1496e6bd92ac944a9ebb1acb17d004f, type: 3}
+    - target: {fileID: 2303665912337336931, guid: cee08d1bb525a01448ad4a545ef9f77d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3138954936333240478, guid: cee08d1bb525a01448ad4a545ef9f77d, type: 3}
+      propertyPath: m_margin.w
+      value: 14.956799
+      objectReference: {fileID: 0}
+    - target: {fileID: 3138954936333240478, guid: cee08d1bb525a01448ad4a545ef9f77d, type: 3}
+      propertyPath: m_margin.x
+      value: 31.388428
+      objectReference: {fileID: 0}
+    - target: {fileID: 3138954936333240478, guid: cee08d1bb525a01448ad4a545ef9f77d, type: 3}
+      propertyPath: m_margin.y
+      value: 28.41832
+      objectReference: {fileID: 0}
+    - target: {fileID: 3138954936333240478, guid: cee08d1bb525a01448ad4a545ef9f77d, type: 3}
+      propertyPath: m_margin.z
+      value: 28.416748
       objectReference: {fileID: 0}
     - target: {fileID: 3742249859424471957, guid: cee08d1bb525a01448ad4a545ef9f77d, type: 3}
       propertyPath: m_Name
@@ -1149,6 +1827,10 @@ PrefabInstance:
     - target: {fileID: 6764219280837999042, guid: cee08d1bb525a01448ad4a545ef9f77d, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8246467306637870681, guid: cee08d1bb525a01448ad4a545ef9f77d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 8732498573050633949, guid: cee08d1bb525a01448ad4a545ef9f77d, type: 3}
       propertyPath: m_IsActive

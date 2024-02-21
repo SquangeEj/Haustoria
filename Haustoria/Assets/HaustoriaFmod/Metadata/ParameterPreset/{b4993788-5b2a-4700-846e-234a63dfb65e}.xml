@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{b4993788-5b2a-4700-846e-234a63dfb65e}">
+		<property name="name">
+			<value>Health</value>
+		</property>
+		<relationship name="folder">
+			<destination>{89cf9ff4-88cd-45fa-8652-e2148acca468}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{07f22f49-75d3-4f35-994a-43c642ed181b}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{07f22f49-75d3-4f35-994a-43c642ed181b}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>101</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+		<relationship name="automators">
+			<destination>{89e1cd9f-c777-44ca-bd96-c540ab9cf682}</destination>
+		</relationship>
+	</object>
+	<object class="Automator" id="{89e1cd9f-c777-44ca-bd96-c540ab9cf682}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>cursorPosition</value>
+		</property>
+	</object>
+</objects>

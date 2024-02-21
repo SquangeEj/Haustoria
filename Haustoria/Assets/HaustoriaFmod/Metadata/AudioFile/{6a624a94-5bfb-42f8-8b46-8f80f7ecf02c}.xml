@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{6a624a94-5bfb-42f8-8b46-8f80f7ecf02c}">
+		<property name="assetPath">
+			<value>Overworld/Music/Town/Piano2.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>16.458321995464853</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{51d9d26e-5973-4851-8f66-d0c0696003f8}</destination>
+		</relationship>
+	</object>
+</objects>

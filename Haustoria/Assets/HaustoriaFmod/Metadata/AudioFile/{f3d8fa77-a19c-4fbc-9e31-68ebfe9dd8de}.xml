@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{f3d8fa77-a19c-4fbc-9e31-68ebfe9dd8de}">
+		<property name="assetPath">
+			<value>Combat Music/Combat 1/Bells2.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>16.421882086167802</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{51d9d26e-5973-4851-8f66-d0c0696003f8}</destination>
+		</relationship>
+	</object>
+</objects>

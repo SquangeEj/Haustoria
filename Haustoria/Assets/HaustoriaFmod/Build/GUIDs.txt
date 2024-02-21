@@ -1,0 +1,7 @@
+{2b22a89b-7d4b-4cba-a29e-50579d8a1615} bank:/Master
+{b33f884f-0c30-00f8-24d7-daa96c79108d} bank:/Master.strings
+{ec10e84c-b762-474e-884b-be4623da4522} bus:/
+{2dd26fb2-eb0d-4592-8d58-42d21385a6f9} bus:/Reverb
+{19ff7f67-de3d-4b3b-8004-0698b540e328} event:/Combat
+{42201276-5ecc-494b-920b-3a7760d2775d} event:/CombatDefault
+{07f22f49-75d3-4f35-994a-43c642ed181b} parameter:/Health

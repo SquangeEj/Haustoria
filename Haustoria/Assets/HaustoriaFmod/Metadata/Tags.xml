@@ -4,5 +4,25 @@
 		<property name="name">
 			<value>Master</value>
 		</property>
+		<relationship name="items">
+			<destination>{562f358d-efd8-4a50-a109-74b8b5a3546b}</destination>
+			<destination>{9c0f0b02-bc17-4b6e-9aa8-96cfdd61eeb3}</destination>
+			<destination>{fee9c2d6-da02-4312-812f-c49fa7d32abd}</destination>
+		</relationship>
+	</object>
+	<object class="Tag" id="{562f358d-efd8-4a50-a109-74b8b5a3546b}">
+		<property name="name">
+			<value>Combat</value>
+		</property>
+	</object>
+	<object class="Tag" id="{9c0f0b02-bc17-4b6e-9aa8-96cfdd61eeb3}">
+		<property name="name">
+			<value>Overworld</value>
+		</property>
+	</object>
+	<object class="Tag" id="{fee9c2d6-da02-4312-812f-c49fa7d32abd}">
+		<property name="name">
+			<value>Ambience</value>
+		</property>
 	</object>
 </objects>

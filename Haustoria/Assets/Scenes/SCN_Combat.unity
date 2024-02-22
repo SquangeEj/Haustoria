@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5500,6 +5500,7 @@ GameObject:
   - component: {fileID: 187794025}
   - component: {fileID: 187794026}
   - component: {fileID: 187794027}
+  - component: {fileID: 187794028}
   m_Layer: 0
   m_Name: Bear
   m_TagString: Untagged
@@ -5677,6 +5678,37 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &187794028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187794022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -969885722
+      Data2: 1238576831
+      Data3: -685940555
+      Data4: -1625373146
+    Path: event:/Bear Combat
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &241651977
 GameObject:
   m_ObjectHideFlags: 0
@@ -16315,6 +16347,7 @@ GameObject:
   - component: {fileID: 1593354082}
   - component: {fileID: 1593354083}
   - component: {fileID: 1593354084}
+  - component: {fileID: 1593354085}
   m_Layer: 0
   m_Name: Crows
   m_TagString: Untagged
@@ -16432,6 +16465,37 @@ MonoBehaviour:
   player: {fileID: 619387921}
   SpritesToDamage:
   - {fileID: 2144953208}
+--- !u!114 &1593354085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593354079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1109398134
+      Data2: 1229676236
+      Data3: 2000292754
+      Data4: 1568133728
+    Path: event:/CombatDefault
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1594359538
 GameObject:
   m_ObjectHideFlags: 0

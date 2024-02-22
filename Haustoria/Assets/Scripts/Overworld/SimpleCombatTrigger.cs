@@ -21,7 +21,7 @@ public class SimpleCombatTrigger : MonoBehaviour
 
 
             EnemyData.EnemyID = EnemyId;
-            combatman.GetComponent<SCR_SceneTransitionManager>().SceneLoad = 1;
+            combatman.GetComponent<SCR_SceneTransitionManager>().SceneLoad = 2;
             combatman.GetComponent<SCR_SceneTransitionManager>().swapscene();
 
         }

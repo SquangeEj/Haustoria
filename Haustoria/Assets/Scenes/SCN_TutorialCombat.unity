@@ -4418,6 +4418,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CombatData: {fileID: 11400000, guid: e2bc43d800d755e4a8a38445e2eab877, type: 2}
   BriarStats: {fileID: 11400000, guid: c8258bf47159ba548a998bfa0ba6093c, type: 2}
+  AttackValues: {fileID: 11400000, guid: 31d3d2622a44ada4d9ebd756c77ba1fe, type: 2}
   Enemies:
   - {fileID: 934017082}
   Backgrounds:
@@ -4430,6 +4431,7 @@ MonoBehaviour:
   BriarCombatGameplay: {fileID: 1889115272}
   BriarCamera: {fileID: 404533979}
   BriarHeart: {fileID: 619387921}
+  DamageNumber: {fileID: 0}
   BriarHealthText: {fileID: 336176297}
 --- !u!1 &1761130940
 GameObject:
@@ -4571,9 +4573,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1817004888}
   - component: {fileID: 1817004887}
-  - component: {fileID: 1817004886}
   - component: {fileID: 1817004890}
   - component: {fileID: 1817004889}
+  - component: {fileID: 1817004891}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4581,14 +4583,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1817004886
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1817004885}
-  m_Enabled: 1
 --- !u!20 &1817004887
 Camera:
   m_ObjectHideFlags: 0
@@ -4733,6 +4727,19 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &1817004891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817004885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1 &1833660884
 GameObject:
   m_ObjectHideFlags: 0

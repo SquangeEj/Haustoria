@@ -8,22 +8,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AlphaScenes/VillageScene.unity
     guid: c7c5b566902c292409479605f1ca1c76
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 163348dcda59570489e59faf83a3212d
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SCN_Combat.unity
     guid: ae641b88424c7f84e870e09c5eb2fc74
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/AlphaScenes/LoreDumpScene.unity
     guid: b1e1e18b2dd51fd4590ab9ffe6e42552
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/AlphaScenes/FarmScene.unity
     guid: fa02918027b453a4e8748884df0cc3a5
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/AlphaScenes/ForestOneScene.unity
     guid: b88740a5866d8b94fb6a7c5a90789f4b
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/FarmHouseScene.unity
     guid: 2d9503b8270bbb546bb77540e0e100ac
   - enabled: 1

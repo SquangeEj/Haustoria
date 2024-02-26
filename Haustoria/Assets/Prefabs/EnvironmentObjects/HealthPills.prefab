@@ -115,7 +115,6 @@ GameObject:
   - component: {fileID: 6980279494439869069}
   - component: {fileID: 7796704538160236077}
   - component: {fileID: 8386288127410907866}
-  - component: {fileID: 7642467912596113878}
   m_Layer: 0
   m_Name: HealthPills
   m_TagString: Item
@@ -203,7 +202,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4753bfc591a6e984a9cb35e7863d44dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: c76247339d064be41bca9eb612827d81, type: 2}
   onClickEvent:
     m_PersistentCalls:
       m_Calls:
@@ -231,7 +229,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  itemNameText: {fileID: 0}
 --- !u!61 &8386288127410907866
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -277,35 +274,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
---- !u!114 &7642467912596113878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5996383636531905310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 977830772281870925}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &8217522772208497864
 GameObject:
   m_ObjectHideFlags: 0

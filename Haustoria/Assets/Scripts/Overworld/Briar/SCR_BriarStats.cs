@@ -42,6 +42,12 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
         }
     }
 
+    public void AddHealth(int num)
+    {
+        Health += num;
+
+        Debug.Log(string.Format("Briars Health is at {0}", Health));
+    }
 
     private void GetSkillTree()
     {

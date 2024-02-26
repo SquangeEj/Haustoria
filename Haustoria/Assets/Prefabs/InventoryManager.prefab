@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6222545135755401990
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3230426779588045894}
+  - component: {fileID: 4072785856409955959}
+  m_Layer: 0
+  m_Name: InventoryManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3230426779588045894
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6222545135755401990}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -45.75492, y: -56.003838, z: -161.24947}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4072785856409955959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6222545135755401990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de7243f77796aa4795fb3b9271cf37e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  briarStats: {fileID: 0}
+  slotHolder: {fileID: 0}
+  slotPrefab: {fileID: 4606541635952735820, guid: 422ba164f8d27454494ad8e854c3ab3b, type: 3}
+  slotWeapon: {fileID: 0}
+  items:
+  - item: {fileID: 11400000, guid: 601c59727930a0948a93a0816634fb0c, type: 2}
+    quantity: 1
+  - item: {fileID: 11400000, guid: 674bf1c55a63b1d429152db46044a634, type: 2}
+    quantity: 1
+  - item: {fileID: 11400000, guid: 1381748d79618524994624e1229d7b0b, type: 2}
+    quantity: 1
+  - item: {fileID: 11400000, guid: f03d6f97a6b32fc4287cfa3832becdcc, type: 2}
+    quantity: 1
+  - item: {fileID: 11400000, guid: f03d6f97a6b32fc4287cfa3832becdcc, type: 2}
+    quantity: 1
+  - item: {fileID: 11400000, guid: f03d6f97a6b32fc4287cfa3832becdcc, type: 2}
+    quantity: 1
+  - item: {fileID: 11400000, guid: f03d6f97a6b32fc4287cfa3832becdcc, type: 2}
+    quantity: 1
+  - item: {fileID: 11400000, guid: f03d6f97a6b32fc4287cfa3832becdcc, type: 2}
+    quantity: 1

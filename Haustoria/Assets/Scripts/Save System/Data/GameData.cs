@@ -28,7 +28,4 @@ public class GameData
 
     public Dictionary<GameObject, bool> EnemiesDead;
 
-    
-
-    
 }

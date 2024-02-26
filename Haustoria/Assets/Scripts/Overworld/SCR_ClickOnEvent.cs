@@ -8,22 +8,29 @@ public class SCR_ClickOnEvent : MonoBehaviour
 {
     public ItemClass item;
     [SerializeField] private UnityEvent onClickEvent;
+    
     public TextMeshProUGUI itemNameText;
+    private SCR_InventoryManager inventoryManager;
 
     private void OnMouseDown()
     {
        
         onClickEvent.Invoke();
-        
+
         if(gameObject.tag == "Item")
         {
             AddToInventory();
         }
+
     }
 
     private void AddToInventory()
     {
-        Inventory_Manager inventoryManager = FindObjectOfType<Inventory_Manager>(); // Find the Inventory_Manager script
+        GameObject inventoryManagerObject = GameObject.Find("InventoryManger");
+        if (inventoryManagerObject != null)
+        {
+            inventoryManager = inventoryManagerObject.GetComponent<SCR_InventoryManager>();
+        }
         if (inventoryManager != null)
         {
             bool added = inventoryManager.Add(item); // Add the item to the inventory
@@ -43,4 +50,5 @@ public class SCR_ClickOnEvent : MonoBehaviour
             }
         }
     }
-}
+   
+    }

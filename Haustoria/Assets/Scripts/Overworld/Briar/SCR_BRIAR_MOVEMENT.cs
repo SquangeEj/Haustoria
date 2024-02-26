@@ -90,11 +90,12 @@ public class SCR_BRIAR_MOVEMENT : MonoBehaviour
 
     private void ToggleInventory()
     {
-        TogglePause();
+        
         if (inventoryUI != null)
         {
             inventoryUI.SetActive(!inventoryUI.activeSelf);
         }
+        TogglePause();
     } 
 
     public void playStepSound()

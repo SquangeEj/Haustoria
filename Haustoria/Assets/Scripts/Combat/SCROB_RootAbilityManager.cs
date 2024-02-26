@@ -13,8 +13,8 @@ public class SCROB_RootAbilityManager : MonoBehaviour,IDataPersistance
         Debug.Log("is here");
 
         AbilitiesUnlocked = data.AbilityID;
+        
 
-      
     }
 
     public void SaveData(GameData data)

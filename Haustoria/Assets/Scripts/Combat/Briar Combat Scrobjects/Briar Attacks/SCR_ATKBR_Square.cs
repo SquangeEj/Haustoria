@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMOD;
+using FMODUnity;
+
 
 public class SCR_ATKBR_Square : MonoBehaviour
 {
@@ -16,26 +19,29 @@ public class SCR_ATKBR_Square : MonoBehaviour
 
     [Header("This is the amount of base damage it deals and the multiplier for when you hit")]
     [SerializeField] private float basedamage;
-   [SerializeField]  private float damage;
-   [SerializeField]  private float multiplier;
+    [SerializeField]  private float damage;
+    [SerializeField]  private float multiplier;
     [SerializeField] private float AnimSpeed;
 
     [SerializeField] private GameObject SquareSprite;
 
     [SerializeField] private Animator anim;
 
-    
+
+    [SerializeField] private StudioEventEmitter FmodEvent;
+    private int timeshit;
 
 
-    private void Start()
-    {
-        anim = GetComponent<Animator>();
-
-    }
-
+  
     private void OnEnable()
     {
         damage = basedamage;
+
+        anim = GetComponent<Animator>();
+        FmodEvent = GetComponent<StudioEventEmitter>();
+       
+        FmodEvent.SetParameter("Times Hit", 0);
+        timeshit = 1;
     }
 
     private void EnterZone()
@@ -71,7 +77,12 @@ public class SCR_ATKBR_Square : MonoBehaviour
 
     private IEnumerator GameFeel()
     {
-
+        FmodEvent.Play();
+        
+        FmodEvent.SetParameter("Times Hit", timeshit);
+        timeshit += 1;
+        UnityEngine.Debug.Log(timeshit);
+        
         for (float t = 0; t < 1; t += 4f * Time.deltaTime)
         {
             SquareSprite.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.green, Color.white, t);

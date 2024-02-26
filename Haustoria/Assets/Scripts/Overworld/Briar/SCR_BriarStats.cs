@@ -11,6 +11,7 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
 
     [SerializeField] private GameObject SkillTree;
     [SerializeField] public int RootAbilityPointsSpent;
+    [SerializeField] public bool[] AbilitiesUnlocked;
 
 
 
@@ -55,6 +56,11 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
     }
 
 
+    public void UnlockAbility(int id)
+    {
+        AbilitiesUnlocked[id] = true;
+    }
+
     public void LoadData(GameData data)
     {
         transform.localPosition = data.BriarPosition;
@@ -62,7 +68,7 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
         this.Health = data.health;
         this.Stamina = data.stamina;
         RootAbilityPointsSpent = data.RootAbilityPointsUsed;
-
+        AbilitiesUnlocked = data.AbilityID;
     }
 
     public void SaveData(GameData data)
@@ -74,5 +80,7 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
         data.Xp = this.XP;
         data.Atk = this.Attack;
         data.Def = this.Defence;
+
+        data.AbilityID = AbilitiesUnlocked;
     }
 }

@@ -115,6 +115,9 @@ public class SCR_EnemySelect : MonoBehaviour
 
      IEnumerator BriarTurnStart()
     {
+
+        BriarCombatGameplay.GetComponent<Animator>().Play("BriarEndTurn");
+        yield return new WaitForSeconds(0.15f);
         BriarCombatGameplay.SetActive(false);
         BriarTurnUI.SetActive(true);
         yield return null;
@@ -128,7 +131,8 @@ public class SCR_EnemySelect : MonoBehaviour
 
      IEnumerator EnemyTurnStart()
     {
-        yield return new WaitForSeconds(0.5f);
+        BriarHeart.transform.position = new Vector3(0, -3.59f, 0);
+        yield return new WaitForSeconds(0.15f);
         BriarCombatGameplay.SetActive(true);
         BriarHeart.transform.position = new Vector3(0, -3.59f, 0);
         CurrentEnemy.GetComponent<SCR_EnemyAttackManager>().InvokeEvent();

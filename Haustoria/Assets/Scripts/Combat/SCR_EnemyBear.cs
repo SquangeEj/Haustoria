@@ -14,7 +14,7 @@ public class SCR_EnemyBear : MonoBehaviour
     [SerializeField] private int health;
 
     [Header("Attack or Attacks")]
-    [SerializeField] private GameObject Attack;
+    [SerializeField] private GameObject Attack, SwipeAttack;
 
     [SerializeField] private GameObject player;
 
@@ -23,6 +23,9 @@ public class SCR_EnemyBear : MonoBehaviour
     private SpriteRenderer spriterend;
 
     private GameObject HealthSlider;
+
+    [SerializeField]
+    private Vector3[] Placement;
 
     [SerializeField] private SpriteRenderer[] SpritesToDamage;
 
@@ -41,8 +44,9 @@ public class SCR_EnemyBear : MonoBehaviour
 
     public void EnemyAttack()
     {
-        int AttackRNG = Random.Range(0, 1 + 1);
+        //   int AttackRNG = Random.Range(0, 2 + 1);
 
+        int AttackRNG = 3;
 
         switch (AttackRNG)
         {
@@ -52,6 +56,11 @@ public class SCR_EnemyBear : MonoBehaviour
 
             case 1:
                 StartCoroutine(BearattackTwo());
+                break;
+
+
+            case 3:
+                StartCoroutine(BearattackThree());
                 break;
         }
     
@@ -119,6 +128,25 @@ public class SCR_EnemyBear : MonoBehaviour
 
         StartCoroutine(BearDamage());
        
+    }
+
+    public IEnumerator BearattackThree()
+    {
+      for(int i =0; i <Random.Range(2,10); i++)
+        {
+           GameObject Swipe = Instantiate(SwipeAttack, Placement[Random.Range(0, Placement.Length)], Quaternion.identity);
+            Destroy(Swipe, 1);
+            yield return new WaitForSeconds(1f);
+        }
+
+
+        yield return new WaitForSeconds(0.1f);
+
+        CombatManager.GetComponent<SCR_EnemySelect>().BriarTurn();
+
+        anim.Play("BearIdle");
+
+        yield return null;
     }
 
     private IEnumerator BearDamage()

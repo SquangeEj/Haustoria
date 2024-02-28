@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using FMOD;
 using FMODUnity;
+using Cinemachine;
+using TMPro;
 
 
 public class SCR_ATKBR_Square : MonoBehaviour
@@ -27,9 +29,13 @@ public class SCR_ATKBR_Square : MonoBehaviour
 
     [SerializeField] private Animator anim;
 
+    [SerializeField] private GameObject ComboNumber;
+
 
     [SerializeField] private StudioEventEmitter FmodEvent;
     private int timeshit;
+
+    private CinemachineImpulseSource imp;
 
 
   
@@ -39,7 +45,8 @@ public class SCR_ATKBR_Square : MonoBehaviour
 
         anim = GetComponent<Animator>();
         FmodEvent = GetComponent<StudioEventEmitter>();
-       
+        imp = GetComponent<CinemachineImpulseSource>();
+
         FmodEvent.SetParameter("Times Hit", 0);
         timeshit = 1;
     }
@@ -80,9 +87,18 @@ public class SCR_ATKBR_Square : MonoBehaviour
         FmodEvent.Play();
         
         FmodEvent.SetParameter("Times Hit", timeshit);
+        imp.GenerateImpulse(timeshit);
+       
+
+        GameObject DamageNum = Instantiate(ComboNumber, transform.position, Quaternion.identity);
+        DamageNum.GetComponent<TMP_Text>().text = timeshit.ToString();
+        DamageNum.GetComponent<Rigidbody2D>().AddForce(new Vector2(UnityEngine.Random.Range(-5, 6), 8), ForceMode2D.Impulse);
+        DamageNum.GetComponent<TMP_Text>().fontSizeMax = timeshit ;
+        Destroy(DamageNum, 10f);
+
         timeshit += 1;
-        UnityEngine.Debug.Log(timeshit);
-        
+
+
         for (float t = 0; t < 1; t += 4f * Time.deltaTime)
         {
             SquareSprite.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.green, Color.white, t);
@@ -102,7 +118,8 @@ public class SCR_ATKBR_Square : MonoBehaviour
     private void FinishAttack()
     {
         int damagedealt = (int)damage;
-
+        //imp.GenerateImpulse(damage/2);
+        imp.GenerateImpulseWithVelocity(new Vector3(damage/10,damage/10,damage/10));
         AttackSCR.damagetaken = damagedealt;
 
         combatManager.GetComponent<SCR_EnemySelect>().DamageEnemy();

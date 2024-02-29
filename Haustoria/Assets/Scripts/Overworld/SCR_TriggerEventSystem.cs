@@ -8,6 +8,8 @@ public class SCR_TriggerEventSystem : MonoBehaviour
 {
     [SerializeField] private UnityEvent OnTriggerEvent;
 
+    [SerializeField] private UnityEvent OnTriggerLeave;
+
     [SerializeField] private bool DeleteAfter;
     private void OnTriggerEnter(Collider other)
     {
@@ -20,4 +22,22 @@ public class SCR_TriggerEventSystem : MonoBehaviour
             }
         }
     }
+
+
+    private void OnTriggerExit(Collider other)
+     {
+         Debug.Log("Exited");
+         if (other.gameObject.CompareTag("Player"))
+         {
+             OnTriggerLeave.Invoke();
+             if (DeleteAfter == true)
+             {
+                 Destroy(this);
+             }
+         }
+     }
+
+    
+  
+
 }

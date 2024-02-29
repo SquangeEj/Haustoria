@@ -67,7 +67,7 @@ public class SCR_EnemyHedgehog : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
 
-        for (int i = 0; i < Random.Range(1,15); i++)
+        for (int i = 0; i < Random.Range(1,4); i++)
         {
             GameObject HedgehogBounce = Instantiate(Attack, player.transform.position + new Vector3(Random.Range(-2, 2f), Random.Range(-2, 2f), 0), Quaternion.identity);
             Destroy(HedgehogBounce, 8f);

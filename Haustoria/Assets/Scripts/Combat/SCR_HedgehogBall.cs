@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class SCR_HedgehogBall : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private GameObject quill;
+
+    private void AddRandomForce()
     {
-        
+        GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-5, 5), Random.Range(-5, 5)),ForceMode2D.Impulse);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        for (int i = 0; i<=360; i += 90)
+        {
+            GameObject Quill = Instantiate(quill, transform.position, Quaternion.Euler(0,0,i));
+            Destroy(Quill, 4f);
+        }
     }
 }

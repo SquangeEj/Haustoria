@@ -81,7 +81,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 3a1aa0df0f532374b8005c4ee6f59817, type: 2}
-    m_Threshold: 0.21428572
+    m_Threshold: 0.16071428
     m_Position: {x: -0.2, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -89,7 +89,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 8be195716e98c444593787a93260934e, type: 2}
-    m_Threshold: 0.42857143
+    m_Threshold: 0.32142857
     m_Position: {x: 0, y: -0.2}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -97,8 +97,16 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 5ece11a4f1bf2e54e85a8ad2d6299465, type: 2}
-    m_Threshold: 0.64285713
+    m_Threshold: 0.48214287
     m_Position: {x: 0, y: 0.2}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: Xmove
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: c7cdb4ae85fb9a14c9a29064d2ffcd80, type: 2}
+    m_Threshold: 0.64285713
+    m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Xmove
@@ -170,6 +178,21 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+--- !u!206 &864989766409540996
+BlendTree:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BlendTree
+  m_Childs: []
+  m_BlendParameter: Xmove
+  m_BlendParameterY: Xmove
+  m_MinThreshold: 0
+  m_MaxThreshold: 1
+  m_UseAutomaticThresholds: 1
+  m_NormalizedBlendValues: 0
+  m_BlendType: 0
 --- !u!1102 &2718714784948241830
 AnimatorState:
   serializedVersion: 6

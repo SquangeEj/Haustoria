@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
-public class SCR_EnemyHedgehog : MonoBehaviour
+public class SCR_DeerEnemy : MonoBehaviour
 {
 
     [SerializeField] private GameObject CombatManager;
@@ -49,7 +49,7 @@ public class SCR_EnemyHedgehog : MonoBehaviour
         switch (AttackRNG)
         {
             case 0:
-                StartCoroutine(HedgehogattackOne());
+                StartCoroutine(DeerattackOne());
                 break;
 
             case 1:
@@ -62,36 +62,15 @@ public class SCR_EnemyHedgehog : MonoBehaviour
     }
 
 
-    public IEnumerator HedgehogattackOne()
+    public IEnumerator DeerattackOne()
     {
         yield return new WaitForSeconds(1f);
 
 
-        for (int i = -1; i < Random.Range(0,3); i++)
+        for (int i = -1; i < Random.Range(0, 3); i++)
         {
-            GameObject HedgehogBounce = Instantiate(Attack, new Vector3(0 +i*1.5f,-2.5f ,0), Quaternion.identity);
+            GameObject HedgehogBounce = Instantiate(Attack, new Vector3(0 + i * 1.5f, -2.5f, 0), Quaternion.identity);
             Destroy(HedgehogBounce, 10f);
-           // yield return new WaitForSeconds(0.1f);
-        }
-
-
-
-        yield return new WaitForSeconds(10f);
-
-        CombatManager.GetComponent<SCR_EnemySelect>().BriarTurn();
-
-
-        yield return null;
-    }
-    public IEnumerator HedgehogattackTwo()
-    {
-        yield return new WaitForSeconds(1f);
-
-
-        for (int i = 0; i < Random.Range(1, 3); i++)
-        {
-            GameObject HedgehogBounce = Instantiate(Attack, player.transform.position + new Vector3(Random.Range(-2, 2f), Random.Range(-2, 2f), 0), Quaternion.identity);
-            Destroy(HedgehogBounce, 8f);
             // yield return new WaitForSeconds(0.1f);
         }
 
@@ -104,37 +83,16 @@ public class SCR_EnemyHedgehog : MonoBehaviour
 
         yield return null;
     }
-    public IEnumerator HedgehogattackThree()
-    {
-        yield return new WaitForSeconds(1f);
-
-
-        for (int i = 0; i < Random.Range(1, 3); i++)
-        {
-            GameObject HedgehogBounce = Instantiate(Attack, player.transform.position + new Vector3(Random.Range(-2, 2f), Random.Range(-2, 2f), 0), Quaternion.identity);
-            Destroy(HedgehogBounce, 8f);
-            // yield return new WaitForSeconds(0.1f);
-        }
-
-
-
-        yield return new WaitForSeconds(10f);
-
-        CombatManager.GetComponent<SCR_EnemySelect>().BriarTurn();
-
-
-        yield return null;
-    }
-
+  
 
     public void takeDamage()
     {
 
-        StartCoroutine(HedgehogDamage());
+        StartCoroutine(DeerDamage());
 
     }
 
-    private IEnumerator HedgehogDamage()
+    private IEnumerator DeerDamage()
     {
         var prevhealth = health;
         health -= AttackValues.damagetaken;

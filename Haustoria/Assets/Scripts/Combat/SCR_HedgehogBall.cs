@@ -9,7 +9,10 @@ public class SCR_HedgehogBall : MonoBehaviour
 
     private void AddRandomForce()
     {
-        GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-5, 5), Random.Range(-5, 5)),ForceMode2D.Impulse);
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        //GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-5, 5), Random.Range(-5, 5)),ForceMode2D.Impulse);
+
+         GetComponent<Rigidbody2D>().AddForce( (player.transform.position- transform.position).normalized * 3, ForceMode2D.Impulse);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

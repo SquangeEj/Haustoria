@@ -20,7 +20,7 @@ public class SCR_MainMenu : MonoBehaviour
     private void StartEvent()
     {
     
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
     public void Quit()
     {

@@ -213,6 +213,9 @@ MonoBehaviour:
   moveSpeed: 8
   walkPathSoundClips:
   - {fileID: 8300000, guid: 4684360daf872414a988c3f40c803b24, type: 3}
+  - {fileID: 8300000, guid: 4684360daf872414a988c3f40c803b24, type: 3}
+  - {fileID: 8300000, guid: 4684360daf872414a988c3f40c803b24, type: 3}
+  - {fileID: 8300000, guid: 4684360daf872414a988c3f40c803b24, type: 3}
   walkGrassSoundClips: []
   inventoryUI: {fileID: 0}
 --- !u!114 &8309164889023490774

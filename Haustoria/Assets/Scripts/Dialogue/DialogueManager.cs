@@ -1,100 +1,114 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
+using System.Collections;
 
 public class DialogueManager : MonoBehaviour
 {
-    public TextMeshProUGUI nameText;
-    public TextMeshProUGUI dialogueText;
-    public Button[] responseButtons;
+    public static DialogueManager instance;
 
-    private Dialogue currentDialogue;
-    private int currentSentenceIndex;
-    private bool dialogueInProgress;
+    [SerializeField] TextMeshProUGUI dialogueText;
+    [SerializeField] TextMeshProUGUI nameText;
+    [SerializeField] GameObject dialogueBox;
+    [SerializeField] GameObject answerBox;
+    [SerializeField] Button[] answerObjects;
 
-    public void StartDialogue(Dialogue dialogue)
+    public static event Action OnDialogueStarted;
+    public static event Action OnDialogueEnded;
+
+    bool skipLineTriggered;
+    bool answerTriggered;
+    int answerIndex;
+
+    private void Awake()
     {
-        currentDialogue = dialogue;
-        currentSentenceIndex = 0;
-        nameText.text = dialogue.name;
-        dialogueInProgress = true;
-        DisplayCurrentSentence();
-        UpdateResponseOptions(false); // Initially disable response buttons
-    }
-
-    private void DisplayCurrentSentence()
-    {
-        // Check if there are sentences left to display
-        if (currentSentenceIndex < currentDialogue.sentences.Length)
+        if (instance == null)
         {
-            dialogueText.text = currentDialogue.sentences[currentSentenceIndex];
-            currentSentenceIndex++;
-        }
-        else if (currentDialogue.responseOptions != null && currentDialogue.responseOptions.Length > 0)
-        {
-            // Check if there are response options available
-            UpdateResponseOptions(true); // Enable response buttons
-            SetResponseButtonsText();
+            instance = this;
         }
         else
         {
-            // No more sentences or response options, end dialogue
-            EndDialogue();
-            return; // Exit the method early
+            Destroy(this);
         }
     }
 
-
-    private void SetResponseButtonsText()
+    public void StartDialogue(Dialogue dialogueData, int startSection, string name)
     {
-        for (int i = 0; i < responseButtons.Length; i++)
+        ResetBox();
+        nameText.text = name;
+        dialogueBox.SetActive(true);
+        OnDialogueStarted?.Invoke();
+        StartCoroutine(RunDialogue(dialogueData, startSection));
+    }
+
+    IEnumerator RunDialogue(Dialogue dialogueData, int section)
+    {
+        for (int i = 0; i < dialogueData.sections[section].dialogue.Length; i++)
         {
-            if (i < currentDialogue.responseOptions.Length)
+            dialogueText.text = dialogueData.sections[section].dialogue[i];
+            while (skipLineTriggered == false)
             {
-                responseButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = currentDialogue.responseOptions[i].optionText;
-                responseButtons[i].gameObject.SetActive(true); // Make sure the button is active
+                yield return null;
+            }
+            skipLineTriggered = false;
+        }
+
+        if (dialogueData.sections[section].endAfterDialogue)
+        {
+            OnDialogueEnded?.Invoke();
+            dialogueBox.SetActive(false);
+            yield break;
+        }
+
+        dialogueText.text = dialogueData.sections[section].branchPoint.question;
+        ShowAnswers(dialogueData.sections[section].branchPoint);
+
+        while (answerTriggered == false)
+        {
+            yield return null;
+        }
+        answerBox.SetActive(false);
+        answerTriggered = false;
+
+        StartCoroutine(RunDialogue(dialogueData, dialogueData.sections[section].branchPoint.answers[answerIndex].nextElement));
+    }
+
+    public void ResetBox()
+    {
+        StopAllCoroutines();
+        dialogueBox.SetActive(false);
+        answerBox.SetActive(false);
+        skipLineTriggered = false;
+        answerTriggered = false;
+    }
+
+    void ShowAnswers(BranchPoint branchPoint)
+    {
+        // Reveals the aselectable answers and sets their text values
+        answerBox.SetActive(true);
+        for (int i = 0; i < branchPoint.answers.Length; i++)
+        {
+            if (i < branchPoint.answers.Length)
+            {
+                answerObjects[i].GetComponentInChildren<TextMeshProUGUI>().text = branchPoint.answers[i].answerLabel;
+                answerObjects[i].gameObject.SetActive(true);
             }
             else
             {
-                responseButtons[i].gameObject.SetActive(false); // Hide extra buttons
+                answerObjects[i].gameObject.SetActive(false);
             }
         }
     }
 
-    public void OnResponseButtonClicked(int responseIndex)
+    public void SkipLine()
     {
-        if (responseIndex >= 0 && responseIndex < currentDialogue.responseOptions.Length)
-        {
-            currentDialogue = currentDialogue.responseOptions[responseIndex].nextDialogue;
-            currentSentenceIndex = 0;
-            DisplayCurrentSentence();
-            UpdateResponseOptions(false);
-        }
-        else
-        {
-            Debug.LogWarning("Invalid response index: " + responseIndex);
-        }
+        skipLineTriggered = true;
     }
 
-    private void UpdateResponseOptions(bool active)
+    public void AnswerQuestion(int answer)
     {
-        foreach (Button button in responseButtons)
-        {
-            button.gameObject.SetActive(active);
-        }
-    }
-
-    private void EndDialogue()
-    {
-        dialogueInProgress = false;
-    }
-
-    private void Update()
-    {
-        // Example: Continue dialogue with left mouse button click
-        if (dialogueInProgress && Input.GetMouseButtonDown(0))
-        {
-            DisplayCurrentSentence();
-        }
+        answerIndex = answer;
+        answerTriggered = true;
     }
 }

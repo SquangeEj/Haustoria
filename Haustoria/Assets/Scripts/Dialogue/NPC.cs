@@ -4,42 +4,52 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour
 {
-    public GameObject dialogueCanvas;
+    public string npcName = "Enter Name IN INspector";
     public Dialogue dialogue;
-    public bool playerInZone;
+    bool inConversation;
+    bool playerInZone;
 
-    private bool inDialogue;
-        
-    private void Update()
+    void Update()
     {
-        if (playerInZone && Input.GetKeyDown(KeyCode.E) && !inDialogue)
+        if (Input.GetKeyDown(KeyCode.E) && playerInZone )
         {
-            StartDialogue();
+            Interact();
         }
     }
 
-    private void StartDialogue()
+    void Interact()
     {
-        inDialogue = true;
-        dialogueCanvas.SetActive(true);
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        if (inConversation)
+        {
+            DialogueManager.instance.SkipLine();
+        }
+        else
+        {
+            DialogueManager.instance.StartDialogue(dialogue, 0, npcName);
+        }
     }
 
-    public void EndDialogue()
+    void JoinConversation()
     {
-        inDialogue = false;
-        dialogueCanvas.SetActive(false);
+        inConversation = true;
     }
 
-    public void ContinueDialogue(int responseIndex)
+    void LeaveConversation()
     {
-        // Get the DialogueManager instance
-        DialogueManager dialogueManager = FindObjectOfType<DialogueManager>();
-
-        // Call the method to handle the response index
-        dialogueManager.OnResponseButtonClicked(responseIndex);
+        inConversation = false;
     }
 
+    private void OnEnable()
+    {
+        DialogueManager.OnDialogueStarted += JoinConversation;
+        DialogueManager.OnDialogueEnded += LeaveConversation;
+    }
+
+    private void OnDisable()
+    {
+        DialogueManager.OnDialogueStarted -= JoinConversation;
+        DialogueManager.OnDialogueEnded -= LeaveConversation;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -54,7 +64,7 @@ public class NPC : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInZone = false;
-            EndDialogue();
+
         }
     }
 }

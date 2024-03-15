@@ -5,20 +5,29 @@ using UnityEngine;
 [System.Serializable]
 public class Dialogue
 {
-	public string name = "name";
-	
-	[TextArea(3, 5)]
-	public string[] sentences;
-	
-	public bool InDialogue;
-
-	public ResponseOption[] responseOptions;
-
+	public DialogueSection[] sections;
 }
 
 [System.Serializable]
-public class ResponseOption
+public struct DialogueSection
 {
-	public string optionText;
-	public Dialogue nextDialogue;
+	[TextArea]
+	public string[] dialogue;
+	public bool endAfterDialogue;
+	public BranchPoint branchPoint;
+}
+
+[System.Serializable]
+public struct BranchPoint
+{
+	[TextArea]
+	public string question;
+	public Answer[] answers;
+}
+
+[System.Serializable]
+public struct Answer
+{
+	public string answerLabel;
+	public int nextElement;
 }

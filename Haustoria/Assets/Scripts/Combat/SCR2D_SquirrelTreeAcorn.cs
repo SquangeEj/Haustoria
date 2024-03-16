@@ -12,7 +12,7 @@ public class SCR2D_SquirrelTreeAcorn : MonoBehaviour
 
     IEnumerator Acorns()
     {
-        for (int i = 0; i < Random.Range(1, 25f); i += 1)
+        for (int i = 0; i < Random.Range(5, 25f); i += 1)
         {
             GameObject acorn = Instantiate(Acorn, transform.position, Quaternion.identity);
             acorn.transform.position += new Vector3(Random.Range(-1,1f), Random.Range(-1,2f), 0);

@@ -15,10 +15,13 @@ public class SCR_DeerEnemy : MonoBehaviour
 
 
 
+    
     [Header("Attack or Attacks")]
     [SerializeField] private GameObject Attack;
 
     [SerializeField] private GameObject player;
+
+    [SerializeField] private Animator antleranim;
 
     private Animator anim;
 
@@ -43,7 +46,7 @@ public class SCR_DeerEnemy : MonoBehaviour
 
     public void EnemyAttack()
     {
-        int AttackRNG = Random.Range(0, 1);
+        int AttackRNG = Random.Range(0, 2);
 
 
         switch (AttackRNG)
@@ -53,7 +56,7 @@ public class SCR_DeerEnemy : MonoBehaviour
                 break;
 
             case 1:
-
+                StartCoroutine(DeerattackTwo());
                 break;
         }
 
@@ -66,24 +69,36 @@ public class SCR_DeerEnemy : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
-
-        for (int i = -1; i < Random.Range(0, 3); i++)
-        {
-            GameObject HedgehogBounce = Instantiate(Attack, new Vector3(0 + i * 1.5f, -2.5f, 0), Quaternion.identity);
-            Destroy(HedgehogBounce, 10f);
-            // yield return new WaitForSeconds(0.1f);
-        }
+        antleranim.Play("AntlerAttackLeft");
 
 
 
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(2.5f);
+
+        antleranim.Play("Idle");
+        CombatManager.GetComponent<SCR_EnemySelect>().BriarTurn();
+
+
+        yield return null;
+    }
+    public IEnumerator DeerattackTwo()
+    {
+        yield return new WaitForSeconds(1f);
+
+
+
+        antleranim.Play("AntlerAttackRight");
+
+        yield return new WaitForSeconds(2.5f);
+
+        antleranim.Play("Idle");
 
         CombatManager.GetComponent<SCR_EnemySelect>().BriarTurn();
 
 
         yield return null;
     }
-  
+
 
     public void takeDamage()
     {

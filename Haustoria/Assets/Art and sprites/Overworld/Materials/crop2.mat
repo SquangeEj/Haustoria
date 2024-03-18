@@ -42,8 +42,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _CellDens: 1
-    - _CutoutSize: 0.2
-    - _FalloffSize: 0.2
+    - _CutoutSize: 0
+    - _FalloffSize: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:

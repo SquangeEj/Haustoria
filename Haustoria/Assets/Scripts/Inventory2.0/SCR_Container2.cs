@@ -38,7 +38,7 @@ public class SCR_Container2 : MonoBehaviour
     private void Update()
     {
 
-        if (playerInRange && Input.GetMouseButtonDown(0))
+        if (playerInRange && Input.GetMouseButtonDown(1))
         {
             if (items != null && items.Count > 0)
             {

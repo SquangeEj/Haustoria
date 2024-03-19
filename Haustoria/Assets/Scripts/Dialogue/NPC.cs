@@ -11,7 +11,7 @@ public class NPC : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && playerInZone )
+        if (Input.GetMouseButtonDown(1) && playerInZone )
         {
             Interact();
         }
@@ -64,7 +64,6 @@ public class NPC : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInZone = false;
-
         }
     }
 }

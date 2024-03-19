@@ -27,8 +27,8 @@ public class SCR_Container : MonoBehaviour
 
     private void Update()
     {
-        // Open the container UI when the player presses the key (E)
-        if (playerInRange && Input.GetKeyDown(KeyCode.E))
+        // Open the container UI when the player Right Clicks 
+        if (playerInRange && Input.GetMouseButtonDown(1))
         {
             meshRenderer.material = openCrate;
 

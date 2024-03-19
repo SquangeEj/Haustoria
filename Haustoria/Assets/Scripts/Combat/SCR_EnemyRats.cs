@@ -22,6 +22,9 @@ public class SCR_EnemyRats : MonoBehaviour
 
     private Animator anim;
 
+    [SerializeField]
+    private Sprite spriterat2, spriterat3;
+
     private SpriteRenderer spriterend;
 
     private GameObject HealthSlider;
@@ -61,9 +64,11 @@ public class SCR_EnemyRats : MonoBehaviour
                 StartCoroutine(RatattackTwo());
                 break;
             case 2:
+              
                 StartCoroutine(RatattackThree());
                 break;
             case 3:
+               
                 StartCoroutine(RatattackFour());
                 break;
 
@@ -102,6 +107,7 @@ public class SCR_EnemyRats : MonoBehaviour
 
 
         yield return new WaitForSeconds(5f);
+        SpritesToDamage[0].sprite = spriterat2;
         anim.Play("RatIdle");
         CombatManager.GetComponent<SCR_EnemySelect>().BriarTurn();
         attacking = false;
@@ -119,6 +125,7 @@ public class SCR_EnemyRats : MonoBehaviour
 
         yield return new WaitForSeconds(5f);
         anim.Play("RatIdle");
+        SpritesToDamage[0].sprite = spriterat3;
         CombatManager.GetComponent<SCR_EnemySelect>().BriarTurn();
 
         attacking = false;

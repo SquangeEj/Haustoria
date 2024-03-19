@@ -580,6 +580,8 @@ MonoBehaviour:
   health: 25
   Attack: {fileID: 0}
   player: {fileID: 619387921}
+  spriterat2: {fileID: 21300000, guid: 8d63643c57c094a4d925cc9ceeefcef5, type: 3}
+  spriterat3: {fileID: 21300000, guid: b2ac56e6c84922549ae0c525109a629c, type: 3}
   SpritesToDamage:
   - {fileID: 1470938305}
   CurrentAttack: 0
@@ -10305,7 +10307,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3939284775478729769, guid: a115e55baf8724b4e84e9d48ff5ab685, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24533,7 +24535,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1470938303}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.3, z: 0}
   m_LocalScale: {x: 3.515625, y: 1.7578125, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24581,7 +24583,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2852931451542154a9a5cd70a094f862, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1c8b1fd8de744684e9f35dadd2d780b8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

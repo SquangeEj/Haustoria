@@ -61,16 +61,6 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
         AbilitiesUnlocked[id] = true;
     }
 
-    public void LoadData(GameData data)
-    {
-        transform.localPosition = data.BriarPosition;
-        this.XP = data.Xp;
-        this.Health = data.health;
-        this.Stamina = data.stamina;
-        RootAbilityPointsSpent = data.RootAbilityPointsUsed;
-        AbilitiesUnlocked = data.AbilityID;
-    }
-
     public void SaveData(GameData data)
     {
 
@@ -83,4 +73,16 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
 
         data.AbilityID = AbilitiesUnlocked;
     }
+
+    public void LoadData(GameData data)
+    {
+        transform.localPosition = data.BriarPosition;
+        this.XP = data.Xp;
+        this.Health = data.health;
+        this.Stamina = data.stamina;
+        RootAbilityPointsSpent = data.RootAbilityPointsUsed;
+        AbilitiesUnlocked = data.AbilityID;
+    }
+
+ 
 }

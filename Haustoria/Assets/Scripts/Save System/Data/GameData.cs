@@ -10,6 +10,7 @@ public class GameData
 
     public int Xp, Atk, Def;
 
+    public int questid;
 
 
     public Vector3 BriarPosition;

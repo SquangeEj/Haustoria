@@ -12,18 +12,9 @@ public class SCR_SceneTransitionManager : MonoBehaviour, IDataPersistance
 
     [SerializeField] private Vector3 BriarLoadPosition;
 
+  
 
-    public void LoadData(GameData data)
-    {
-
-    }
-
-    public void SaveData(GameData data)
-    {
-      
-        data.BriarPosition = BriarLoadPosition;
-   
-    }
+  
 
 
     public void SetDestinationX(int x)
@@ -37,6 +28,18 @@ public class SCR_SceneTransitionManager : MonoBehaviour, IDataPersistance
     public void SetDestinationZ(int z)
     {
         BriarLoadPosition.z = z;
+    }
+
+    public void SaveData(GameData data)
+    {
+
+        data.BriarPosition = BriarLoadPosition;
+
+    }
+
+    public void LoadData(GameData data)
+    {
+
     }
 
     public void SetScene(int scene)

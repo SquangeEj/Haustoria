@@ -17,7 +17,7 @@ public class SCR_InventoryManager : MonoBehaviour
 
     private void Start()
     {
-        int numSlots = 20;
+        int numSlots = 10;
         slots = new GameObject[numSlots];
 
         for (int i = 0; i < numSlots; i++)
@@ -25,7 +25,7 @@ public class SCR_InventoryManager : MonoBehaviour
             GameObject slot = Instantiate(slotPrefab, slotHolder.transform);
             slots[i] = slot;
 
-            // Add an onClick listener to the button component of the slot
+            // Add an onClick listener to the button component of each slot
             Button button = slot.GetComponentInChildren<Button>();
             int index = i; // Create a local variable to capture the current index
             button.onClick.AddListener(() => OnSlotClicked(index));
@@ -123,18 +123,25 @@ public class SCR_InventoryManager : MonoBehaviour
 
     private void OnSlotClicked(int index)
     {
-        ItemClass item = items[index].GetItem();
-        if (item is SO_ConsumableClass consumableItem)
+        if (index >= 0 && index < items.Count)
         {
-            AddHeathPoints(consumableItem);
-        }
-        else if (item is SO_WeaponClass weaponItem)
-        {
-            EquipWeapon(weaponItem);
+            ItemClass item = items[index].GetItem();
+            if (item is SO_ConsumableClass consumableItem)
+            {
+                AddHeathPoints(consumableItem);
+            }
+            else if (item is SO_WeaponClass weaponItem)
+            {
+                EquipWeapon(weaponItem);
+            }
+            else
+            {
+                Debug.Log("Invalid item clicked.");
+            }
         }
         else
         {
-            Debug.Log(string.Format("CLICKING NOT WORKING"));
+            Debug.LogWarning("Index out of range.");
         }
     }
 

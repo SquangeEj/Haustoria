@@ -4,14 +4,20 @@ using UnityEngine;
 public class SCR_Container : MonoBehaviour
 {
     public List<SlotClass> items = new List<SlotClass>(); // List of items in the container
-    public GameObject containerUIPrefab; // Reference to the UI prefab for displaying container items
-    private GameObject containerUIInstance; // Instance of the UI prefab
+    public GameObject containerUIPrefab; 
+    private GameObject containerUIInstance;
+
+    private MeshRenderer meshRenderer;
+    public Material openCrate;
+    public Material closedCrate;
 
     private bool playerInRange = false;
 
     private void Start()
     {
-        // Instantiate the container UI prefab and deactivate it
+        meshRenderer = GetComponent<MeshRenderer>();
+        meshRenderer.material = closedCrate;
+
         if (containerUIPrefab != null)
         {
             containerUIInstance = containerUIPrefab;
@@ -24,6 +30,8 @@ public class SCR_Container : MonoBehaviour
         // Open the container UI when the player presses the key (E)
         if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
+            meshRenderer.material = openCrate;
+
             if (containerUIInstance != null)
             {
                 containerUIInstance.SetActive(true);
@@ -50,6 +58,8 @@ public class SCR_Container : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
+            meshRenderer.material = closedCrate;
+
             // Close the container UI if the player exits the collider area
             if (containerUIInstance != null)
             {

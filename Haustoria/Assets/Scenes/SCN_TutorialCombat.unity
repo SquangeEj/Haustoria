@@ -2550,6 +2550,7 @@ GameObject:
   - component: {fileID: 934017085}
   - component: {fileID: 934017086}
   - component: {fileID: 934017087}
+  - component: {fileID: 934017088}
   m_Layer: 0
   m_Name: Rootorial
   m_TagString: Untagged
@@ -2720,6 +2721,37 @@ MonoBehaviour:
   player: {fileID: 619387921}
   anim: {fileID: 0}
   RootText: {fileID: 1890645275}
+--- !u!114 &934017088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934017082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 436174695
+      Data2: 1262214717
+      Data3: -1744436096
+      Data4: 685981877
+    Path: event:/Music/Combat
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &979554452
 GameObject:
   m_ObjectHideFlags: 0

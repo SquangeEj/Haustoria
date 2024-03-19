@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -401,6 +401,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7408057496333487340, guid: f0ad460728abd8741ba2a8f54c141e29, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7408057496333487340, guid: f0ad460728abd8741ba2a8f54c141e29, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000016526673
+      objectReference: {fileID: 0}
+    - target: {fileID: 7408057496333487340, guid: f0ad460728abd8741ba2a8f54c141e29, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.00000000448794
+      objectReference: {fileID: 0}
+    - target: {fileID: 1683412938956249995, guid: f0ad460728abd8741ba2a8f54c141e29, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049105836483716277, guid: f0ad460728abd8741ba2a8f54c141e29, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049105836483716277, guid: f0ad460728abd8741ba2a8f54c141e29, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000016526673
+      objectReference: {fileID: 0}
+    - target: {fileID: 7049105836483716277, guid: f0ad460728abd8741ba2a8f54c141e29, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.00000000448794
+      objectReference: {fileID: 0}
     - target: {fileID: 8916941002783050181, guid: cee08d1bb525a01448ad4a545ef9f77d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -425,4 +453,4 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: cee08d1bb525a01448ad4a545ef9f77d, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: f0ad460728abd8741ba2a8f54c141e29, type: 3}

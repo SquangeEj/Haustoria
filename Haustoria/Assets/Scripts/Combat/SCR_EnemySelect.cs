@@ -99,11 +99,8 @@ public class SCR_EnemySelect : MonoBehaviour
 
     IEnumerator EndCombat()
     {
-        if(CombatData.EnemyID == 1)
-        {
-            SceneManager.LoadScene(4);
-        }
-        SceneManager.LoadScene(4);
+       
+        SceneManager.LoadScene(CombatData.Scenetogotoafter);
         yield return null;
     }
 

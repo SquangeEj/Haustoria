@@ -4421,6 +4421,13 @@ MonoBehaviour:
   AttackValues: {fileID: 11400000, guid: 31d3d2622a44ada4d9ebd756c77ba1fe, type: 2}
   Enemies:
   - {fileID: 934017082}
+  - {fileID: 934017082}
+  - {fileID: 934017082}
+  - {fileID: 934017082}
+  - {fileID: 934017082}
+  - {fileID: 934017082}
+  - {fileID: 934017082}
+  - {fileID: 934017082}
   Backgrounds:
   - {fileID: 394108788}
   - {fileID: 2052545225}
@@ -4431,7 +4438,7 @@ MonoBehaviour:
   BriarCombatGameplay: {fileID: 1889115272}
   BriarCamera: {fileID: 404533979}
   BriarHeart: {fileID: 619387921}
-  DamageNumber: {fileID: 0}
+  DamageNumber: {fileID: 4999409101859005338, guid: 262a4910d4c9d8d41929c0412ce340c7, type: 3}
   BriarHealthText: {fileID: 336176297}
 --- !u!1 &1761130940
 GameObject:
@@ -6290,8 +6297,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7985621022085244095, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 946175110586002584}
+    - target: {fileID: 7985621022085244095, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
+      propertyPath: FmodEvent
+      value: 
+      objectReference: {fileID: 946175110586002583}
+    - target: {fileID: 7985621022085244095, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
+      propertyPath: basedamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7985621022085244095, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
       propertyPath: multiplier
-      value: 1.5
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 7985621022085244095, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
       propertyPath: combatManager
@@ -6306,6 +6325,22 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
+--- !u!114 &946175110586002583 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9160634011220531118, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
+  m_PrefabInstance: {fileID: 946175110586002582}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616448701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &946175110586002584 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1811945076640970245, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
+  m_PrefabInstance: {fileID: 946175110586002582}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4601350241752284754
 PrefabInstance:
   m_ObjectHideFlags: 0

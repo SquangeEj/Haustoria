@@ -7772,109 +7772,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7171775200910235436, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
   m_PrefabInstance: {fileID: 946175110586002582}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &616448706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 616448701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -1090484886
-      Data2: 1125871398
-      Data3: -584560992
-      Data4: -2123407784
-    Path: event:/Hit Sound
-  Event: 
-  PlayEvent: 0
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
---- !u!114 &616448707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 616448701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  Emitters:
-  - Target: {fileID: 616448706}
-    Params:
-    - Name: Times Hit
-      Value: 1
-  TriggerEvent: 0
---- !u!114 &616448711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 616448701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ImpulseDefinition:
-    m_ImpulseChannel: 1
-    m_ImpulseShape: 3
-    m_CustomImpulseShape:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    m_ImpulseDuration: 0.2
-    m_ImpulseType: 0
-    m_DissipationRate: 0.25
-    m_RawSignal: {fileID: 0}
-    m_AmplitudeGain: 1
-    m_FrequencyGain: 1
-    m_RepeatMode: 0
-    m_Randomize: 1
-    m_TimeEnvelope:
-      m_AttackShape:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      m_DecayShape:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      m_AttackTime: 0
-      m_SustainTime: 0.2
-      m_DecayTime: 0.7
-      m_ScaleWithImpact: 1
-      m_HoldForever: 0
-    m_ImpactRadius: 100
-    m_DirectionMode: 0
-    m_DissipationMode: 2
-    m_DissipationDistance: 100
-    m_PropagationSpeed: 343
-  m_DefaultVelocity: {x: 0, y: 0, z: 0.2}
 --- !u!1 &619387921
 GameObject:
   m_ObjectHideFlags: 0
@@ -37281,18 +37178,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 691681139619911937, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
-      propertyPath: m_Color.b
-      value: 0.8207547
-      objectReference: {fileID: 0}
-    - target: {fileID: 691681139619911937, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
-      propertyPath: m_Color.g
-      value: 0.8207547
-      objectReference: {fileID: 0}
-    - target: {fileID: 691681139619911937, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
-      propertyPath: m_Color.r
-      value: 0.8207547
-      objectReference: {fileID: 0}
     - target: {fileID: 2131016217994993730, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -37337,70 +37222,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2804272857354260830, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c9e2fec954878a340a419d23b66240a3, type: 3}
-    - target: {fileID: 2804272857354260830, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
-      propertyPath: m_Color.b
-      value: 0.4245283
-      objectReference: {fileID: 0}
-    - target: {fileID: 2804272857354260830, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
-      propertyPath: m_Color.g
-      value: 0.4245283
-      objectReference: {fileID: 0}
-    - target: {fileID: 2804272857354260830, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
-      propertyPath: m_Color.r
-      value: 0.4245283
-      objectReference: {fileID: 0}
-    - target: {fileID: 3476065056684064631, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3476065056684064631, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 4402227965404797263, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 439fdf29c223e5f4295dbda15e74e9b4, type: 3}
-    - target: {fileID: 4402227965404797263, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4402227965404797263, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4402227965404797263, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7171775200910235436, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
       propertyPath: m_Name
       value: Briar_Attack_Square
       objectReference: {fileID: 0}
-    - target: {fileID: 7171775200910235436, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7985621022085244095, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
-      propertyPath: AnimSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7985621022085244095, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
-      propertyPath: basedamage
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7985621022085244095, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
-      propertyPath: multiplier
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 7985621022085244095, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
-      propertyPath: ComboNumber
-      value: 
-      objectReference: {fileID: 4999409101859005338, guid: 873e475a794cee44a8d5022a150cba81, type: 3}
     - target: {fileID: 7985621022085244095, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
       propertyPath: combatManager
       value: 
@@ -37412,16 +37237,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7171775200910235436, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 616448706}
-    - targetCorrespondingSourceObject: {fileID: 7171775200910235436, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 616448707}
-    - targetCorrespondingSourceObject: {fileID: 7171775200910235436, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 616448711}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
 --- !u!1001 &2348865859857676488
 PrefabInstance:

@@ -5,7 +5,9 @@ using UnityEngine;
 public class SimpleCombatTrigger : MonoBehaviour
 {
     [SerializeField] private SCROBJ_CombatStartManager EnemyData;
-    [SerializeField] private int EnemyId;
+    [SerializeField] private int EnemyId, SceneAfter, Scenetoload;
+
+
 
     [SerializeField] private GameData Gamedata;
   
@@ -21,7 +23,8 @@ public class SimpleCombatTrigger : MonoBehaviour
 
 
             EnemyData.EnemyID = EnemyId;
-            combatman.GetComponent<SCR_SceneTransitionManager>().SceneLoad = 2;
+            EnemyData.Scenetogotoafter = SceneAfter;
+            combatman.GetComponent<SCR_SceneTransitionManager>().SceneLoad = Scenetoload;
             combatman.GetComponent<SCR_SceneTransitionManager>().swapscene();
 
         }

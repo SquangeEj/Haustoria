@@ -78,7 +78,9 @@ public class DataPersistanceManager : MonoBehaviour
             /*NewGame();*/
         }
 
-        foreach(IDataPersistance dataPersistanceObj in dataPersistenceObjects)
+        this.dataPersistenceObjects = FindAllDataPersistenceObjects();
+
+        foreach (IDataPersistance dataPersistanceObj in dataPersistenceObjects)
         {
             dataPersistanceObj.LoadData(gameData);
         }

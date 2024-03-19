@@ -4,13 +4,13 @@ using UnityEngine;
 
 [System.Serializable]
 
-public class GameData 
+public class GameData
 {
     public int health, stamina;
 
     public int Xp, Atk, Def;
 
-    
+
 
     public Vector3 BriarPosition;
 
@@ -24,8 +24,17 @@ public class GameData
     public int RootAbilityPointsUsed;
 
 
-    public bool[] AbilityID= new bool[3];
+    public bool[] AbilityID = new bool[3];
 
     public Dictionary<GameObject, bool> EnemiesDead;
 
+    public List<ItemData> inventoryItems = new List<ItemData>();
+
+}
+
+[System.Serializable]
+public class ItemData
+{
+    public ItemClass item;
+    public int quantity;
 }

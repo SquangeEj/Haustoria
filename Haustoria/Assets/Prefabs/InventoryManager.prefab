@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4072785856409955959
 MonoBehaviour:
@@ -48,20 +48,4 @@ MonoBehaviour:
   slotHolder: {fileID: 0}
   slotPrefab: {fileID: 4606541635952735820, guid: 422ba164f8d27454494ad8e854c3ab3b, type: 3}
   slotWeapon: {fileID: 0}
-  items:
-  - item: {fileID: 11400000, guid: 601c59727930a0948a93a0816634fb0c, type: 2}
-    quantity: 1
-  - item: {fileID: 11400000, guid: 674bf1c55a63b1d429152db46044a634, type: 2}
-    quantity: 1
-  - item: {fileID: 11400000, guid: 1381748d79618524994624e1229d7b0b, type: 2}
-    quantity: 1
-  - item: {fileID: 11400000, guid: f03d6f97a6b32fc4287cfa3832becdcc, type: 2}
-    quantity: 1
-  - item: {fileID: 11400000, guid: f03d6f97a6b32fc4287cfa3832becdcc, type: 2}
-    quantity: 1
-  - item: {fileID: 11400000, guid: f03d6f97a6b32fc4287cfa3832becdcc, type: 2}
-    quantity: 1
-  - item: {fileID: 11400000, guid: f03d6f97a6b32fc4287cfa3832becdcc, type: 2}
-    quantity: 1
-  - item: {fileID: 11400000, guid: f03d6f97a6b32fc4287cfa3832becdcc, type: 2}
-    quantity: 1
+  items: []

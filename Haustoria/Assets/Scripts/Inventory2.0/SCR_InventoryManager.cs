@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class SCR_InventoryManager : MonoBehaviour
+public class SCR_InventoryManager : MonoBehaviour, IDataPersistance
 {
     [SerializeField] public SCR_BriarStats briarStats;
     [SerializeField] private GameObject slotHolder;
@@ -15,9 +15,10 @@ public class SCR_InventoryManager : MonoBehaviour
 
     private GameObject[] slots;
 
+
     private void Start()
     {
-        int numSlots = 10;
+        int numSlots = 12;
         slots = new GameObject[numSlots];
 
         for (int i = 0; i < numSlots; i++)
@@ -36,6 +37,7 @@ public class SCR_InventoryManager : MonoBehaviour
 
     public void RefreshUI()
     {
+
         for (int i = 0; i < slots.Length; i++)
         {
             try
@@ -169,6 +171,26 @@ public class SCR_InventoryManager : MonoBehaviour
         slotWeapon.transform.GetChild(0).GetComponent<Image>().sprite = item.itemSprite;
         slotWeapon.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = item.itemName;
         RefreshUI();
+    }
+
+    public void LoadData(GameData data)
+    {
+        items.Clear();
+        //Debug.Log("Loading Inventory");
+        foreach (ItemData itemData in data.inventoryItems)
+        {
+            items.Add(new SlotClass(itemData.item, itemData.quantity));
+        }
+    }
+
+    public void SaveData(GameData data)
+    {
+        data.inventoryItems.Clear();
+        //Debug.Log("Saved Inventory");
+        foreach (SlotClass slot in items)
+        {
+            data.inventoryItems.Add(new ItemData { item = slot.GetItem(), quantity = slot.GetQuantity() });
+        }
     }
 
 }

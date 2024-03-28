@@ -34,6 +34,7 @@ public class SCR_SceneTransitionManager : MonoBehaviour//, IDataPersistance
     public void ForceSavePosition()
     {
         DataPersistanceManager.instance.gameData.BriarPosition = BriarLoadPosition;
+        Debug.Log(BriarLoadPosition);
     }
 
 /*    public void SaveData(GameData data)

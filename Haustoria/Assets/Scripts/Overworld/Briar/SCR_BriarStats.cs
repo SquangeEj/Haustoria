@@ -85,6 +85,7 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
     public void LoadData(GameData data)
     {
         transform.localPosition = data.BriarPosition;
+        Debug.Log(data.BriarPosition);
         this.XP = data.Xp;
         this.Health = data.health;
         this.Stamina = data.stamina;

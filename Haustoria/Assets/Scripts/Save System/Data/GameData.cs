@@ -16,6 +16,8 @@ public class GameData
 
     public Vector3 BriarPosition;
 
+    public List<GameObject> DeadEnemies;
+
     //   public Dictionary<int, bool> AbiltiesUnlocked = new Dictionary<int, bool>();
     // dictionary didnt work
 

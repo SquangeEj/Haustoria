@@ -12,6 +12,13 @@ public class SimpleCombatTrigger : MonoBehaviour
 
 
     [SerializeField] private SCROBJ_BRIAR_STATS BriarStats;
+
+
+    private void Start()
+    {
+        
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))

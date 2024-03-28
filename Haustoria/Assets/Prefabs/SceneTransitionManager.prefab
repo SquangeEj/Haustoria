@@ -230,6 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneLoad: 0
+  stats: {fileID: 11400000, guid: c8258bf47159ba548a998bfa0ba6093c, type: 2}
 --- !u!95 &6681810324057308070
 Animator:
   serializedVersion: 5

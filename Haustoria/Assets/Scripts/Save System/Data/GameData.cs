@@ -12,6 +12,7 @@ public class GameData
 
     public int questid;
 
+    public int SceneId;
 
     public Vector3 BriarPosition;
 

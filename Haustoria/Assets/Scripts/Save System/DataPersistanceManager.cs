@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class DataPersistanceManager : MonoBehaviour
 {
     
-    private GameData gameData;
+    public GameData gameData;
 
     
 

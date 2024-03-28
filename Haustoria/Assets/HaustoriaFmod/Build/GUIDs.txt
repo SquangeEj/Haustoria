@@ -2,6 +2,12 @@
 {b33f884f-0c30-00f8-24d7-daa96c79108d} bank:/Master.strings
 {ec10e84c-b762-474e-884b-be4623da4522} bus:/
 {2dd26fb2-eb0d-4592-8d58-42d21385a6f9} bus:/Reverb
-{19ff7f67-de3d-4b3b-8004-0698b540e328} event:/Combat
-{42201276-5ecc-494b-920b-3a7760d2775d} event:/CombatDefault
+{bf00856a-6f26-431b-a04e-28dd585e6f81} event:/Hit Sound
+{c630b7e6-2ebf-49d3-b560-1dd726c61e9f} event:/Music/Bear Combat
+{19ff7f67-de3d-4b3b-8004-0698b540e328} event:/Music/Combat
+{42201276-5ecc-494b-920b-3a7760d2775d} event:/Music/CombatDefault
+{d18f4612-61b2-4fd9-8e9b-c32d9219bff2} event:/Music/ForestMusic
+{2dffb37d-602a-41db-bb3e-247e9df98faf} event:/Music/RootorialMusic
+{63418293-b19e-45ce-9ff4-d0ef0bc656ef} event:/Music/TownMusic
 {07f22f49-75d3-4f35-994a-43c642ed181b} parameter:/Health
+{590850a0-2726-49c8-8d9c-8f35a7624671} parameter:/Times Hit

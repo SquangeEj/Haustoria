@@ -9,6 +9,8 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
     [SerializeField] private int AbilityPoints;
     [SerializeField] public int Stamina;
 
+    [SerializeField] private SCROBJ_BRIAR_STATS BriarStats;
+
     [SerializeField] private GameObject SkillTree;
     [SerializeField] public int RootAbilityPointsSpent;
     [SerializeField] public bool[] AbilitiesUnlocked;
@@ -61,6 +63,12 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
         AbilitiesUnlocked[id] = true;
     }
 
+
+  /*  public void SetBriarPosition(Vector3 BriarPosition)
+    {
+        
+    }
+    */
     public void SaveData(GameData data)
     {
 

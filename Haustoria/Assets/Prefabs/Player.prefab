@@ -2018,7 +2018,7 @@ Transform:
   - {fileID: 1232433507756595997}
   - {fileID: 4897331836992272875}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3752516490075746896
 GameObject:
@@ -2605,6 +2605,7 @@ MonoBehaviour:
   walkPathSoundClips:
   - {fileID: 8300000, guid: 4684360daf872414a988c3f40c803b24, type: 3}
   walkGrassSoundClips: []
+  inventoryUI: {fileID: 0}
 --- !u!114 &5453249428610410662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2623,6 +2624,7 @@ MonoBehaviour:
   Defence: 0
   AbilityPoints: 0
   Stamina: 10
+  BriarStats: {fileID: 11400000, guid: c8258bf47159ba548a998bfa0ba6093c, type: 2}
   SkillTree: {fileID: 205547609331744565}
   RootAbilityPointsSpent: 0
   AbilitiesUnlocked: 

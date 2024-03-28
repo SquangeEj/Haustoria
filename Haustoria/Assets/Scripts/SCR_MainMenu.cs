@@ -15,12 +15,23 @@ public class SCR_MainMenu : MonoBehaviour
         DataPersistanceManager.instance.NewGame();
      
         anim.Play("FadeIn");
+        SceneManager.LoadScene(2);
+    }
+
+    public void ContinueGame()
+    {
+        DataPersistanceManager.instance.LoadGame();
+
+        anim.Play("FadeIn");
+
+        SceneManager.LoadScene(DataPersistanceManager.instance.gameData.SceneId);
+     
     }
 
     private void StartEvent()
     {
     
-        SceneManager.LoadScene(2);
+       
     }
     public void Quit()
     {

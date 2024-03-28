@@ -19663,6 +19663,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7970370388294800105, guid: a115e55baf8724b4e84e9d48ff5ab685, type: 3}
+      propertyPath: stats
+      value: 
+      objectReference: {fileID: 11400000, guid: c8258bf47159ba548a998bfa0ba6093c, type: 2}
+    - target: {fileID: 7970370388294800105, guid: a115e55baf8724b4e84e9d48ff5ab685, type: 3}
+      propertyPath: SceneLoad
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

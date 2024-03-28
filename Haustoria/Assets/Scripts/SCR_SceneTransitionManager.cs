@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SCR_SceneTransitionManager : MonoBehaviour, IDataPersistance
+public class SCR_SceneTransitionManager : MonoBehaviour//, IDataPersistance
 {
 
     private Animator anim;
@@ -30,7 +30,12 @@ public class SCR_SceneTransitionManager : MonoBehaviour, IDataPersistance
         BriarLoadPosition.z = z;
     }
 
-    public void SaveData(GameData data)
+    public void ForceSavePosition()
+    {
+        DataPersistanceManager.instance.gameData.BriarPosition = BriarLoadPosition;
+    }
+
+/*    public void SaveData(GameData data)
     {
 
         data.BriarPosition = BriarLoadPosition;
@@ -40,7 +45,7 @@ public class SCR_SceneTransitionManager : MonoBehaviour, IDataPersistance
     public void LoadData(GameData data)
     {
 
-    }
+    }*/
 
     public void SetScene(int scene)
     {

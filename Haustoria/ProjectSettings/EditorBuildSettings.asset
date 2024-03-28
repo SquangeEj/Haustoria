@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BetaScenes/VillageScene.unity
     guid: c7c5b566902c292409479605f1ca1c76
+  - enabled: 1
+    path: Assets/Scenes/BetaScenes/LoreDump2.unity
+    guid: 5613f970bc7f8254d96cc65d9ba8e3eb
   m_configObjects: {}

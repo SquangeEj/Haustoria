@@ -38,7 +38,7 @@ public class SCR_EnemyFox : MonoBehaviour
         spriterend = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         HealthSlider = GameObject.Find("EnemyHealthSlider");
-        player = GameObject.FindGameObjectWithTag("Player");
+        
 
         HealthSlider.GetComponent<Slider>().maxValue = health;
         HealthSlider.GetComponent<Slider>().value = health;

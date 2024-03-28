@@ -8,6 +8,7 @@ public class SimpleChasePlayer : MonoBehaviour
     public GameObject player;
     [SerializeField] private SCROBJ_CombatStartManager EnemyData;
     [SerializeField] bool ischasing =false;
+    [SerializeField] GameObject TransMan;
     void Start()
     {
         
@@ -32,13 +33,8 @@ public class SimpleChasePlayer : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+         
 
-           GameObject combatman =  GameObject.Find("SceneTransitionManager");
-
-
-            EnemyData.EnemyID = 0;
-            combatman.GetComponent<SCR_SceneTransitionManager>().SceneLoad = 2;
-            combatman.GetComponent<SCR_SceneTransitionManager>().swapscene();
 
 
 

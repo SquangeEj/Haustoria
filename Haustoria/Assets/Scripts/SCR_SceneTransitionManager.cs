@@ -28,6 +28,7 @@ public class SCR_SceneTransitionManager : MonoBehaviour//, IDataPersistance
     public void SetDestinationZ(int z)
     {
         BriarLoadPosition.z = z;
+       
     }
 
     public void ForceSavePosition()

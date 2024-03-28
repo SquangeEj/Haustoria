@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2721,6 +2721,7 @@ MonoBehaviour:
   player: {fileID: 619387921}
   anim: {fileID: 0}
   RootText: {fileID: 1890645275}
+  Transitionman: {fileID: 1736316781}
 --- !u!114 &934017088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3471,7 +3472,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3939284775478729769, guid: a115e55baf8724b4e84e9d48ff5ab685, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970370388294800105, guid: a115e55baf8724b4e84e9d48ff5ab685, type: 3}
+      propertyPath: SceneLoad
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4472,6 +4477,11 @@ MonoBehaviour:
   BriarHeart: {fileID: 619387921}
   DamageNumber: {fileID: 4999409101859005338, guid: 262a4910d4c9d8d41929c0412ce340c7, type: 3}
   BriarHealthText: {fileID: 336176297}
+--- !u!1 &1736316781 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3939284775478729769, guid: a115e55baf8724b4e84e9d48ff5ab685, type: 3}
+  m_PrefabInstance: {fileID: 1095525041}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1761130940
 GameObject:
   m_ObjectHideFlags: 0

@@ -29,6 +29,7 @@ public class SCR_TutorialEnemy : MonoBehaviour
     [SerializeField]
     private TMP_Text RootText;
 
+    [SerializeField] private GameObject Transitionman;
 
     private void Start()
     {
@@ -144,6 +145,7 @@ public class SCR_TutorialEnemy : MonoBehaviour
 
     private IEnumerator RootDamage()
     {
+
         var prevhealth = health;
         health -= AttackValues.damagetaken;
 
@@ -163,7 +165,8 @@ public class SCR_TutorialEnemy : MonoBehaviour
             RootText.text = "Come to me.";
 
             StopAllCoroutines();
-            CombatManager.GetComponent<SCR_EnemySelect>().EnemyDied();
+            Transitionman.GetComponent<SCR_SceneTransitionManager>().SetScene(6);
+            Transitionman.GetComponent<SCR_SceneTransitionManager>().swapscene();
             gameObject.SetActive(false);
         }
         yield return null;

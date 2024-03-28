@@ -16,8 +16,10 @@ public class SCR2D_FoxAttackMoveAway : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         rb2d = GetComponent<Rigidbody2D>();
         rb2d.AddForce(new Vector2(Random.Range(-5, 5f), Random.Range(-5, 5f) * speed/5) , ForceMode2D.Impulse);
-
-        StartCoroutine(HurtTrail());
+        if (Thingtospawn != null)
+        {
+            StartCoroutine(HurtTrail());
+        }
     }
 
     // Update is called once per frame

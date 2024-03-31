@@ -8175,7 +8175,7 @@ MonoBehaviour:
     questid: 0
     SceneId: 0
     BriarPosition: {x: 0, y: 0, z: 0}
-    DeadEnemies: []
+    DeadEnemies: 
     SkillID: 000000
     RootAbilityPointsUsed: 0
     AbilityID: 000000
@@ -10218,7 +10218,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3939284775478729769, guid: a115e55baf8724b4e84e9d48ff5ab685, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

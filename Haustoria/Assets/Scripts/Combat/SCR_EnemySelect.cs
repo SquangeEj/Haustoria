@@ -99,7 +99,7 @@ public class SCR_EnemySelect : MonoBehaviour
 
     IEnumerator EndCombat()
     {
-       
+        DataPersistanceManager.instance.gameData.Xp += CombatData.XPamount;
         SceneManager.LoadScene(CombatData.Scenetogotoafter);
         yield return null;
     }

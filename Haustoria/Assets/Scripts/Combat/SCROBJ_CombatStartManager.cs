@@ -9,6 +9,7 @@ public class SCROBJ_CombatStartManager : ScriptableObject
     public int Scenetogotoafter;
     public int EnemyID;
     public int BackgroundID;
+    public int XPamount;
 
     public string[] EnemyNames;
 

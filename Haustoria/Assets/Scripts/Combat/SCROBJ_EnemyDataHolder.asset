@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53a7616fa08163848bc109aae50ccf92, type: 3}
   m_Name: SCROBJ_EnemyDataHolder
   m_EditorClassIdentifier: 
-  Scenetogotoafter: 0
-  EnemyID: 0
+  Scenetogotoafter: 8
+  EnemyID: 3
   BackgroundID: 0
   EnemyNames:
   - Bear

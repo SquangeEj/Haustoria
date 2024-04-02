@@ -17,11 +17,13 @@ public class SCR_DeerEnemy : MonoBehaviour
 
     
     [Header("Attack or Attacks")]
-    [SerializeField] private GameObject Attack;
+    [SerializeField] private GameObject Attack, Attack2;
 
     [SerializeField] private GameObject player;
 
     [SerializeField] private Animator antleranim;
+
+    [SerializeField] private Vector3[] Headattackside;
 
     private Animator anim;
 
@@ -46,7 +48,7 @@ public class SCR_DeerEnemy : MonoBehaviour
 
     public void EnemyAttack()
     {
-        int AttackRNG = Random.Range(0, 2);
+        int AttackRNG = Random.Range(0, 4);
 
 
         switch (AttackRNG)
@@ -57,6 +59,13 @@ public class SCR_DeerEnemy : MonoBehaviour
 
             case 1:
                 StartCoroutine(DeerattackTwo());
+                break;
+
+            case 2:
+                StartCoroutine(DeerattackThree());
+                break;
+            case 3:
+                StartCoroutine(DeerattackFour());
                 break;
         }
 
@@ -73,7 +82,7 @@ public class SCR_DeerEnemy : MonoBehaviour
 
 
 
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(3f);
 
         antleranim.Play("Idle");
         CombatManager.GetComponent<SCR_EnemySelect>().BriarTurn();
@@ -89,7 +98,60 @@ public class SCR_DeerEnemy : MonoBehaviour
 
         antleranim.Play("AntlerAttackRight");
 
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(3f);
+
+        antleranim.Play("Idle");
+
+        CombatManager.GetComponent<SCR_EnemySelect>().BriarTurn();
+
+
+        yield return null;
+    }
+
+    public IEnumerator DeerattackThree()
+    {
+        yield return new WaitForSeconds(1f);
+        
+        
+        
+
+        for(int i = 0; i < Random.Range(1, 5f); i++)
+        {
+            var side = Random.Range(0, 2);
+            GameObject AntlerAttack = Instantiate(Attack, Headattackside[side], Quaternion.identity);
+            if(side == 1)
+            {
+                AntlerAttack.transform.eulerAngles = new Vector3(0, 180, 0);
+            }
+            Destroy(AntlerAttack, 3f);
+             yield return new WaitForSeconds(Random.Range(1f,2f));
+        }
+
+        
+
+        yield return new WaitForSeconds(3f);
+
+        antleranim.Play("Idle");
+
+        CombatManager.GetComponent<SCR_EnemySelect>().BriarTurn();
+
+
+        yield return null;
+    }
+
+    public IEnumerator DeerattackFour()
+    {
+        yield return new WaitForSeconds(1f);
+
+
+
+        GameObject attack2 = Instantiate(Attack2, transform.position - new Vector3(0,4f,0), Quaternion.identity);
+
+        Destroy(attack2, 10f);
+      
+
+
+        yield return new WaitForSeconds(8f);
 
         antleranim.Play("Idle");
 

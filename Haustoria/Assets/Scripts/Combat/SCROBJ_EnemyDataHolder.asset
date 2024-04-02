@@ -15,6 +15,7 @@ MonoBehaviour:
   Scenetogotoafter: 8
   EnemyID: 3
   BackgroundID: 0
+  XPamount: 0
   EnemyNames:
   - Bear
   - Bird

@@ -2553,6 +2553,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5fd1e25ecaaf76f49b1b019e9076842b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 87ef7489823759f4a84f4bb12e7b9ed4, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 5fd1e25ecaaf76f49b1b019e9076842b, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 87ef7489823759f4a84f4bb12e7b9ed4, type: 2}
     - target: {fileID: 919132149155446097, guid: 5fd1e25ecaaf76f49b1b019e9076842b, type: 3}
       propertyPath: m_Name
       value: shelf (5)
@@ -3417,6 +3425,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5fd1e25ecaaf76f49b1b019e9076842b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 87ef7489823759f4a84f4bb12e7b9ed4, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 5fd1e25ecaaf76f49b1b019e9076842b, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 87ef7489823759f4a84f4bb12e7b9ed4, type: 2}
     - target: {fileID: 919132149155446097, guid: 5fd1e25ecaaf76f49b1b019e9076842b, type: 3}
       propertyPath: m_Name
       value: shelf (1)
@@ -5322,6 +5338,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5fd1e25ecaaf76f49b1b019e9076842b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 87ef7489823759f4a84f4bb12e7b9ed4, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 5fd1e25ecaaf76f49b1b019e9076842b, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 87ef7489823759f4a84f4bb12e7b9ed4, type: 2}
     - target: {fileID: 919132149155446097, guid: 5fd1e25ecaaf76f49b1b019e9076842b, type: 3}
       propertyPath: m_Name
       value: shelf (2)
@@ -8292,6 +8316,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5fd1e25ecaaf76f49b1b019e9076842b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 87ef7489823759f4a84f4bb12e7b9ed4, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 5fd1e25ecaaf76f49b1b019e9076842b, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 87ef7489823759f4a84f4bb12e7b9ed4, type: 2}
     - target: {fileID: 919132149155446097, guid: 5fd1e25ecaaf76f49b1b019e9076842b, type: 3}
       propertyPath: m_Name
       value: shelf (6)
@@ -13389,6 +13421,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5fd1e25ecaaf76f49b1b019e9076842b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 87ef7489823759f4a84f4bb12e7b9ed4, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 5fd1e25ecaaf76f49b1b019e9076842b, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 87ef7489823759f4a84f4bb12e7b9ed4, type: 2}
     - target: {fileID: 919132149155446097, guid: 5fd1e25ecaaf76f49b1b019e9076842b, type: 3}
       propertyPath: m_Name
       value: shelf (8)
@@ -13912,6 +13952,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5fd1e25ecaaf76f49b1b019e9076842b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 87ef7489823759f4a84f4bb12e7b9ed4, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 5fd1e25ecaaf76f49b1b019e9076842b, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 87ef7489823759f4a84f4bb12e7b9ed4, type: 2}
     - target: {fileID: 919132149155446097, guid: 5fd1e25ecaaf76f49b1b019e9076842b, type: 3}
       propertyPath: m_Name
       value: shelf (7)
@@ -21940,6 +21988,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5fd1e25ecaaf76f49b1b019e9076842b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 87ef7489823759f4a84f4bb12e7b9ed4, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 5fd1e25ecaaf76f49b1b019e9076842b, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 87ef7489823759f4a84f4bb12e7b9ed4, type: 2}
     - target: {fileID: 919132149155446097, guid: 5fd1e25ecaaf76f49b1b019e9076842b, type: 3}
       propertyPath: m_Name
       value: shelf (3)
@@ -28921,6 +28977,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5fd1e25ecaaf76f49b1b019e9076842b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 87ef7489823759f4a84f4bb12e7b9ed4, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 5fd1e25ecaaf76f49b1b019e9076842b, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 87ef7489823759f4a84f4bb12e7b9ed4, type: 2}
     - target: {fileID: 919132149155446097, guid: 5fd1e25ecaaf76f49b1b019e9076842b, type: 3}
       propertyPath: m_Name
       value: shelf (4)

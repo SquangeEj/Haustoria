@@ -61,14 +61,28 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
     public void UnlockAbility(int id)
     {
         AbilitiesUnlocked[id] = true;
+
+        DataPersistanceManager.instance.SaveGame();
     }
-
-
-  /*  public void SetBriarPosition(Vector3 BriarPosition)
+    public void AddDefence(int defence)
     {
-        
+        Defence += defence;
+
+        DataPersistanceManager.instance.SaveGame();
     }
-    */
+    public void AddAttack(int attack)
+    {
+
+        Attack += attack;
+        DataPersistanceManager.instance.SaveGame();
+    }
+
+
+    /*  public void SetBriarPosition(Vector3 BriarPosition)
+      {
+
+      }
+      */
     public void SaveData(GameData data)
     {
 

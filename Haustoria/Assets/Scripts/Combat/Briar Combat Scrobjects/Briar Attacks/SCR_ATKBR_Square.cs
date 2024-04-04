@@ -32,7 +32,7 @@ public class SCR_ATKBR_Square : MonoBehaviour
     [SerializeField] private GameObject ComboNumber;
 
 
-    [SerializeField] private StudioEventEmitter FmodEvent;
+    [SerializeField] private StudioEventEmitter FmodEvent, FmodMiss;
     private int timeshit;
 
     private CinemachineImpulseSource imp;
@@ -41,6 +41,7 @@ public class SCR_ATKBR_Square : MonoBehaviour
   
     private void OnEnable()
     {
+        resetSpeed();
         damage = basedamage;
 
         anim = GetComponent<Animator>();
@@ -78,6 +79,11 @@ public class SCR_ATKBR_Square : MonoBehaviour
 
                 StartCoroutine(GameFeel());
             }
+            else
+            {
+                damage /= multiplier;
+                StartCoroutine(GameFeelWrong());
+            }
 
         }
     }
@@ -102,6 +108,23 @@ public class SCR_ATKBR_Square : MonoBehaviour
         for (float t = 0; t < 1; t += 4f * Time.deltaTime)
         {
             SquareSprite.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.green, Color.white, t);
+            SquareSprite.transform.localScale = Vector3.Lerp(new Vector3(2, 2, 2), new Vector3(1, 1, 1), t);
+            yield return null;
+        }
+        yield return null;
+    }
+
+
+
+    private IEnumerator GameFeelWrong()
+    {
+        FmodMiss.Play();
+        
+   
+
+        for (float t = 0; t < 1; t += 4f * Time.deltaTime)
+        {
+            SquareSprite.GetComponent<SpriteRenderer>().color = Color.Lerp(Color.red, Color.white, t);
             SquareSprite.transform.localScale = Vector3.Lerp(new Vector3(2, 2, 2), new Vector3(1, 1, 1), t);
             yield return null;
         }

@@ -24,6 +24,8 @@ public class SCR_BriarCombatMovement : MonoBehaviour
     [SerializeField]
     private TMP_Text BriarHealthText;
 
+    private int Defence;
+
     
 
     private void Start()
@@ -31,6 +33,7 @@ public class SCR_BriarCombatMovement : MonoBehaviour
        
         rb2d = GetComponent<Rigidbody2D>();
         combatmanager = GameObject.Find("CombatManager");
+        Defence = DataPersistanceManager.instance.gameData.Def;
       
     }
  
@@ -58,7 +61,8 @@ public class SCR_BriarCombatMovement : MonoBehaviour
     private IEnumerator TakeDamageInum(int Dam)
     {
         combatmanager.GetComponent<SCR_EnemySelect>().StartCoroutine("ScreenShake");
-      
+
+        Dam += Defence;
         BriarHealth.Health -= Dam;
         BriarHealthText.text = BriarHealth.Health.ToString();
 

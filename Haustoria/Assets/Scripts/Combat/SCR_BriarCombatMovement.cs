@@ -62,7 +62,7 @@ public class SCR_BriarCombatMovement : MonoBehaviour
     {
         combatmanager.GetComponent<SCR_EnemySelect>().StartCoroutine("ScreenShake");
 
-        Dam += Defence;
+        Dam -= Defence;
         BriarHealth.Health -= Dam;
         BriarHealthText.text = BriarHealth.Health.ToString();
 
@@ -74,7 +74,7 @@ public class SCR_BriarCombatMovement : MonoBehaviour
 
         switch (BriarHealth.Health)
         {
-            case > 10:
+            case > 50:
                 BriarFace.sprite = BriarNeutral;
                 break;
 
@@ -84,7 +84,7 @@ public class SCR_BriarCombatMovement : MonoBehaviour
 
 
 
-            case < 10:
+            case < 50:
                 BriarFace.sprite = BriarDying;
                 break;
 

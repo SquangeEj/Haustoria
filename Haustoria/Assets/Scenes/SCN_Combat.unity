@@ -7894,11 +7894,53 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7171775200910235436, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
   m_PrefabInstance: {fileID: 946175110586002582}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &616448704 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9160634011220531118, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
+  m_PrefabInstance: {fileID: 946175110586002582}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616448701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &616448705 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1811945076640970245, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
   m_PrefabInstance: {fileID: 946175110586002582}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &616448708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616448701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -497965344
+      Data2: 1264131411
+      Data3: 1695192705
+      Data4: 884497729
+    Path: event:/Miss Sound
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &619387921
 GameObject:
   m_ObjectHideFlags: 0
@@ -37886,6 +37928,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3295998836429428587, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
+      propertyPath: Emitters.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3295998836429428587, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
+      propertyPath: Emitters.Array.data[0].Target
+      value: 
+      objectReference: {fileID: 616448708}
+    - target: {fileID: 3295998836429428587, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
+      propertyPath: Emitters.Array.data[1].Target
+      value: 
+      objectReference: {fileID: 616448704}
+    - target: {fileID: 3295998836429428587, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
+      propertyPath: Emitters.Array.data[1].Params.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3295998836429428587, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
+      propertyPath: Emitters.Array.data[1].Params.Array.data[0].Name
+      value: Times Hit
+      objectReference: {fileID: 0}
+    - target: {fileID: 3295998836429428587, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
+      propertyPath: Emitters.Array.data[1].Params.Array.data[0].Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7171775200910235436, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
       propertyPath: m_Name
       value: Briar_Attack_Square
@@ -37894,6 +37960,14 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 616448705}
+    - target: {fileID: 7985621022085244095, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
+      propertyPath: FmodMiss
+      value: 
+      objectReference: {fileID: 616448708}
+    - target: {fileID: 7985621022085244095, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
+      propertyPath: FmodEvent
+      value: 
+      objectReference: {fileID: 616448704}
     - target: {fileID: 7985621022085244095, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
       propertyPath: combatManager
       value: 
@@ -37905,7 +37979,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7171775200910235436, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 616448708}
   m_SourcePrefab: {fileID: 100100000, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
 --- !u!1001 &2348865859857676488
 PrefabInstance:

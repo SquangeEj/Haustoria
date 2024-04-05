@@ -5,7 +5,7 @@ using UnityEngine;
 public class SimpleCombatTrigger : MonoBehaviour
 {
     [SerializeField] private SCROBJ_CombatStartManager EnemyData;
-    [SerializeField] private int EnemyId, SceneAfter, Scenetoload, CombatBackgroundId, XpAmount;
+    [SerializeField] private int EnemyId, SceneAfter, Scenetoload, CombatBackgroundId, XpAmount, backgroundID;
     [SerializeField] GameObject TransMan;
     [SerializeField]
     private GameObject player;
@@ -48,6 +48,7 @@ public class SimpleCombatTrigger : MonoBehaviour
 
 
                 TransMan.GetComponent<SCR_SceneTransitionManager>().ForceSavePosition();
+                EnemyData.BackgroundID = backgroundID;
                 EnemyData.XPamount = XpAmount;
                 EnemyData.EnemyID = EnemyId;
                 EnemyData.Scenetogotoafter = SceneAfter;

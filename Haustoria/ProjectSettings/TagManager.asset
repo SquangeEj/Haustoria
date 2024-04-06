@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Item
+  - Skill
   layers:
   - Default
   - TransparentFX

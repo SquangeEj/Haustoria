@@ -95,7 +95,7 @@ public class SCR_ATKBR_Circle : MonoBehaviour
             yield return new WaitForSeconds(delay);
             Destroy(skillcheck, 4f);
         }
-      yield return  new WaitForSeconds(4f);
+      yield return  new WaitForSeconds(2f);
         anim.Play("CircleDone");
         FinishAttack();
         yield return null;

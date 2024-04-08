@@ -445,9 +445,9 @@ MonoBehaviour:
   AttackSCR: {fileID: 11400000, guid: 31d3d2622a44ada4d9ebd756c77ba1fe, type: 2}
   combatManager: {fileID: 0}
   AttackAnimation: {fileID: 0}
-  basedamage: 5
-  damage: 5
-  multiplier: 5
+  basedamage: 1.5
+  damage: 1.5
+  multiplier: 2.1
   AnimSpeed: 1
   SquareSprite: {fileID: 3462918725907373759}
   anim: {fileID: 6718566395944989511}

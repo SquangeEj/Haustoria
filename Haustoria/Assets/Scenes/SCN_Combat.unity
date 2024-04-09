@@ -8735,9 +8735,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 727630828}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0.49, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1901516381}
   m_RootOrder: -1
@@ -8783,7 +8783,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b5c2bc5940428124f8ef94145269c77b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9ea2f1e335c387b47a654d2e54b3e2e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10613,6 +10613,30 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.4245283
       objectReference: {fileID: 0}
+    - target: {fileID: 3295998836429428587, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
+      propertyPath: Emitters.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3295998836429428587, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
+      propertyPath: Emitters.Array.data[0].Target
+      value: 
+      objectReference: {fileID: 1395828783}
+    - target: {fileID: 3295998836429428587, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
+      propertyPath: Emitters.Array.data[1].Target
+      value: 
+      objectReference: {fileID: 1395828780}
+    - target: {fileID: 3295998836429428587, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
+      propertyPath: Emitters.Array.data[1].Params.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3295998836429428587, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
+      propertyPath: Emitters.Array.data[1].Params.Array.data[0].Name
+      value: Times Hit
+      objectReference: {fileID: 0}
+    - target: {fileID: 3295998836429428587, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
+      propertyPath: Emitters.Array.data[1].Params.Array.data[0].Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3476065056684064631, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -10650,9 +10674,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1395828777}
     - target: {fileID: 7985621022085244095, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
+      propertyPath: FmodMiss
+      value: 
+      objectReference: {fileID: 1395828783}
+    - target: {fileID: 7985621022085244095, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
       propertyPath: AnimSpeed
       value: 1.15
       objectReference: {fileID: 0}
+    - target: {fileID: 7985621022085244095, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
+      propertyPath: FmodEvent
+      value: 
+      objectReference: {fileID: 1395828780}
     - target: {fileID: 7985621022085244095, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
       propertyPath: basedamage
       value: 2
@@ -10672,7 +10704,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7171775200910235436, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1395828783}
   m_SourcePrefab: {fileID: 100100000, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
 --- !u!1 &1120649822
 GameObject:
@@ -10971,7 +11006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CombatManager: {fileID: 1687708836}
   AttackValues: {fileID: 11400000, guid: 31d3d2622a44ada4d9ebd756c77ba1fe, type: 2}
-  health: 20
+  health: 14
   Attack: {fileID: 3361853737430097432, guid: 0896f8311ba841341a34ffbe1f7a336b, type: 3}
   AttackAnnoying: {fileID: 5241096193023864671, guid: f3c44bedc35dfbe4ea1a20e26d1fe32f, type: 3}
   AttackVeryAnnoying: {fileID: 3383808382250831282, guid: 946b965b1fa82b24d80aeb9975bdf2b7, type: 3}
@@ -16870,6 +16905,48 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 1811945076640970245, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
   m_PrefabInstance: {fileID: 1113511222}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1395828780 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9160634011220531118, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
+  m_PrefabInstance: {fileID: 1113511222}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395828773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1395828783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395828773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -497965344
+      Data2: 1264131411
+      Data3: 1695192705
+      Data4: 884497729
+    Path: event:/Miss Sound
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1446005168
 GameObject:
   m_ObjectHideFlags: 0
@@ -25050,9 +25127,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1485356127}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.515625, y: 1.7578125, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0.94, z: 0}
+  m_LocalScale: {x: 2.33, y: 0.66571426, z: 0.66571426}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1160547740}
   m_RootOrder: -1
@@ -25098,7 +25175,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4e19c4c579322fe428a7a5e6cb0035f2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: babaa51c9b48321449aef96ffb47bae9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -25988,7 +26065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CombatManager: {fileID: 1687708836}
   AttackValues: {fileID: 11400000, guid: 31d3d2622a44ada4d9ebd756c77ba1fe, type: 2}
-  health: 15
+  health: 14
   Attack: {fileID: 9137102017542458068, guid: c0925fd3413d9544db1eef5b9b013690, type: 3}
   player: {fileID: 619387921}
   SpritesToDamage:
@@ -26566,7 +26643,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1677606828
 Transform:
   m_ObjectHideFlags: 0
@@ -37805,6 +37882,10 @@ PrefabInstance:
     - target: {fileID: 7171775200910235436, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
       propertyPath: m_Name
       value: Briar_Attack_Square
+      objectReference: {fileID: 0}
+    - target: {fileID: 7171775200910235436, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7985621022085244095, guid: a0135f134646bdc4b9a2c67190728f4f, type: 3}
       propertyPath: anim

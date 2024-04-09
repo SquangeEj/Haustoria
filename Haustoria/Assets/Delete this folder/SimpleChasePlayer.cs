@@ -6,20 +6,27 @@ public class SimpleChasePlayer : MonoBehaviour
 {
     public NavMeshAgent agent;
     public GameObject player;
-    [SerializeField] private SCROBJ_CombatStartManager EnemyData;
     [SerializeField] bool ischasing =false;
-    [SerializeField] GameObject TransMan;
+    private Vector3 origin;
+   
     void Start()
     {
-        
+        agent = GetComponent<NavMeshAgent>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        agent.updateRotation = false;
+        origin = this.transform.position;   
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Vector3.Distance(transform.position,player.transform.position)< 50)
+        if (Vector3.Distance(transform.position, player.transform.position) < 50)
         {
             ischasing = true;
+        }
+        else
+        {
+            ischasing = false;
         }
 
         
@@ -27,17 +34,11 @@ public class SimpleChasePlayer : MonoBehaviour
         {
             agent.SetDestination(player.transform.position);
         }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
+        if (ischasing == false)
         {
-         
-
-
-
-
+            agent.SetDestination(origin);
         }
     }
+
+   
 }

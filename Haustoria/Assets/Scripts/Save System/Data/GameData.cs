@@ -12,6 +12,8 @@ public class GameData
 
     public int questid;
 
+    public string questDescription;
+
     public int SceneId;
 
     public Vector3 BriarPosition;
@@ -30,7 +32,7 @@ public class GameData
 
     public bool[] AbilityID = new bool[3];
 
-    public Dictionary<GameObject, bool> EnemiesDead;
+    //public Dictionary<GameObject, bool> EnemiesDead;
 
     public List<ItemData> inventoryItems = new List<ItemData>();
 

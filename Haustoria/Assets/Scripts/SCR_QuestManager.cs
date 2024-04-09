@@ -1,25 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-public class SCR_QuestManager : MonoBehaviour, IDataPersistance
+public class SCR_QuestManager : MonoBehaviour
 {
     public int QuestID;
+    private string QuestDescription;
 
-    public void LoadData(GameData data)
+    [SerializeField] private TextMeshProUGUI Text;
+    private void Start()
     {
-        QuestID = data.questid;
+        QuestID = DataPersistanceManager.instance.gameData.questid;
+
+        Text.text = QuestDescription = DataPersistanceManager.instance.gameData.questDescription;
     }
 
     public void SetQuestID(int NewID)
     {
-        QuestID = NewID;
-
+    
+        DataPersistanceManager.instance.gameData.questid = NewID;
 
     }
 
-    public void SaveData(GameData data)
+    public void SetQuestDescription(string Description)
     {
-        data.questid = QuestID;
+        DataPersistanceManager.instance.gameData.questDescription = Description;
+        updatequest();
     }
+
+    private void updatequest()
+    {
+        Text.text = QuestDescription = DataPersistanceManager.instance.gameData.questDescription;
+    }
+
+
+   
 }

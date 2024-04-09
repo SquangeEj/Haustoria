@@ -52,6 +52,7 @@ public class SCR_SceneTransitionManager : MonoBehaviour//, IDataPersistance
     public void SetScene(int scene)
     {
         SceneLoad = scene;
+        DataPersistanceManager.instance.gameData.SceneId = scene;
     }
 
     private void Start()

@@ -21,8 +21,12 @@ public class DialogueManager : MonoBehaviour
     bool answerTriggered;
     int answerIndex;
 
+    GameObject briar;
+    SCR_BRIAR_MOVEMENT moveScript;
+
     private void Awake()
     {
+        
         if (instance == null)
         {
             instance = this;
@@ -33,12 +37,25 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        briar = GameObject.FindGameObjectWithTag("Player");
+        moveScript = briar.GetComponent<SCR_BRIAR_MOVEMENT>();
+    }
+
     public void StartDialogue(Dialogue dialogueData, int startSection, string name)
     {
         ResetBox();
         nameText.text = name;
         dialogueBox.SetActive(true);
         OnDialogueStarted?.Invoke();
+        //Pause Player or Time 
+        Time.timeScale = 0f;
+        if (moveScript != null)
+        {
+            moveScript.enabled = false;
+        }
+
         StartCoroutine(RunDialogue(dialogueData, startSection));
     }
 
@@ -58,6 +75,10 @@ public class DialogueManager : MonoBehaviour
         {
             OnDialogueEnded?.Invoke();
             dialogueBox.SetActive(false);
+            //Im using 2 ways to freeze time during Dialogues
+            moveScript.enabled = true;
+            Time.timeScale = 1f;
+
             yield break;
         }
 

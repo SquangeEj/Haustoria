@@ -19,7 +19,7 @@ public class SCR_BRIAR_MOVEMENT : MonoBehaviour
     private AudioSource audioSource;
     private SCR_BriarStats briarStats; // Reference to SCR_BriarStats script
     private bool isPaused = false;
-    public GameObject inventoryUI;
+    public GameObject gameUI;
     [SerializeField]
     private LayerMask layerMask;
 
@@ -43,7 +43,7 @@ public class SCR_BRIAR_MOVEMENT : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.I))
         {
-            ToggleInventory();
+            ToggleUI();
         }
 
         if (Input.GetKey(KeyCode.LeftShift) && IsMoving())
@@ -104,14 +104,13 @@ public class SCR_BRIAR_MOVEMENT : MonoBehaviour
         Time.timeScale = isPaused ? 0f : 1f;
     }
 
-    private void ToggleInventory()
+    private void ToggleUI()
     {
         
-        if (inventoryUI != null)
+        if (gameUI != null)
         {
-            inventoryUI.SetActive(!inventoryUI.activeSelf);
+            gameUI.SetActive(!gameUI.activeSelf);
         }
-        TogglePause();
     } 
 
     public void playStepSound()

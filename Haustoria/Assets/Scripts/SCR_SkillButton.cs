@@ -1,18 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class SCR_SkillButton : MonoBehaviour
+public class SCR_SkillButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public GameObject toolTip;
+
+    private void Start()
     {
-        
+        toolTip = transform.Find("Panel").gameObject;
+        toolTip.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnPointerEnter(PointerEventData eventData)
     {
-        
+        toolTip.SetActive(true);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        toolTip.SetActive(false);
     }
 }

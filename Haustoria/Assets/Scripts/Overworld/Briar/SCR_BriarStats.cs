@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SCR_BriarStats : MonoBehaviour, IDataPersistance
 {
-    [SerializeField] private int Health;
-    [SerializeField] private int XP, Attack, Defence;
-    [SerializeField] private int AbilityPoints;
+    [SerializeField] public int Health;
+    [SerializeField] public int XP, Attack, Defence;
+    [SerializeField] public int AbilityPoints;
     [SerializeField] public int Stamina;
 
     [SerializeField] private SCROBJ_BRIAR_STATS BriarStats;

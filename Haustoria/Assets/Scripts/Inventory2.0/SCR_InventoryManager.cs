@@ -18,7 +18,7 @@ public class SCR_InventoryManager : MonoBehaviour, IDataPersistance
 
     private void Start()
     {
-        int numSlots = 12;
+        int numSlots = 100;
         slots = new GameObject[numSlots];
 
         for (int i = 0; i < numSlots; i++)

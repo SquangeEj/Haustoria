@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 3227887747864729104}
   - component: {fileID: 1983783230773848578}
   - component: {fileID: 2126025649361305632}
+  - component: {fileID: 95381984175337749}
+  - component: {fileID: 6969487939575621663}
   m_Layer: 0
   m_Name: Rat
   m_TagString: Untagged
@@ -29,13 +31,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9003486487756490822}
-  m_LocalRotation: {x: -0.0034788747, y: -0, z: -0, w: 0.9999939}
+  m_LocalRotation: {x: -0.0034819718, y: 0, z: 0, w: 0.999994}
   m_LocalPosition: {x: -35.73, y: 2.179, z: -386.93}
   m_LocalScale: {x: 7.195186, y: 7.195186, z: 7.195186}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: -0.399, y: 0, z: 0}
 --- !u!212 &2217903288519713319
 SpriteRenderer:
@@ -97,7 +99,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9003486487756490822}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 9ef91497ae9e97a4aadd637974364d1b, type: 2}
   m_CullingMode: 0
@@ -123,17 +125,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyData: {fileID: 11400000, guid: e2bc43d800d755e4a8a38445e2eab877, type: 2}
-  EnemyId: 1
-  Gamedata:
-    health: 0
-    stamina: 0
-    Xp: 0
-    Atk: 0
-    Def: 0
-    BriarPosition: {x: 0, y: 0, z: 0}
-    SkillID: 000000
-    RootAbilityPointsUsed: 0
-    AbilityID: 000000
+  EnemyId: 5
+  SceneAfter: 9
+  Scenetoload: 1
+  CombatBackgroundId: 0
+  XpAmount: 0
+  backgroundID: 0
+  TransMan: {fileID: 0}
+  player: {fileID: 0}
+  SavedID: 0
   BriarStats: {fileID: 11400000, guid: c8258bf47159ba548a998bfa0ba6093c, type: 2}
 --- !u!54 &3227887747864729104
 Rigidbody:
@@ -224,3 +224,40 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9999997, y: 0.3897872, z: 0.38536027}
   m_Center: {x: 0, y: -0.05378442, z: -0.09269611}
+--- !u!114 &95381984175337749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9003486487756490822}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462b9c0bd9f317e41b4031a11b57fbad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 6969487939575621663}
+  player: {fileID: 0}
+  ischasing: 1
+--- !u!195 &6969487939575621663
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9003486487756490822}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.41699314
+  m_Speed: 9.79
+  m_Acceleration: 30.67
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.83398426
+  m_BaseOffset: 0.41699213
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

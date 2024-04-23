@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{26b53a2e-3f2f-48be-88f2-2258510cc33c}">
+		<property name="assetPath">
+			<value>Combat Music/HedgeHawg/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{51d9d26e-5973-4851-8f66-d0c0696003f8}</destination>
+		</relationship>
+	</object>
+</objects>

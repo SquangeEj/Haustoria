@@ -62,6 +62,12 @@ public class SCR_SceneTransitionManager : MonoBehaviour//, IDataPersistance
     }
 
 
+    public void swapsceneFadeOut()
+    {
+        anim.Play("ExitSceneFade");
+
+    }
+
 
     public void swapscene()
     {

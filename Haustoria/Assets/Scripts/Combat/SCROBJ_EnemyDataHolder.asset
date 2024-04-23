@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SCROBJ_EnemyDataHolder
   m_EditorClassIdentifier: 
   Scenetogotoafter: 8
-  EnemyID: 4
+  EnemyID: 7
   BackgroundID: 1
   XPamount: 0
   EnemyNames:
@@ -24,4 +24,5 @@ MonoBehaviour:
   - Fox
   - Rats
   - Squirrel
+  - Snake
   - Tutorial

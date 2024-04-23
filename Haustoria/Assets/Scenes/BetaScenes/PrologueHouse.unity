@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1251,7 +1251,7 @@ GameObject:
   - component: {fileID: 52504755}
   - component: {fileID: 52504757}
   - component: {fileID: 52504756}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1423,7 +1423,7 @@ GameObject:
   - component: {fileID: 53956930}
   - component: {fileID: 53956929}
   - component: {fileID: 53956928}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CameraBedroom_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6864,7 +6864,7 @@ GameObject:
   - component: {fileID: 496374809}
   - component: {fileID: 496374808}
   - component: {fileID: 496374811}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LivingRoomCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7275,7 +7275,7 @@ GameObject:
   - component: {fileID: 550229134}
   - component: {fileID: 550229133}
   - component: {fileID: 550229135}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BathroomCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7691,7 +7691,7 @@ GameObject:
   - component: {fileID: 562244471}
   - component: {fileID: 562244473}
   - component: {fileID: 562244472}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7779,7 +7779,7 @@ GameObject:
   - component: {fileID: 579030150}
   - component: {fileID: 579030152}
   - component: {fileID: 579030151}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CamCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7960,7 +7960,7 @@ GameObject:
   - component: {fileID: 585623792}
   - component: {fileID: 585623794}
   - component: {fileID: 585623793}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8048,7 +8048,7 @@ GameObject:
   - component: {fileID: 586609104}
   - component: {fileID: 586609106}
   - component: {fileID: 586609105}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8324,7 +8324,7 @@ GameObject:
   - component: {fileID: 602415860}
   - component: {fileID: 602415862}
   - component: {fileID: 602415861}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CamCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9663,7 +9663,7 @@ GameObject:
   - component: {fileID: 720469652}
   - component: {fileID: 720469654}
   - component: {fileID: 720469656}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CameraBedroom_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10422,7 +10422,7 @@ GameObject:
   - component: {fileID: 781917355}
   - component: {fileID: 781917357}
   - component: {fileID: 781917356}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11453,7 +11453,7 @@ GameObject:
   - component: {fileID: 876090549}
   - component: {fileID: 876090551}
   - component: {fileID: 876090550}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CamCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14149,7 +14149,7 @@ GameObject:
   - component: {fileID: 1075653752}
   - component: {fileID: 1075653754}
   - component: {fileID: 1075653753}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CamCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15045,7 +15045,7 @@ GameObject:
   - component: {fileID: 1158159124}
   - component: {fileID: 1158159126}
   - component: {fileID: 1158159125}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CamCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15794,7 +15794,7 @@ GameObject:
   - component: {fileID: 1215297148}
   - component: {fileID: 1215297147}
   - component: {fileID: 1215297149}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18706,7 +18706,7 @@ GameObject:
   - component: {fileID: 1345444226}
   - component: {fileID: 1345444225}
   - component: {fileID: 1345444227}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HallwayCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20172,7 +20172,7 @@ GameObject:
   - component: {fileID: 1449815881}
   - component: {fileID: 1449815883}
   - component: {fileID: 1449815882}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CamCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21906,7 +21906,7 @@ GameObject:
   - component: {fileID: 1568808081}
   - component: {fileID: 1568808080}
   - component: {fileID: 1568808083}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: KitchenCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24841,7 +24841,7 @@ GameObject:
   - component: {fileID: 1702127057}
   - component: {fileID: 1702127056}
   - component: {fileID: 1702127059}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HallwayCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25465,7 +25465,7 @@ GameObject:
   - component: {fileID: 1747648186}
   - component: {fileID: 1747648185}
   - component: {fileID: 1747648187}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: UtilityRoomCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26678,7 +26678,7 @@ GameObject:
   - component: {fileID: 1848747254}
   - component: {fileID: 1848747256}
   - component: {fileID: 1848747255}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CamCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27094,7 +27094,7 @@ GameObject:
   - component: {fileID: 1872409964}
   - component: {fileID: 1872409966}
   - component: {fileID: 1872409965}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29999,7 +29999,7 @@ GameObject:
   - component: {fileID: 1994198674}
   - component: {fileID: 1994198676}
   - component: {fileID: 1994198675}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30941,7 +30941,7 @@ GameObject:
   - component: {fileID: 2087694503}
   - component: {fileID: 2087694505}
   - component: {fileID: 2087694504}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CamCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

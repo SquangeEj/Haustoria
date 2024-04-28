@@ -14,4 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 100
   MaxHealth: 100
+  XP: 0
+  Attack: 1
+  Defence: 0
+  AbilityPoints: 0
+  Stamina: 100
   Position: {x: 0, y: 0, z: 0}

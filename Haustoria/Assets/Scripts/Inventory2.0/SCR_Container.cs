@@ -18,6 +18,7 @@ public class SCR_Container : MonoBehaviour
         meshRenderer = GetComponent<MeshRenderer>();
         meshRenderer.material = closedCrate;
 
+
         if (containerUIPrefab != null)
         {
             containerUIInstance = containerUIPrefab;
@@ -28,12 +29,14 @@ public class SCR_Container : MonoBehaviour
     private void Update()
     {
         // Open the container UI when the player Right Clicks 
-        if (playerInRange && Input.GetMouseButtonDown(1))
+        if (playerInRange && Input.GetMouseButtonDown(0) && !containerUIInstance.activeSelf)
         {
             meshRenderer.material = openCrate;
 
+
             if (containerUIInstance != null)
             {
+                
                 containerUIInstance.SetActive(true);
                 // Pass the container reference to the UI script
                 SCR_ContainerUI containerUIScript = containerUIInstance.GetComponentInChildren<SCR_ContainerUI>();

@@ -6140,7 +6140,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Flee
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 896aefb726a226343b92be0578ed29ec, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 670c8e6f995543b4ebcff39393008e40, type: 2}
   m_sharedMaterial: {fileID: 4166987831703604752, guid: 896aefb726a226343b92be0578ed29ec, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -6204,7 +6204,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &306797119
@@ -6499,8 +6499,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 896aefb726a226343b92be0578ed29ec, type: 2}
-  m_sharedMaterial: {fileID: 4166987831703604752, guid: 896aefb726a226343b92be0578ed29ec, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 670c8e6f995543b4ebcff39393008e40, type: 2}
+  m_sharedMaterial: {fileID: 8426855874241824890, guid: 670c8e6f995543b4ebcff39393008e40, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6524,7 +6524,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 38
+  m_fontSize: 40.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7025,8 +7025,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Items
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 896aefb726a226343b92be0578ed29ec, type: 2}
-  m_sharedMaterial: {fileID: 4166987831703604752, guid: 896aefb726a226343b92be0578ed29ec, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 670c8e6f995543b4ebcff39393008e40, type: 2}
+  m_sharedMaterial: {fileID: 8426855874241824890, guid: 670c8e6f995543b4ebcff39393008e40, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7160,7 +7160,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Vine-Slash
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 896aefb726a226343b92be0578ed29ec, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 670c8e6f995543b4ebcff39393008e40, type: 2}
   m_sharedMaterial: {fileID: 4166987831703604752, guid: 896aefb726a226343b92be0578ed29ec, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -7224,7 +7224,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &441588465
@@ -7633,37 +7633,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 542144250}
   m_CullTransparentMesh: 1
---- !u!1 &556344877
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 556344878}
-  m_Layer: 0
-  m_Name: SnakeHatPoint1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &556344878
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 556344877}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.091, y: -0.209, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1537622217}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &579473465
 GameObject:
   m_ObjectHideFlags: 0
@@ -7761,8 +7730,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Attack
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 896aefb726a226343b92be0578ed29ec, type: 2}
-  m_sharedMaterial: {fileID: 4166987831703604752, guid: 896aefb726a226343b92be0578ed29ec, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 670c8e6f995543b4ebcff39393008e40, type: 2}
+  m_sharedMaterial: {fileID: 8426855874241824890, guid: 670c8e6f995543b4ebcff39393008e40, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8352,7 +8321,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Spine-Shot
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 896aefb726a226343b92be0578ed29ec, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 670c8e6f995543b4ebcff39393008e40, type: 2}
   m_sharedMaterial: {fileID: 4166987831703604752, guid: 896aefb726a226343b92be0578ed29ec, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -8416,7 +8385,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &641378810
@@ -9082,7 +9051,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: PAIN KILLERS
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 896aefb726a226343b92be0578ed29ec, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 670c8e6f995543b4ebcff39393008e40, type: 2}
   m_sharedMaterial: {fileID: 4166987831703604752, guid: 896aefb726a226343b92be0578ed29ec, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -9146,7 +9115,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &799435113
@@ -10247,8 +10216,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Powers
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 896aefb726a226343b92be0578ed29ec, type: 2}
-  m_sharedMaterial: {fileID: 4166987831703604752, guid: 896aefb726a226343b92be0578ed29ec, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 670c8e6f995543b4ebcff39393008e40, type: 2}
+  m_sharedMaterial: {fileID: 8426855874241824890, guid: 670c8e6f995543b4ebcff39393008e40, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10382,7 +10351,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Back
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 896aefb726a226343b92be0578ed29ec, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 670c8e6f995543b4ebcff39393008e40, type: 2}
   m_sharedMaterial: {fileID: 4166987831703604752, guid: 896aefb726a226343b92be0578ed29ec, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -10446,7 +10415,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1084343019
@@ -11103,7 +11072,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1187004317
 Transform:
   m_ObjectHideFlags: 0
@@ -11136,11 +11105,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 1109398134
-      Data2: 1229676236
-      Data3: 2000292754
-      Data4: 1568133728
-    Path: event:/Music/CombatDefault
+      Data1: -805305942
+      Data2: 1245669427
+      Data3: -1138628441
+      Data4: -780595208
+    Path: event:/Music/SnakeMusicEPIC
   Event: 
   PlayEvent: 11
   StopEvent: 12
@@ -11215,8 +11184,8 @@ MonoBehaviour:
   DamageEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SCR_EnemyCrow, Assembly-CSharp
+      - m_Target: {fileID: 1187004322}
+        m_TargetAssemblyTypeName: SCR_EnemySnake, Assembly-CSharp
         m_MethodName: takeDamage
         m_Mode: 1
         m_Arguments:
@@ -11242,10 +11211,8 @@ MonoBehaviour:
   CombatManager: {fileID: 1687708836}
   AttackValues: {fileID: 11400000, guid: 31d3d2622a44ada4d9ebd756c77ba1fe, type: 2}
   health: 65
-  Positions:
-  - {fileID: 556344878}
-  - {fileID: 1462003567}
   Attack: {fileID: 8165457903649740125, guid: 48da58a8d4ce29d46b9673ce06095ca9, type: 3}
+  snakefollow: {fileID: 5584970035608858611, guid: a88bf3b5914756e41bcc3f3c2fd07b55, type: 3}
   player: {fileID: 619387921}
   SpritesToDamage:
   - {fileID: 1839943489}
@@ -16475,7 +16442,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: LOCKED
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 896aefb726a226343b92be0578ed29ec, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 670c8e6f995543b4ebcff39393008e40, type: 2}
   m_sharedMaterial: {fileID: 4166987831703604752, guid: 896aefb726a226343b92be0578ed29ec, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -16539,7 +16506,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1289621159
@@ -17018,7 +16985,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: RECOVER 5 HIT POINTS
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 896aefb726a226343b92be0578ed29ec, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 670c8e6f995543b4ebcff39393008e40, type: 2}
   m_sharedMaterial: {fileID: 4166987831703604752, guid: 896aefb726a226343b92be0578ed29ec, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -17082,7 +17049,7 @@ MonoBehaviour:
   m_margin: {x: -21.836037, y: 0, z: -15.597176, w: 40.552532}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1378459924
@@ -25148,37 +25115,6 @@ PolygonCollider2D:
       - {x: 1.628418, y: -1.8457031}
       - {x: 1.5942383, y: -1.8481445}
   m_UseDelaunayMesh: 1
---- !u!1 &1462003566
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1462003567}
-  m_Layer: 0
-  m_Name: SnakeHatPoint2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1462003567
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1462003566}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.093, y: -0.209, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1537622217}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1470938303
 GameObject:
   m_ObjectHideFlags: 0
@@ -25810,8 +25746,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1537622217}
   - component: {fileID: 1537622218}
-  - component: {fileID: 1537622219}
-  - component: {fileID: 1537622220}
   m_Layer: 0
   m_Name: snake hat
   m_TagString: Untagged
@@ -25830,9 +25764,7 @@ Transform:
   m_LocalPosition: {x: 0, y: -0.056294776, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 556344878}
-  - {fileID: 1462003567}
+  m_Children: []
   m_Father: {fileID: 1187004317}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25888,55 +25820,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1537622219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1537622216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: defd8b41de48c214dae1bd61b2650fef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 5
-  Destroyafter: 0
---- !u!58 &1537622220
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1537622216}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.2
 --- !u!1 &1551874405
 GameObject:
   m_ObjectHideFlags: 0
@@ -36535,7 +36418,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1889115273
 Transform:
   m_ObjectHideFlags: 0
@@ -37004,7 +36887,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Back
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 896aefb726a226343b92be0578ed29ec, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 670c8e6f995543b4ebcff39393008e40, type: 2}
   m_sharedMaterial: {fileID: 4166987831703604752, guid: 896aefb726a226343b92be0578ed29ec, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -37068,7 +36951,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1939870725
@@ -37139,7 +37022,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: LOCKED
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 896aefb726a226343b92be0578ed29ec, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 670c8e6f995543b4ebcff39393008e40, type: 2}
   m_sharedMaterial: {fileID: 4166987831703604752, guid: 896aefb726a226343b92be0578ed29ec, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -37203,7 +37086,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1944124109
@@ -38526,6 +38409,10 @@ PrefabInstance:
     - target: {fileID: 5474025301000186766, guid: 8d9b8fa8b5bcab340b77e4097084614a, type: 3}
       propertyPath: m_Name
       value: Briar_Attack_CircleRoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 5474025301000186766, guid: 8d9b8fa8b5bcab340b77e4097084614a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6546575102470773052, guid: 8d9b8fa8b5bcab340b77e4097084614a, type: 3}
       propertyPath: combatManager

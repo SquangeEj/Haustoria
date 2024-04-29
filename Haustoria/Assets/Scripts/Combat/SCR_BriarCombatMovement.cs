@@ -106,6 +106,21 @@ public class SCR_BriarCombatMovement : MonoBehaviour
         // Update the health text
         BriarHealthText.text = BriarHealth.Health.ToString();
 
+        switch (BriarHealth.Health)
+        {
+            case > 50:
+                BriarFace.sprite = BriarNeutral;
+                break;
+
+        
+
+
+            case < 50:
+                BriarFace.sprite = BriarDying;
+                break;
+
+
+        }
 
         yield return null; // Yield null to end the coroutine
     }

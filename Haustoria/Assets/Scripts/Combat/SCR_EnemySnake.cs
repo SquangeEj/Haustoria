@@ -13,12 +13,10 @@ public class SCR_EnemySnake : MonoBehaviour
 
     [SerializeField] private int health;
 
-    [SerializeField] private Transform[] Positions;
-
 
 
     [Header("Attack or Attacks")]
-    [SerializeField] private GameObject Attack;
+    [SerializeField] private GameObject Attack, snakefollow;
 
     [SerializeField] private GameObject player;
 
@@ -41,11 +39,12 @@ public class SCR_EnemySnake : MonoBehaviour
 
         HealthSlider.GetComponent<Slider>().maxValue = health;
         HealthSlider.GetComponent<Slider>().value = health;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     public void EnemyAttack()
     {
-        int AttackRNG = Random.Range(0, 2);
+        int AttackRNG = Random.Range(0, 1);
 
 
         switch (AttackRNG)
@@ -55,7 +54,6 @@ public class SCR_EnemySnake : MonoBehaviour
                 break;
 
             case 1:
-                StartCoroutine(SnakeattackTwo());
                 break;
         }
 
@@ -68,14 +66,16 @@ public class SCR_EnemySnake : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
+        GameObject Snakefollow = Instantiate(snakefollow, transform.position, Quaternion.identity);
+       
 
-        anim.Play("SnakeAttackOne");
-        yield return new WaitForSeconds(0.2f);
-
+        anim.Play("SnakeAttackStart");
+        yield return new WaitForSeconds(0.8f);
+        anim.Play("SnakeAttackOver");
         for (int i = 0; i < 100; i++)
         {
             
-                GameObject venomdrop = Instantiate(Attack, Positions[Random.Range(0,2)].position, Quaternion.identity);
+                GameObject venomdrop = Instantiate(Attack, transform.position + new Vector3(Random.Range(-5, 5),0, 0), Quaternion.identity);
                 Destroy(venomdrop, 3f);
                 
             yield return new WaitForSeconds(Random.Range(0f,0.2f));
@@ -83,38 +83,9 @@ public class SCR_EnemySnake : MonoBehaviour
         }
 
 
+        Destroy(snakefollow);
         yield return new WaitForSeconds(0.5f);
-        anim.Play("SnakeAttackOver");
-
-        CombatManager.GetComponent<SCR_EnemySelect>().BriarTurn();
-
-
-        yield return null;
-    }
-
-    public IEnumerator SnakeattackTwo()
-    {
-        yield return new WaitForSeconds(1f);
-
-
-        anim.Play("SnakeAttackOne");
-        yield return new WaitForSeconds(0.2f);
-
-        for (int i = 0; i < 100; i++)
-        {
-
-            GameObject venomdrop = Instantiate(Attack, Positions[Random.Range(0, 2)].position, Quaternion.identity);
-            Destroy(venomdrop, 3f);
-            venomdrop.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-2, 2), 0), ForceMode2D.Impulse);
-
-            yield return new WaitForSeconds(Random.Range(0f, 0.2f));
-
-        }
-
-
-        yield return new WaitForSeconds(0.5f);
-        anim.Play("SnakeAttackOver");
-
+   
         CombatManager.GetComponent<SCR_EnemySelect>().BriarTurn();
 
 

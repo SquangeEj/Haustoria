@@ -13,12 +13,17 @@ public class SCR_StatsUI : MonoBehaviour
 
     SCR_BriarStats briarStats;
 
-    void Start()
+    private void Start()
     {
         
         GameObject briar = GameObject.Find("Briar");
         briarStats  = briar.GetComponent<SCR_BriarStats>();
         
+        UpdateUI();
+    }
+
+    private void Update()
+    {
         UpdateUI();
     }
 
@@ -28,7 +33,7 @@ public class SCR_StatsUI : MonoBehaviour
         atkText.text = "Attack: " + briarStats.Attack.ToString();
         defText.text = "Defense: " + briarStats.Defence.ToString();
         xpText.text = "Experience: " + briarStats.XP.ToString();
-        AbilityText.text = "Ability Points: " + briarStats.AbilityPoints.ToString();
+        AbilityText.text = "Skill Points: " + briarStats.AbilityPoints.ToString();
     }
 
     // Call this method whenever stats are updated

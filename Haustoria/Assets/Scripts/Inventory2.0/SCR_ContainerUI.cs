@@ -80,6 +80,7 @@ public class SCR_ContainerUI : MonoBehaviour
 
     private void OnSlotClicked(int index)
     {
+        Debug.LogWarning("CLICKING ITEM");
         ItemClass item = items[index].GetItem();
         TransferItem(item);
     }

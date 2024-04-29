@@ -20,8 +20,15 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
 
     private void Start()
     {
-       // transform.position = BriarPosition;
-       if(XP >= 500)
+        Health = BriarStats.Health;
+        Attack = BriarStats.Attack;
+        XP = BriarStats.XP; 
+        Defence = BriarStats.Defence;
+        AbilityPoints = BriarStats.AbilityPoints;
+        Stamina = BriarStats.Stamina;
+
+        // transform.position = BriarPosition;
+        if (XP >= 500)
         {
             AbilityPoints += 1;
             XP -= 500;
@@ -72,17 +79,16 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
     }
     public void AddAttack(int attack)
     {
-
+        int currentAttack = Attack;
         Attack += attack;
         DataPersistanceManager.instance.SaveGame();
     }
 
+    public void AddWeaponDamage()
+    {
 
-    /*  public void SetBriarPosition(Vector3 BriarPosition)
-      {
+    }
 
-      }
-      */
     public void SaveData(GameData data)
     {
 

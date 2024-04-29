@@ -134,7 +134,17 @@ public class SCR_InventoryManager : MonoBehaviour, IDataPersistance
             }
             else if (item is SO_WeaponClass weaponItem)
             {
-                EquipWeapon(weaponItem);
+                if(slotWeapon.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text == weaponItem.name)
+                {
+                    Debug.Log(weaponItem.name + " is already equipped");
+                }
+                else
+                {
+
+                    EquipWeapon(weaponItem);
+                }
+                
+                
             }
             else
             {
@@ -167,9 +177,12 @@ public class SCR_InventoryManager : MonoBehaviour, IDataPersistance
 
     public void EquipWeapon(SO_WeaponClass item)
     {
+
         slotWeapon.transform.GetChild(0).GetComponent<Image>().enabled = true;
         slotWeapon.transform.GetChild(0).GetComponent<Image>().sprite = item.itemSprite;
         slotWeapon.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = item.itemName;
+
+        
         RefreshUI();
     }
 

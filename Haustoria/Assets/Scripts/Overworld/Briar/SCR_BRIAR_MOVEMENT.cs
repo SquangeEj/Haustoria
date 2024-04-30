@@ -25,6 +25,8 @@ public class SCR_BRIAR_MOVEMENT : MonoBehaviour
 
     private void Start()
     {
+        gameUI = GameObject.FindGameObjectWithTag("GameUI");
+        gameUI.SetActive(false);
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
@@ -37,7 +39,7 @@ public class SCR_BRIAR_MOVEMENT : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            
+            ToggleUI();
         }
       
 

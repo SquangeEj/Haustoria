@@ -15,6 +15,7 @@ public class SCR_TriggerEventSystem : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+          
             OnTriggerEvent.Invoke();
             if (DeleteAfter == true)
             {
@@ -26,10 +27,11 @@ public class SCR_TriggerEventSystem : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
      {
-         Debug.Log("Exited");
+         
          if (other.gameObject.CompareTag("Player"))
          {
-             OnTriggerLeave.Invoke();
+           
+            OnTriggerLeave.Invoke();
              if (DeleteAfter == true)
              {
                  Destroy(this);

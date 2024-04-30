@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMOD;
+using FMODUnity;
 using UnityEngine.UI;
 
 public class SCR_BRIAR_MOVEMENT : MonoBehaviour
@@ -13,6 +15,8 @@ public class SCR_BRIAR_MOVEMENT : MonoBehaviour
     [Header("Sound Effects")]
     [SerializeField] private AudioClip[] walkPathSoundClips;
     [SerializeField] private AudioClip[] walkGrassSoundClips;
+
+    [SerializeField] private StudioEventEmitter eventem;
 
     private CharacterController controller;
     private Animator animator;
@@ -117,8 +121,8 @@ public class SCR_BRIAR_MOVEMENT : MonoBehaviour
 
     public void playStepSound()
     {
-       
-      SCR_SoundFXManager.instance.PlayRandomFootstep(walkPathSoundClips, audioSource);
+
+        eventem.Play();
         
     }
 }

@@ -79,7 +79,7 @@ public class SCR_BriarCombatMovement : MonoBehaviour
                 break;
 
             case < 0:
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene(11);
                 break;
 
 

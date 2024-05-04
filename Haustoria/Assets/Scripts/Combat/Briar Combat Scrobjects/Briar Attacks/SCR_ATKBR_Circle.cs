@@ -51,7 +51,7 @@ public class SCR_ATKBR_Circle : MonoBehaviour
     private void OnEnable()
     {
         resetSpeed();
-        damage = basedamage;
+        damage = basedamage + DataPersistanceManager.instance.gameData.Atk; 
 
         anim = GetComponent<Animator>();
         FmodEvent = GetComponent<StudioEventEmitter>();
@@ -115,6 +115,7 @@ public class SCR_ATKBR_Circle : MonoBehaviour
             {
                 InArea = false;
                 damage *= multiplier;
+
 
                 anim.speed = anim.speed * AnimSpeed;
 

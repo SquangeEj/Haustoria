@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{add9461c-1d2d-41ff-8061-b7aee4e5f49e}">
+	<object class="AudioFile" id="{afd76521-c6fb-4ea2-a29c-5519b5fd5b26}">
 		<property name="assetPath">
-			<value>HitSound.wav</value>
+			<value>Hitsound.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

@@ -8975,11 +8975,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -1090484886
-      Data2: 1125871398
-      Data3: -584560992
-      Data4: -2123407784
-    Path: event:/Hit Sound
+      Data1: 2140480347
+      Data2: 1327701502
+      Data3: -291342438
+      Data4: 1818081173
+    Path: event:/DamageSound
   Event: 
   PlayEvent: 11
   StopEvent: 0
@@ -38406,6 +38406,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 313942721254839220, guid: 8d9b8fa8b5bcab340b77e4097084614a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5474025301000186766, guid: 8d9b8fa8b5bcab340b77e4097084614a, type: 3}
       propertyPath: m_Name
       value: Briar_Attack_CircleRoot
@@ -38422,6 +38426,10 @@ PrefabInstance:
       propertyPath: AttackAnimation
       value: 
       objectReference: {fileID: 779603217}
+    - target: {fileID: 6936628248386764149, guid: 8d9b8fa8b5bcab340b77e4097084614a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4be549f3ae3120841ba304a245461ce5, type: 3}
     - target: {fileID: 9038208803168807293, guid: 8d9b8fa8b5bcab340b77e4097084614a, type: 3}
       propertyPath: m_RootOrder
       value: 9

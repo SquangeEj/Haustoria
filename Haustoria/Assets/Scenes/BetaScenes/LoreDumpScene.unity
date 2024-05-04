@@ -1039,8 +1039,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: This game uses mouse and keyboard. You will have to interact with the environment
-    by clicking.
+  m_text: 'This game uses mouse and keyboard. You will have to interact with the
+    environment by clicking.
+
+    (RMB to skip through text)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1257,7 +1259,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 670c8e6f995543b4ebcff39393008e40, type: 2}
-  m_sharedMaterial: {fileID: -4790403091549399312, guid: 6fe48e4be21bc2a408f30d11dcf6d6d6, type: 2}
+  m_sharedMaterial: {fileID: 8426855874241824890, guid: 670c8e6f995543b4ebcff39393008e40, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

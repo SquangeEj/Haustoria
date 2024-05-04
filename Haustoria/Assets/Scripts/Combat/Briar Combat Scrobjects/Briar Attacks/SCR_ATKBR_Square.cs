@@ -43,7 +43,7 @@ public class SCR_ATKBR_Square : MonoBehaviour
     private void OnEnable()
     {
         resetSpeed();
-        damage = basedamage;
+        damage = basedamage + DataPersistanceManager.instance.gameData.Atk;
 
         anim = GetComponent<Animator>();
         FmodEvent = GetComponent<StudioEventEmitter>();

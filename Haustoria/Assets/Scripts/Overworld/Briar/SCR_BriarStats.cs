@@ -22,11 +22,14 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
     {
         Health = BriarStats.Health;
         Attack = BriarStats.Attack;
-        XP = BriarStats.XP; 
+        Debug.Log(DataPersistanceManager.instance.gameData.Xp);
+        BriarStats.XP = DataPersistanceManager.instance.gameData.Xp;
+        XP = DataPersistanceManager.instance.gameData.Xp; 
         Defence = BriarStats.Defence;
         AbilityPoints = BriarStats.AbilityPoints;
         Stamina = BriarStats.Stamina;
 
+        
         // transform.position = BriarPosition;
         if (XP >= 500)
         {

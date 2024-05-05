@@ -35,7 +35,7 @@ public class GameData
     //public Dictionary<GameObject, bool> EnemiesDead;
 
     public List<ItemData> inventoryItems = new List<ItemData>();
-
+    public SO_WeaponClass equippedWeapon;
 }
 
 [System.Serializable]

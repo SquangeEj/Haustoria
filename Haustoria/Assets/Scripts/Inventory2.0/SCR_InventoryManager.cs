@@ -11,6 +11,8 @@ public class SCR_InventoryManager : MonoBehaviour, IDataPersistance
     [SerializeField] private GameObject slotPrefab;
     [SerializeField] private GameObject slotWeapon;
 
+    private SO_WeaponClass previousWeapon;
+
     public List<SlotClass> items = new List<SlotClass>();
 
     private GameObject[] slots;
@@ -130,7 +132,14 @@ public class SCR_InventoryManager : MonoBehaviour, IDataPersistance
             ItemClass item = items[index].GetItem();
             if (item is SO_ConsumableClass consumableItem)
             {
-                AddHeathPoints(consumableItem);
+                if (briarStats.Health < briarStats.MaxHealth)
+                {
+                    AddHeathPoints(consumableItem);
+                }
+                else
+                {
+                    Debug.Log("Health at Max. No need to use item");
+                }
             }
             else if (item is SO_WeaponClass weaponItem)
             {
@@ -140,7 +149,6 @@ public class SCR_InventoryManager : MonoBehaviour, IDataPersistance
                 }
                 else
                 {
-
                     EquipWeapon(weaponItem);
                 }
                 
@@ -177,12 +185,21 @@ public class SCR_InventoryManager : MonoBehaviour, IDataPersistance
 
     public void EquipWeapon(SO_WeaponClass item)
     {
+        // Check if there is a previously equipped weapon and add it back to the inventory
+        if (previousWeapon != null)
+        {
+            Add(previousWeapon);
+            Debug.Log(previousWeapon.name + " added back to inventory");
+        }
 
+        Remove(item);
+        
         slotWeapon.transform.GetChild(0).GetComponent<Image>().enabled = true;
         slotWeapon.transform.GetChild(0).GetComponent<Image>().sprite = item.itemSprite;
         slotWeapon.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = item.itemName;
 
-        
+        previousWeapon = item;
+
         RefreshUI();
     }
 
@@ -194,6 +211,11 @@ public class SCR_InventoryManager : MonoBehaviour, IDataPersistance
         {
             items.Add(new SlotClass(itemData.item, itemData.quantity));
         }
+        if (data.equippedWeapon != null)
+        {
+            // Equip the weapon
+            EquipWeapon(data.equippedWeapon);
+        }
     }
 
     public void SaveData(GameData data)
@@ -203,6 +225,11 @@ public class SCR_InventoryManager : MonoBehaviour, IDataPersistance
         foreach (SlotClass slot in items)
         {
             data.inventoryItems.Add(new ItemData { item = slot.GetItem(), quantity = slot.GetQuantity() });
+        }
+
+        if (previousWeapon != null)
+        {
+            data.equippedWeapon = previousWeapon;
         }
     }
 

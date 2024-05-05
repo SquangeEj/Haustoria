@@ -9,7 +9,6 @@ public class SCR_ClickOnEvent : MonoBehaviour
     public ItemClass item;
     [SerializeField] private UnityEvent onClickEvent;
     
-    public TextMeshProUGUI itemNameText;
     private SCR_InventoryManager inventoryManager;
 
     private void OnMouseDown()
@@ -17,7 +16,7 @@ public class SCR_ClickOnEvent : MonoBehaviour
        
         onClickEvent.Invoke();
 
-        if(gameObject.tag == "Item")
+        if( item != null)
         {
             AddToInventory();
         }
@@ -38,11 +37,6 @@ public class SCR_ClickOnEvent : MonoBehaviour
             {
                 Debug.Log("Item added to inventory: " + item.itemName);
                 Destroy(gameObject); // Remove the item from the game world
-
-                if (itemNameText != null)
-                {
-                    itemNameText.text = item.itemName +" added to inventory: Press 'I' to open Inventory " ;
-                }
             }
             else
             {

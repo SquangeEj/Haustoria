@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SCR_BriarStats : MonoBehaviour, IDataPersistance
 {
-    [SerializeField] public int Health;
+    [SerializeField] public int Health, MaxHealth;
     [SerializeField] public int XP, Attack, Defence;
     [SerializeField] public int AbilityPoints;
     [SerializeField] public int Stamina;
@@ -21,6 +21,7 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
     private void Start()
     {
         Health = BriarStats.Health;
+        MaxHealth = BriarStats.MaxHealth;
         Attack = BriarStats.Attack;
         Debug.Log(DataPersistanceManager.instance.gameData.Xp);
         BriarStats.XP = DataPersistanceManager.instance.gameData.Xp;
@@ -58,6 +59,10 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
     public void AddHealth(int num)
     {
         Health += num;
+        if(Health > MaxHealth)
+        {
+            Health = MaxHealth;
+        }
 
         Debug.Log(string.Format("Briars Health is at {0}", Health));
     }

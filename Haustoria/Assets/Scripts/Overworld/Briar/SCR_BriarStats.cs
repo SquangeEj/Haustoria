@@ -78,12 +78,14 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
     {
         Defence += defence;
 
+        DataPersistanceManager.instance.gameData.Def = Defence;
         DataPersistanceManager.instance.SaveGame();
     }
     public void AddAttack(int attack)
     {
         int currentAttack = Attack;
         Attack += attack;
+        DataPersistanceManager.instance.gameData.Atk = Attack;
         DataPersistanceManager.instance.SaveGame();
     }
 

@@ -26926,11 +26926,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 1109398134
-      Data2: 1229676236
-      Data3: 2000292754
-      Data4: 1568133728
-    Path: event:/Music/CombatDefault
+      Data1: 754137827
+      Data2: 1102877326
+      Data3: 167026836
+      Data4: 1003776370
+    Path: event:/Music/DeerComat
   Event: 
   PlayEvent: 11
   StopEvent: 12
@@ -27031,7 +27031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CombatManager: {fileID: 1687708836}
   AttackValues: {fileID: 11400000, guid: 31d3d2622a44ada4d9ebd756c77ba1fe, type: 2}
-  health: 25
+  health: 100
   Attack: {fileID: 8935824139243133710, guid: e3c50eccdda33a14dbfb5f05e346d930, type: 3}
   Attack2: {fileID: 7323902887234662087, guid: cd0bef31f6329124886c80c4f55968a7, type: 3}
   player: {fileID: 619387921}

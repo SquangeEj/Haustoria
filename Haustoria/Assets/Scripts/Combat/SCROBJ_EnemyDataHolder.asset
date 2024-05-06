@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SCROBJ_EnemyDataHolder
   m_EditorClassIdentifier: 
   Scenetogotoafter: 0
-  EnemyID: 0
+  EnemyID: 3
   BackgroundID: 1
   XPamount: 0
   EnemyNames:

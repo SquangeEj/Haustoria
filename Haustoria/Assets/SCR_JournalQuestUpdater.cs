@@ -12,7 +12,7 @@ public class SCR_JournalQuestUpdater : MonoBehaviour
        
     }
 
-    private void Awake()
+    private void Update()
     {
         textext = GetComponent<TextMeshProUGUI>();
         textext.text = DataPersistanceManager.instance.gameData.questDescription.ToString();

@@ -7,16 +7,16 @@ public class SCR_Container : MonoBehaviour
     public GameObject containerUIPrefab; 
     private GameObject containerUIInstance;
 
-    private MeshRenderer meshRenderer;
-    public Material openCrate;
-    public Material closedCrate;
+    //private MeshRenderer meshRenderer;
+    //public Material openIMG;
+    //public Material closedIMG;
 
     private bool playerInRange = false;
 
     private void Start()
     {
-        meshRenderer = GetComponent<MeshRenderer>();
-        meshRenderer.material = closedCrate;
+        //meshRenderer = GetComponent<MeshRenderer>();
+        //meshRenderer.material = closedIMG;
 
 
         if (containerUIPrefab != null)
@@ -31,7 +31,7 @@ public class SCR_Container : MonoBehaviour
         // Open the container UI when the player Right Clicks 
         if (playerInRange && Input.GetMouseButtonDown(0) && !containerUIInstance.activeSelf)
         {
-            meshRenderer.material = openCrate;
+            //meshRenderer.material = openIMG;
 
 
             if (containerUIInstance != null)
@@ -61,7 +61,7 @@ public class SCR_Container : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
-            meshRenderer.material = closedCrate;
+            //meshRenderer.material = closedIMG;
 
             // Close the container UI if the player exits the collider area
             if (containerUIInstance != null)

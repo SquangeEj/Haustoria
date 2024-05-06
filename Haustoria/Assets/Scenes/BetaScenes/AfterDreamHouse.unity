@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.29649058, g: 0.2965134, b: 0.29654762, a: 1}
+  m_IndirectSpecularColor: {r: 0.29653862, g: 0.29656357, b: 0.29659328, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3835,7 +3835,6 @@ MonoBehaviour:
           m_StringArgument: Mam...Dad... I miss you.
           m_BoolArgument: 0
         m_CallState: 2
-  itemNameText: {fileID: 0}
 --- !u!33 &330013320
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4070,7 +4069,6 @@ MonoBehaviour:
           m_StringArgument: These books are really just decorations these days...
           m_BoolArgument: 0
         m_CallState: 2
-  itemNameText: {fileID: 0}
 --- !u!65 &340067713
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21396,7 +21394,6 @@ MonoBehaviour:
           m_StringArgument: I need to do my laundry one of these days.
           m_BoolArgument: 0
         m_CallState: 2
-  itemNameText: {fileID: 0}
 --- !u!65 &1133380806
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25161,7 +25158,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1447563658
 Transform:
   m_ObjectHideFlags: 0
@@ -26464,7 +26461,6 @@ MonoBehaviour:
             helpful to be honest.
           m_BoolArgument: 0
         m_CallState: 2
-  itemNameText: {fileID: 0}
 --- !u!65 &1542365086
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27010,7 +27006,6 @@ MonoBehaviour:
             broken. '
           m_BoolArgument: 0
         m_CallState: 2
-  itemNameText: {fileID: 0}
 --- !u!65 &1581190203
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27674,7 +27669,6 @@ MonoBehaviour:
           m_StringArgument: "Sleeping doesn\u2019t bring the comfort it used to. "
           m_BoolArgument: 0
         m_CallState: 2
-  itemNameText: {fileID: 0}
 --- !u!65 &1648876435
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29480,8 +29474,6 @@ MonoBehaviour:
   - item: {fileID: 11400000, guid: d5c27a758e6040347a2065bef980f369, type: 2}
     quantity: 1
   containerUIPrefab: {fileID: 637451782}
-  openCrate: {fileID: 2100000, guid: 21cde7b1d12468a48b50e26f9993b351, type: 2}
-  closedCrate: {fileID: 2100000, guid: 21cde7b1d12468a48b50e26f9993b351, type: 2}
 --- !u!114 &1765486644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29510,7 +29502,6 @@ MonoBehaviour:
           m_StringArgument: Can't survive off ice.
           m_BoolArgument: 0
         m_CallState: 2
-  itemNameText: {fileID: 0}
 --- !u!65 &1765486645
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -12314,7 +12314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4753bfc591a6e984a9cb35e7863d44dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  item: {fileID: 11400000, guid: 388ef605f12deb046bc873f6ec201484, type: 2}
   onClickEvent:
     m_PersistentCalls:
       m_Calls:
@@ -12378,7 +12378,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  itemNameText: {fileID: 0}
+      - m_Target: {fileID: 1687020434}
+        m_TargetAssemblyTypeName: SCR_BriarSpeakOverworld, Assembly-CSharp
+        m_MethodName: BriarSpeak
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Keys Added to Inventory
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &581461375
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13386,7 +13397,6 @@ MonoBehaviour:
             broken. '
           m_BoolArgument: 0
         m_CallState: 2
-  itemNameText: {fileID: 0}
 --- !u!65 &654679847
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17941,7 +17951,6 @@ MonoBehaviour:
           m_StringArgument: These books are really just decorations these days...
           m_BoolArgument: 0
         m_CallState: 2
-  itemNameText: {fileID: 0}
 --- !u!1 &959605190
 GameObject:
   m_ObjectHideFlags: 0
@@ -18965,7 +18974,6 @@ MonoBehaviour:
           m_StringArgument: Can't survive off ice.
           m_BoolArgument: 0
         m_CallState: 2
-  itemNameText: {fileID: 0}
 --- !u!65 &1081701714
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19003,8 +19011,6 @@ MonoBehaviour:
   - item: {fileID: 11400000, guid: d5c27a758e6040347a2065bef980f369, type: 2}
     quantity: 1
   containerUIPrefab: {fileID: 1026311929}
-  openCrate: {fileID: 2100000, guid: 21cde7b1d12468a48b50e26f9993b351, type: 2}
-  closedCrate: {fileID: 2100000, guid: 21cde7b1d12468a48b50e26f9993b351, type: 2}
 --- !u!1001 &1085200142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22682,7 +22688,6 @@ MonoBehaviour:
           m_StringArgument: I need to do my laundry one of these days.
           m_BoolArgument: 0
         m_CallState: 2
-  itemNameText: {fileID: 0}
 --- !u!1 &1305183287
 GameObject:
   m_ObjectHideFlags: 0
@@ -27371,7 +27376,6 @@ MonoBehaviour:
           m_StringArgument: Mam...Dad... I miss you.
           m_BoolArgument: 0
         m_CallState: 2
-  itemNameText: {fileID: 0}
 --- !u!1001 &1621043947
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33183,7 +33187,6 @@ MonoBehaviour:
             helpful to be honest.
           m_BoolArgument: 0
         m_CallState: 2
-  itemNameText: {fileID: 0}
 --- !u!1 &1959614829
 GameObject:
   m_ObjectHideFlags: 0
@@ -36083,7 +36086,6 @@ MonoBehaviour:
           m_StringArgument: "Sleeping doesn\u2019t bring the comfort it used to. "
           m_BoolArgument: 0
         m_CallState: 2
-  itemNameText: {fileID: 0}
 --- !u!1 &2075963991
 GameObject:
   m_ObjectHideFlags: 0

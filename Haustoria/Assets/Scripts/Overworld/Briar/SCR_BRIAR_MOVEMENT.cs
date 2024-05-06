@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using FMOD;
 using FMODUnity;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class SCR_BRIAR_MOVEMENT : MonoBehaviour
 {
     [Header("Movement")]
     [SerializeField] private float moveSpeed;
-
-    [Header("Stamina")]
 
     [Header("Sound Effects")]
     [SerializeField] private AudioClip[] walkPathSoundClips;
@@ -23,6 +22,8 @@ public class SCR_BRIAR_MOVEMENT : MonoBehaviour
     private AudioSource audioSource;
     private SCR_BriarStats briarStats; // Reference to SCR_BriarStats script
     private bool isPaused = false;
+
+    [Header("Game UI to Open with 'I' ")]
     public GameObject gameUI;
     [SerializeField]
     private LayerMask layerMask;
@@ -30,7 +31,9 @@ public class SCR_BRIAR_MOVEMENT : MonoBehaviour
     private void Start()
     {
         gameUI = GameObject.FindGameObjectWithTag("GameUI");
+
         gameUI.SetActive(false);
+
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();

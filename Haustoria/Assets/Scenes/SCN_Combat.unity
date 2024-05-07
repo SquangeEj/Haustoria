@@ -8485,6 +8485,7 @@ MonoBehaviour:
     RootAbilityPointsUsed: 0
     AbilityID: 000000
     inventoryItems: []
+    equippedWeapon: {fileID: 0}
   fileName: Haustoria-Data
 --- !u!4 &692617190
 Transform:
@@ -27104,7 +27105,6 @@ MonoBehaviour:
   Backgrounds:
   - {fileID: 394108788}
   - {fileID: 2052545225}
-  - {fileID: 394108788}
   CurrentEnemy: {fileID: 0}
   EnemyName_TXT: {fileID: 2070817391}
   BriarTurnUI: {fileID: 932946025}

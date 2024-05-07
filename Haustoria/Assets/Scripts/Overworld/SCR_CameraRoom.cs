@@ -7,19 +7,16 @@ public class SCR_CameraRoom : MonoBehaviour
     private Camera mainCamera;
     public Transform Target;
     private Transform lastObstruction;
+    public GameObject quadObject; // Reference to the quad GameObject
 
     private void Awake()
     {
         mainCamera = GetComponent<Camera>();
     }
 
-    private void LateUpdate()
-    {
-        ViewObstructed();
-    }
-
     private void Update()
     {
+        ViewObstructed();
         Debug.DrawLine(mainCamera.transform.position, Target.position, Color.blue);
     }
 
@@ -32,6 +29,7 @@ public class SCR_CameraRoom : MonoBehaviour
         {
             if (!hit.collider.CompareTag("Player"))
             {
+                Debug.Log("HIT SOMETHING");
                 // Check if the last obstruction is different from the current one
                 if (lastObstruction != hit.transform)
                 {
@@ -48,17 +46,26 @@ public class SCR_CameraRoom : MonoBehaviour
                 {
                     obstructionRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
                 }
+
+                // Deactivate the quad object
+                quadObject.SetActive(false);
             }
             else
             {
                 // Reset the last obstruction's shadowCastingMode to On
                 ResetObstruction();
+
+                // Activate the quad object
+                quadObject.SetActive(true);
             }
         }
         else
         {
             // Reset the last obstruction's shadowCastingMode to On if no obstruction is found
             ResetObstruction();
+
+            // Activate the quad object
+            quadObject.SetActive(true);
         }
     }
 

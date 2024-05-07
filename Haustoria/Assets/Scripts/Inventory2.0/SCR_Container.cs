@@ -28,7 +28,7 @@ public class SCR_Container : MonoBehaviour
 
     private void Update()
     {
-        // Open the container UI when the player Right Clicks 
+        // Open the container UI when the player  Clicks 
         if (playerInRange && Input.GetMouseButtonDown(0) && !containerUIInstance.activeSelf)
         {
             //meshRenderer.material = openIMG;

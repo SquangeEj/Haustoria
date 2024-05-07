@@ -59,11 +59,12 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
     public void AddHealth(int num)
     {
         Health += num;
+
         if(Health > MaxHealth)
         {
             Health = MaxHealth;
         }
-
+        BriarStats.Health = Health; //Test to see if healing saves to Stats and if combat gets info
         Debug.Log(string.Format("Briars Health is at {0}", Health));
     }
 
@@ -94,9 +95,14 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
         DataPersistanceManager.instance.SaveGame();
     }
 
-    public void AddWeaponDamage()
+    public void AddWeaponDamage(int previousWeaponDamage, int currentWeaponDamage)
     {
-
+        //Need to 1st takeaway the previous weapons Damage, if one was equipped.
+        //Add equipped weapon damage to attack
+        int weaponDamage = 0;
+        weaponDamage -= previousWeaponDamage;
+        weaponDamage += currentWeaponDamage;
+        AddAttack(weaponDamage);
     }
 
     public void SaveData(GameData data)

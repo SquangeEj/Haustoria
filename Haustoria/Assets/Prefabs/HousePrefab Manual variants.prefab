@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5337783255748008480}
   - component: {fileID: 78525072495982595}
   - component: {fileID: 8729977635302765879}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SideWall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 7665167922440639780}
   - component: {fileID: 9055684158860750665}
   - component: {fileID: 9101688462054033745}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FrontWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c7cb50e2dc70f8c43b4c9bbf7c4197b8, type: 2}
+  - {fileID: 2100000, guid: 01ad0359f20a04a47b97fc3801336eb4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 6943382267927775545}
   - component: {fileID: 2714096918310122095}
   - component: {fileID: 5779007626561310495}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 2480193683414039368}
   - component: {fileID: 4682473253158048916}
   - component: {fileID: 8660175645430506238}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SideWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -419,7 +419,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -436,7 +436,7 @@ GameObject:
   - component: {fileID: 8269631920627880483}
   - component: {fileID: 2638748326324378000}
   - component: {fileID: 3021849783270612386}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Roof (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -540,7 +540,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1839264422655861464}
   - component: {fileID: 8479053671538459737}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HousePrefab Manual variants
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -554,9 +554,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6037857663469735569}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -356.2, y: 10.3147, z: -415.5}
-  m_LocalScale: {x: 22.869558, y: 20.43749, z: 31.801853}
+  m_LocalScale: {x: 22.869556, y: 20.43749, z: 31.801853}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5884293349627886579}
@@ -566,7 +566,7 @@ Transform:
   - {fileID: 2092196985459972733}
   - {fileID: 7721925567031904731}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &8479053671538459737
 BoxCollider:
@@ -587,8 +587,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 0.9884931}
+  m_Center: {x: 0, y: 0, z: 0.00575383}
 --- !u!1 &7312652844133318061
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,7 +601,7 @@ GameObject:
   - component: {fileID: 5319229130295325775}
   - component: {fileID: 2447851930947374432}
   - component: {fileID: 4752964257962447385}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Backwall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

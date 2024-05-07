@@ -10071,10 +10071,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DiaglogueUI
       objectReference: {fileID: 0}
-    - target: {fileID: 3657138060198617058, guid: 37f07ee9f3ac59f48b16ab09c533ad38, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5235355005837636620, guid: 37f07ee9f3ac59f48b16ab09c533ad38, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

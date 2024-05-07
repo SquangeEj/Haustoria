@@ -63,6 +63,7 @@ public class DialogueManager : MonoBehaviour
     {
         for (int i = 0; i < dialogueData.sections[section].dialogue.Length; i++)
         {
+            Debug.Log(string.Format("Section {0} and Lines {1}", section, i));
             dialogueText.text = dialogueData.sections[section].dialogue[i];
             while (skipLineTriggered == false)
             {
@@ -97,6 +98,7 @@ public class DialogueManager : MonoBehaviour
 
     public void ResetBox()
     {
+        Debug.Log( "Reset Box called");
         StopAllCoroutines();
         dialogueBox.SetActive(false);
         answerBox.SetActive(false);
@@ -106,6 +108,7 @@ public class DialogueManager : MonoBehaviour
 
     void ShowAnswers(BranchPoint branchPoint)
     {
+        Debug.Log("Showing Answers");
         // Reveals the aselectable answers and sets their text values
         answerBox.SetActive(true);
         for (int i = 0; i < branchPoint.answers.Length; i++)

@@ -14,6 +14,7 @@ public class SCR_EnemyFox : MonoBehaviour
     [SerializeField] private int health;
 
 
+    
 
     [Header("Attack or Attacks")]
     [SerializeField] private GameObject Attack, AttackAnnoying, AttackVeryAnnoying;

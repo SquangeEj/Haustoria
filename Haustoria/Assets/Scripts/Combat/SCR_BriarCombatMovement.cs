@@ -64,8 +64,12 @@ public class SCR_BriarCombatMovement : MonoBehaviour
 
         Dam -= Defence;
         BriarHealth.Health -= Dam;
+        if(BriarHealth.Health > 100)
+        {
+            BriarHealth.Health = 100;
+        }
         BriarHealthText.text = BriarHealth.Health.ToString();
-
+        
         for (float i = 0; i < 1; i += 5 * Time.deltaTime)
         {
             BriarFace.sprite = BriarFace.sprite = BriarHurt;

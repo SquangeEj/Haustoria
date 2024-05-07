@@ -17,4 +17,5 @@ MonoBehaviour:
   itemName: Blunt Blade
   isStackable: 0
   isEquipable: 1
-  baseDamage: 10
+  slotButton: {fileID: 0}
+  baseDamage: 1

@@ -20,7 +20,7 @@ public class SCR_InventoryManager : MonoBehaviour, IDataPersistance
 
     private void Start()
     {
-        int numSlots = 100;
+        int numSlots = 20;
         slots = new GameObject[numSlots];
 
         for (int i = 0; i < numSlots; i++)
@@ -190,16 +190,24 @@ public class SCR_InventoryManager : MonoBehaviour, IDataPersistance
         {
             Add(previousWeapon);
             Debug.Log(previousWeapon.name + " added back to inventory");
+            briarStats.AddWeaponDamage(previousWeapon.GetWeaponDamage(), item.GetWeaponDamage());
         }
-
-        Remove(item);
+        else
+        {
+            briarStats.AddWeaponDamage(0, item.GetWeaponDamage());
+            
+        }
+        Debug.Log(briarStats.Attack);
         
+        
+
         slotWeapon.transform.GetChild(0).GetComponent<Image>().enabled = true;
         slotWeapon.transform.GetChild(0).GetComponent<Image>().sprite = item.itemSprite;
-        slotWeapon.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = item.itemName;
+        slotWeapon.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = item.itemName + "\n + " + item.GetWeaponDamage().ToString() + " DAMAGE";
 
         previousWeapon = item;
 
+        DataPersistanceManager.instance.SaveGame();
         RefreshUI();
     }
 
@@ -213,7 +221,7 @@ public class SCR_InventoryManager : MonoBehaviour, IDataPersistance
         }
         if (data.equippedWeapon != null)
         {
-            // Equip the weapon
+            Debug.Log("Loading Equipped weapon: " + data.equippedWeapon.name);
             EquipWeapon(data.equippedWeapon);
         }
     }

@@ -90,7 +90,10 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
     public void AddAttack(int attack)
     {
         int currentAttack = Attack;
-        Attack += attack;
+        int newAttack = attack;
+        currentAttack -= currentAttack;
+        currentAttack += newAttack;
+        Attack = currentAttack;
         DataPersistanceManager.instance.gameData.Atk = Attack;
         DataPersistanceManager.instance.SaveGame();
     }
@@ -99,10 +102,9 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
     {
         //Need to 1st takeaway the previous weapons Damage, if one was equipped.
         //Add equipped weapon damage to attack
-        int weaponDamage = 0;
-        weaponDamage -= previousWeaponDamage;
-        weaponDamage += currentWeaponDamage;
-        AddAttack(weaponDamage);
+        previousWeaponDamage -= previousWeaponDamage;
+        previousWeaponDamage += currentWeaponDamage;
+        AddAttack(previousWeaponDamage);
     }
 
     public void SaveData(GameData data)

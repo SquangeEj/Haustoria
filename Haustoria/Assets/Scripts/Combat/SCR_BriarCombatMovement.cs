@@ -83,6 +83,9 @@ public class SCR_BriarCombatMovement : MonoBehaviour
                 break;
 
             case < 0:
+
+                DataPersistanceManager.instance.gameData.DeadEnemies.RemoveAt(DataPersistanceManager.instance.gameData.DeadEnemies.Count-1);
+                DataPersistanceManager.instance.gameData.BriarPosition.z -= 10;
                 BriarHealth.Health = 100;
                 SceneManager.LoadScene(11);
                 break;

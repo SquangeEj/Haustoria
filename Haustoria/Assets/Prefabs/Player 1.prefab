@@ -237,6 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 10
+  MaxHealth: 0
   XP: 0
   Attack: 0
   Defence: 0
@@ -447,7 +448,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 243609182207195607}
-  m_LocalRotation: {x: 0.26206672, y: -0.000000016605014, z: 0.0000000045092206, w: 0.96504974}
+  m_LocalRotation: {x: 0.26206672, y: 0.000000016605014, z: -0.0000000045092206, w: 0.96504974}
   m_LocalPosition: {x: 0, y: 7, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1426,7 +1427,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2134332526089217367}
-  m_LocalRotation: {x: 0.26206672, y: -0.000000016605014, z: 0.0000000045092206, w: 0.96504974}
+  m_LocalRotation: {x: 0.26206672, y: 0.000000016605014, z: -0.0000000045092206, w: 0.96504974}
   m_LocalPosition: {x: 0, y: 7, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1953,7 +1954,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4754138574471885232}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7661379771483166041}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5184063999185943996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1966,7 +1979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 890e0cc391ee4974389cca0145177d93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  content: Regain all health
+  content: Reject the roots
   header: Stay Human
   tooltip: {fileID: 0}
 --- !u!1 &3079328049938453491

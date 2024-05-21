@@ -34,6 +34,22 @@ public class SCR_InventoryManager : MonoBehaviour, IDataPersistance
             button.onClick.AddListener(() => OnSlotClicked(index));
         }
 
+        if (previousWeapon != null)
+        {
+            //Add(previousWeapon);
+            Debug.Log(previousWeapon.name + " added back to inventory");
+            briarStats.AddWeaponDamage(previousWeapon.GetWeaponDamage(), previousWeapon.GetWeaponDamage());
+        }
+        else
+        {
+            briarStats.AddWeaponDamage(0, previousWeapon.GetWeaponDamage());
+
+        }
+        Debug.Log(briarStats.Attack);
+        slotWeapon.transform.GetChild(0).GetComponent<Image>().enabled = true;
+        slotWeapon.transform.GetChild(0).GetComponent<Image>().sprite = previousWeapon.itemSprite;
+        slotWeapon.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = previousWeapon.itemName + "\n + " + previousWeapon.GetWeaponDamage().ToString() + " DAMAGE";
+
         RefreshUI();
     }
 
@@ -61,8 +77,9 @@ public class SCR_InventoryManager : MonoBehaviour, IDataPersistance
                 slots[i].transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "";
 
             }
-
         }
+
+        
     }
 
 
@@ -188,7 +205,7 @@ public class SCR_InventoryManager : MonoBehaviour, IDataPersistance
         // Check if there is a previously equipped weapon and add it back to the inventory
         if (previousWeapon != null)
         {
-            Add(previousWeapon);
+            //Add(previousWeapon);
             Debug.Log(previousWeapon.name + " added back to inventory");
             briarStats.AddWeaponDamage(previousWeapon.GetWeaponDamage(), item.GetWeaponDamage());
         }

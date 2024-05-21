@@ -188,7 +188,7 @@ public class SCR_InventoryManager : MonoBehaviour, IDataPersistance
         // Check if there is a previously equipped weapon and add it back to the inventory
         if (previousWeapon != null)
         {
-            Add(previousWeapon);
+        //    Add(previousWeapon);
             Debug.Log(previousWeapon.name + " added back to inventory");
             briarStats.AddWeaponDamage(previousWeapon.GetWeaponDamage(), item.GetWeaponDamage());
         }

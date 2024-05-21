@@ -74,8 +74,9 @@ public class DataPersistanceManager : MonoBehaviour
         if (this.gameData == null) // wont continue 
         {
             Debug.Log("No data was found");
+            NewGame();
             return;
-            /*NewGame();*/
+           
         }
 
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();

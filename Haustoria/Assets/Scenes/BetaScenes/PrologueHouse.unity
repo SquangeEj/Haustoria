@@ -12390,6 +12390,18 @@ MonoBehaviour:
           m_StringArgument: Keys Added to Inventory
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1729078512}
+        m_TargetAssemblyTypeName: SCR_QuestManager, Assembly-CSharp
+        m_MethodName: SetQuestDescription
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Check On Sheep in Farm
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &581461375
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18833,6 +18845,18 @@ MonoBehaviour:
   OnTriggerEvent:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1729078512}
+        m_TargetAssemblyTypeName: SCR_QuestManager, Assembly-CSharp
+        m_MethodName: SetQuestDescription
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 100
+          m_FloatArgument: 0
+          m_StringArgument: Find Keys
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1702127056}
         m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCameraBase, Cinemachine
         m_MethodName: set_Priority
@@ -18993,7 +19017,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Can't survive off ice.
+          m_StringArgument: Left over cold pasta. Yum
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!65 &1081701714
@@ -36220,6 +36244,18 @@ MonoBehaviour:
           m_IntArgument: 100
           m_FloatArgument: 0
           m_StringArgument: Get something to eat.
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 720469652}
+        m_TargetAssemblyTypeName: Cinemachine.CinemachineVirtualCameraBase, Cinemachine
+        m_MethodName: set_Priority
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 100
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 720469652}

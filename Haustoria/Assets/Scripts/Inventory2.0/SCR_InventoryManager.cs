@@ -17,6 +17,10 @@ public class SCR_InventoryManager : MonoBehaviour, IDataPersistance
 
     private GameObject[] slots;
 
+    private void LateUpdate()
+    {
+        RefreshUI();
+    }
 
     private void Start()
     {

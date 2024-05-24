@@ -114,9 +114,8 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
         data.health = this.Health;
         data.stamina = this.Stamina;
         data.Xp = this.XP;
-       // data.Atk = this.Attack;
-       // data.Def = this.Defence;
-
+        data.Atk = this.Attack;
+        data.Def = this.Defence;
         data.AbilityID = AbilitiesUnlocked;
     }
 
@@ -127,6 +126,8 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
         this.XP = data.Xp;
         this.Health = data.health;
         this.Stamina = data.stamina;
+        this.Attack = data.Atk;
+        this.Defence = data.Def;
         RootAbilityPointsSpent = data.RootAbilityPointsUsed;
         AbilitiesUnlocked = data.AbilityID;
     }

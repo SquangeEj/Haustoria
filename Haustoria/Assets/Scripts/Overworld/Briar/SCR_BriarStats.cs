@@ -20,10 +20,11 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
 
     private void Start()
     {
+        BriarStats.Attack = DataPersistanceManager.instance.gameData.Atk;
         Health = BriarStats.Health;
         MaxHealth = BriarStats.MaxHealth;
         Attack = BriarStats.Attack;
-        Debug.Log(DataPersistanceManager.instance.gameData.Xp);
+        Debug.Log("XP :" + DataPersistanceManager.instance.gameData.Xp);
         BriarStats.XP = DataPersistanceManager.instance.gameData.Xp;
         XP = DataPersistanceManager.instance.gameData.Xp; 
         Defence = BriarStats.Defence;
@@ -66,6 +67,7 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
         }
         BriarStats.Health = Health; //Test to see if healing saves to Stats and if combat gets info
         Debug.Log(string.Format("Briars Health is at {0}", Health));
+        DataPersistanceManager.instance.SaveGame();
     }
 
     private void GetSkillTree()
@@ -89,22 +91,20 @@ public class SCR_BriarStats : MonoBehaviour, IDataPersistance
     }
     public void AddAttack(int attack)
     {
-        int currentAttack = Attack;
-        int newAttack = attack;
-        currentAttack -= currentAttack;
-        currentAttack += newAttack;
-        Attack = currentAttack;
+        
+        Attack += attack;
+
         DataPersistanceManager.instance.gameData.Atk = Attack;
         DataPersistanceManager.instance.SaveGame();
     }
 
-    public void AddWeaponDamage(int previousWeaponDamage, int currentWeaponDamage)
+    public void AddWeaponDamage(int p, int c)
     {
-        //Need to 1st takeaway the previous weapons Damage, if one was equipped.
-        //Add equipped weapon damage to attack
-        previousWeaponDamage -= previousWeaponDamage;
-        previousWeaponDamage += currentWeaponDamage;
-        AddAttack(previousWeaponDamage);
+
+        Debug.Log("New  +ATK: " + c + ". Previous Weapon " + p);
+        int weaponDam = c - p;
+        Debug.Log("MATHS: " + c + " - " + p + " = " + weaponDam);
+        AddAttack(weaponDam);
     }
 
     public void SaveData(GameData data)

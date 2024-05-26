@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -27032,7 +27032,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CombatManager: {fileID: 1687708836}
   AttackValues: {fileID: 11400000, guid: 31d3d2622a44ada4d9ebd756c77ba1fe, type: 2}
-  health: 100
+  health: 70
   Attack: {fileID: 8935824139243133710, guid: e3c50eccdda33a14dbfb5f05e346d930, type: 3}
   Attack2: {fileID: 7323902887234662087, guid: cd0bef31f6329124886c80c4f55968a7, type: 3}
   player: {fileID: 619387921}

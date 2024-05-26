@@ -67,7 +67,7 @@ public class SCR_EnemyHedgehog : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
 
-        for (int i = -1; i < Random.Range(0,3); i++)
+        for (int i = -1; i < Random.Range(0,2); i++)
         {
             GameObject HedgehogBounce = Instantiate(Attack, new Vector3(0 +i*1.5f,-2.5f ,0), Quaternion.identity);
             Destroy(HedgehogBounce, 10f);
@@ -88,7 +88,7 @@ public class SCR_EnemyHedgehog : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
 
-        for (int i = 0; i < Random.Range(1, 3); i++)
+        for (int i = 0; i < Random.Range(1, 2); i++)
         {
             GameObject HedgehogBounce = Instantiate(Attack, player.transform.position + new Vector3(Random.Range(-2, 2f), Random.Range(-2, 2f), 0), Quaternion.identity);
             Destroy(HedgehogBounce, 8f);
@@ -104,7 +104,8 @@ public class SCR_EnemyHedgehog : MonoBehaviour
 
         yield return null;
     }
-    public IEnumerator HedgehogattackThree()
+
+   /*  public IEnumerator HedgehogattackThree()
     {
         yield return new WaitForSeconds(1f);
 
@@ -116,7 +117,7 @@ public class SCR_EnemyHedgehog : MonoBehaviour
             // yield return new WaitForSeconds(0.1f);
         }
 
-
+ 
 
         yield return new WaitForSeconds(10f);
 
@@ -125,6 +126,7 @@ public class SCR_EnemyHedgehog : MonoBehaviour
 
         yield return null;
     }
+   */ 
 
 
     public void takeDamage()

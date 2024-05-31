@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using TMPro;
 
 public class SCR_EnemyFox : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class SCR_EnemyFox : MonoBehaviour
 
     [SerializeField] private int health;
 
-
+    [SerializeField] private TextMeshProUGUI text;
     
 
     [Header("Attack or Attacks")]
@@ -74,7 +75,7 @@ public class SCR_EnemyFox : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
-
+        text.text = "Grab them";
         for (float i = 0; i < 20; i+=10)
         {
             for (float z = 0; z < 6; z+=3f)
@@ -105,6 +106,7 @@ public class SCR_EnemyFox : MonoBehaviour
                 Destroy(ball);
             }
         }
+        text.text = "";
         FoxBalls.Clear();
         yield return new WaitForSeconds(0.2f);
         CombatManager.GetComponent<SCR_EnemySelect>().BriarTurn();
@@ -117,7 +119,7 @@ public class SCR_EnemyFox : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
-
+        text.text = "Catch them";
         for (float i = 0; i <= 5; i += 5)
         {
            
@@ -136,7 +138,7 @@ public class SCR_EnemyFox : MonoBehaviour
 
 
         yield return new WaitForSeconds(4f);
-
+        text.text = "";
 
         foreach (GameObject ball in FoxBalls)
         {
@@ -158,9 +160,9 @@ public class SCR_EnemyFox : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
+        text.text = "Grab it and avoid";
 
-     
-            GameObject FoxBallAnnoying = Instantiate(AttackVeryAnnoying, new Vector3(Random.Range(-2.5f,2.5f), -2.5f, 0), Quaternion.identity);
+        GameObject FoxBallAnnoying = Instantiate(AttackVeryAnnoying, new Vector3(Random.Range(-2.5f,2.5f), -2.5f, 0), Quaternion.identity);
 
 
             FoxBalls.Add(FoxBallAnnoying);
@@ -180,6 +182,7 @@ public class SCR_EnemyFox : MonoBehaviour
                 Destroy(ball);
             }
         }
+        text.text = "";
         FoxBalls.Clear();
         yield return new WaitForSeconds(0.2f);
         CombatManager.GetComponent<SCR_EnemySelect>().BriarTurn();

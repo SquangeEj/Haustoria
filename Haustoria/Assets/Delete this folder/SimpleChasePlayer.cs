@@ -20,7 +20,7 @@ public class SimpleChasePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position, player.transform.position) < 50)
+        if (Vector3.Distance(transform.position, player.transform.position) < 30)
         {
             ischasing = true;
         }

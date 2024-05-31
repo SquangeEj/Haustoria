@@ -11,7 +11,7 @@ public class SCR_InventoryManager : MonoBehaviour, IDataPersistance
     [SerializeField] private GameObject slotPrefab;
     [SerializeField] private GameObject slotWeapon;
 
-    private SO_WeaponClass previousWeapon;
+    public SO_WeaponClass previousWeapon;
 
     public List<SlotClass> items = new List<SlotClass>();
 
@@ -38,7 +38,17 @@ public class SCR_InventoryManager : MonoBehaviour, IDataPersistance
             button.onClick.AddListener(() => OnSlotClicked(index));
         }
 
+        if (previousWeapon != null)
+        {
+            EquipWeapon(previousWeapon);
+            slotWeapon.transform.GetChild(0).GetComponent<Image>().enabled = true;
+            slotWeapon.transform.GetChild(0).GetComponent<Image>().sprite = previousWeapon.itemSprite;
+            slotWeapon.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = previousWeapon.itemName + "\n + " + previousWeapon.GetWeaponDamage().ToString() + " DAMAGE";
+        }
         RefreshUI();
+
+        Debug.Log("Current ATK:" + briarStats.Attack + ". Previous Weapon " + previousWeapon.itemName);
+
     }
 
     public void RefreshUI()
@@ -65,8 +75,9 @@ public class SCR_InventoryManager : MonoBehaviour, IDataPersistance
                 slots[i].transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "";
 
             }
-
         }
+
+        
     }
 
 
@@ -189,11 +200,10 @@ public class SCR_InventoryManager : MonoBehaviour, IDataPersistance
 
     public void EquipWeapon(SO_WeaponClass item)
     {
+        Debug.Log("New Weapon " + item.itemName + " : Damage: " + item.GetWeaponDamage());
         // Check if there is a previously equipped weapon and add it back to the inventory
         if (previousWeapon != null)
         {
-        //    Add(previousWeapon);
-            Debug.Log(previousWeapon.name + " added back to inventory");
             briarStats.AddWeaponDamage(previousWeapon.GetWeaponDamage(), item.GetWeaponDamage());
         }
         else
@@ -201,8 +211,7 @@ public class SCR_InventoryManager : MonoBehaviour, IDataPersistance
             briarStats.AddWeaponDamage(0, item.GetWeaponDamage());
             
         }
-        Debug.Log(briarStats.Attack);
-        
+        Debug.Log("AFTER EQUIPING WEAPON +" + briarStats.Attack);
         
 
         slotWeapon.transform.GetChild(0).GetComponent<Image>().enabled = true;
@@ -226,7 +235,8 @@ public class SCR_InventoryManager : MonoBehaviour, IDataPersistance
         if (data.equippedWeapon != null)
         {
             Debug.Log("Loading Equipped weapon: " + data.equippedWeapon.name);
-            EquipWeapon(data.equippedWeapon);
+            previousWeapon = data.equippedWeapon;
+            EquipWeapon(previousWeapon);
         }
     }
 
